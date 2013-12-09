@@ -20,28 +20,9 @@
 			
 			
 							<ul>
-<?
-
-include "config.php";
-
-$id = mysql_connect ( $host, $login_db, $senha_db );
-$con = mysql_select_db ( $database, $id );
-$login = $_COOKIE["login"];
-
-$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
-$res = mysql_query ( $sql, $id );
-
-while ( $row = mysql_fetch_array ( $res ) ) {
-	$disciplina = utf8_encode ( $row ["surveyls_title"] );
-	$disciplina_id = $row ["disciplina_id"];
-	
-	echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
-	
-}
-?>
 
 		    </ul></li>
-			<li><a href="../index.html">Sair</a></li>
+			<li><a href="../home/logout.html">Sair</a></li>
 
 		</ul>
 
