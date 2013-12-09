@@ -1,4 +1,0 @@
-Igor,Gerência da Informação (todas as turmas),4.5,4.17,3.67,4.33,4.5,4.17,4.33,4.67,4.83,4.33,4.5,4.17,3.5
-Lívia_Campos,Gerência da Informação (todas as turmas),4.5,4.17,3.67,4.33,4.5,4.17,4.33,4.67,4.83,4.33,4.5,4.17,3.5
-Lívia_Campos,Estrutura de Dados (todas as turmas),4.5,4.75,4.5,4.75,5,5,4.25,4.25,4.25,5,4,4.75,5
-Lívia_Campos,Programação II (Turma 1 - 2013.2),4.75,4.5,4.5,4,3.75,3.25,4.75,4.75,4.25,5,2.5,4.5,3.5
