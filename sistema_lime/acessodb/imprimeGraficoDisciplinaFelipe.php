@@ -134,7 +134,7 @@ for($i = 0; $i < 14; $i ++) {
 	if($i < 13){
 
 		$arrayMediasQuesito = geraMediasQuesitos();
-		echo utf8_encode ("<b>Média do DSC: </b>").  $arrayMediasQuesito[$i]  . " || " .  utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas) ;
+		echo utf8_encode ("<b>Média do DSC: </b>").  $arrayMediasQuesito[$i]  . " || " .  utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
 	}
 
 	echo "<br>";

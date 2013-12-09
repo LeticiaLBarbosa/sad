@@ -34,7 +34,7 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php?login=<?php echo $login ?>">Meus dados</a></li>
+			<li><a href="sessao.php">Meus dados</a></li>
 			<li><a>Disciplinas</a>
 
 				<ul>
