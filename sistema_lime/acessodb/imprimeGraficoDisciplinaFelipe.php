@@ -17,12 +17,9 @@
 	<div id="cssmenu">
 		<ul>
 			<li><a href="sessao.php">Disciplinas</a></li>
-			
-			
-							<ul>
 
-		    </ul></li>
-			<li><a href="../home/logout.html">Sair</a></li>
+		    
+			<li><a href="../usuario/logout.html">Sair</a></li>
 
 		</ul>
 
