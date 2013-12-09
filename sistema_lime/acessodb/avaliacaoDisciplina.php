@@ -49,12 +49,18 @@ include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
 
+
+
 // Iniciando conexao ao BD e gerando variáveis essenciaisis
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
 
 // Variável com o id da disciplina em questão
 $disciplina_id = $_GET ['disciplina_id'];
+
+$mediaFile = fopen ( "media.csv", "w");
+fwrite($mediaFile, "Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13\n");
+
 $indiceResposta = 5;
 $lacoResposta = 0;
 $valores = array ();

@@ -4,8 +4,8 @@ function geraMediasQuesitos(){
 	$mediasGerais = array ();
 
 	$file = fopen ( "data.csv", "r" );
-	$mediaFile = fopen ( "media.csv", "w");
-	fwrite($mediaFile, "Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13\n");
+	//$mediaFile = fopen ( "media.csv", "w");
+	//fwrite($mediaFile, "Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13\n");
 	for($j = 0; $j < 13; $j ++) {
 		array_push ( $mediasGerais, 0 );
 	}
