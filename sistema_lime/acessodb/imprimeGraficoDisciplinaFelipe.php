@@ -3,16 +3,7 @@
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<?php
-include "config.php";
 
-$id = mysql_connect ( $host, $login_db, $senha_db );
-$con = mysql_select_db ( $database, $id );
-$login = $_COOKIE["login"];
-
-$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
-$res = mysql_query ( $sql, $id );
-?>
 </head>
 
 <body>
@@ -25,8 +16,8 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php?login=<?php echo $login;?>">Meus dados</a></li>
-			<li><a href="#">Disciplinas</a>
+			<li><a href="sessao.php">Disciplinas</a></li>
+			
 			
 							<ul>
 <?
@@ -35,7 +26,7 @@ include "config.php";
 
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
-$login = $_GET ['login'];
+$login = $_COOKIE["login"];
 
 $sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
 $res = mysql_query ( $sql, $id );
