@@ -1,29 +1,4 @@
-teacher, discipline, Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13
-Felipe,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Igor,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Isabelly,Laboratório de Programação II (Turma 1 - 2013.2),4.5,4.67,3.5,3.83,3.67,4.17,4.33,4.5,4.33,3.67,3.83,4.33,4.33
-Lívia_Campos,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Lívia_Campos,Estrutura de Dados (todas as turmas),3.73,4.09,3.36,3.91,3.64,3.82,3.55,3.45,3.36,3.64,3.36,4,4.09
-Lívia_Campos,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Rinaldo,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Felipe,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Igor,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Isabelly,Laboratório de Programação II (Turma 1 - 2013.2),4.5,4.67,3.5,3.83,3.67,4.17,4.33,4.5,4.33,3.67,3.83,4.33,4.33
-Lívia_Campos,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Lívia_Campos,Estrutura de Dados (todas as turmas),3.73,4.09,3.36,3.91,3.64,3.82,3.55,3.45,3.36,3.64,3.36,4,4.09
-Lívia_Campos,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Rinaldo,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Felipe,Programação II (Turma 1 - 2013.2),1.17,1.17,1.33,0.83,1.17,0.5,1.5,1.17,1.17,2,-0.33,1.5,0.5
-Igor,Gerência da Informação (todas as turmas),1.2,0.93,0.6,1.13,0.87,0.67,0.8,1.4,1.07,0.67,0.73,0.87,0.77
-Isabelly,Laboratório de Programação II (Turma 1 - 2013.2),1.5,1.67,0.5,0.83,0.67,1.17,1.33,1.5,1.33,0.67,0.83,1.33,1.33
-Lívia_Campos,Gerência da Informação (todas as turmas),1.2,0.93,0.6,1.13,0.87,0.67,0.8,1.4,1.07,0.67,0.73,0.87,0.77
-Lívia_Campos,Estrutura de Dados (todas as turmas),0.73,1.09,0.36,0.91,0.64,0.82,0.55,0.45,0.36,0.64,0.36,1,1.09
-Lívia_Campos,Programação II (Turma 1 - 2013.2),1.17,1.17,1.33,0.83,1.17,0.5,1.5,1.17,1.17,2,-0.33,1.5,0.5
-Rinaldo,Gerência da Informação (todas as turmas),1.2,0.93,0.6,1.13,0.87,0.67,0.8,1.4,1.07,0.67,0.73,0.87,0.77
-Felipe,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Igor,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Isabelly,Laboratório de Programação II (Turma 1 - 2013.2),4.5,4.67,3.5,3.83,3.67,4.17,4.33,4.5,4.33,3.67,3.83,4.33,4.33
-Lívia_Campos,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
-Lívia_Campos,Estrutura de Dados (todas as turmas),3.73,4.09,3.36,3.91,3.64,3.82,3.55,3.45,3.36,3.64,3.36,4,4.09
-Lívia_Campos,Programação II (Turma 1 - 2013.2),4.17,4.17,4.33,3.83,4.17,3.5,4.5,4.17,4.17,5,2.67,4.5,3.5
-Rinaldo,Gerência da Informação (todas as turmas),4.2,3.93,3.6,4.13,3.87,3.67,3.8,4.4,4.07,3.67,3.73,3.87,3.77
+Igor,Gerência da Informação (todas as turmas),4.5,4.17,3.67,4.33,4.5,4.17,4.33,4.67,4.83,4.33,4.5,4.17,3.5
+Lívia_Campos,Gerência da Informação (todas as turmas),4.5,4.17,3.67,4.33,4.5,4.17,4.33,4.67,4.83,4.33,4.5,4.17,3.5
+Lívia_Campos,Estrutura de Dados (todas as turmas),4.5,4.75,4.5,4.75,5,5,4.25,4.25,4.25,5,4,4.75,5
+Lívia_Campos,Programação II (Turma 1 - 2013.2),4.75,4.5,4.5,4,3.75,3.25,4.75,4.75,4.25,5,2.5,4.5,3.5
