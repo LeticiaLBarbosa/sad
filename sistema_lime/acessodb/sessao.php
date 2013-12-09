@@ -44,13 +44,13 @@ $res = mysql_query ( $sql, $id );
 					$disciplina = utf8_encode ( $row ["surveyls_title"] );
 					$disciplina_id = $row ["disciplina_id"];
 					
-					echo "<li><a href=/sistema_lime_2/sistema_lime/acessodb/imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
 				?>
 
 		    </ul></li>
 
-			<li><a href="/var/www/sistema_lime_2/sistema_lime/index.html">Sair</a></li>
+			<li><a href="../index.html">Sair</a></li>
 
 		</ul>
 
