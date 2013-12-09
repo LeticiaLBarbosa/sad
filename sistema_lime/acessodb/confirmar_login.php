@@ -21,7 +21,7 @@
 	  //setcookie ("senha", $senha); //grava o cookie com a senha
 	  echo "Usuário logado." , $_SESSION['loginSession']; //se a senha digitada está correta, mostra a mensagem
 	  
-	  header("Location: sessao.php?login=$login");
+	  header("Location: sessao.php");
 	  exit(2);   
 	  
 	  } else {
