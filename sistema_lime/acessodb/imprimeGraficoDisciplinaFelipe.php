@@ -4,6 +4,19 @@
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="RadarChart.js"></script>
+
+<?php
+include "config.php";
+
+$id = mysql_connect ( $host, $login_db, $senha_db );
+$con = mysql_select_db ( $database, $id );
+$login = $_COOKIE ['login'];
+
+$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
+$res = mysql_query ( $sql, $id );
+?>
 </head>
 
 <body>
@@ -16,15 +29,22 @@
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php">Disciplinas</a></li>
-
-		    
-			<li><a href="../usuario/logout.php">Sair</a></li>
+			<li><a href="sessao.php?login=<?php echo $login;?>">Meus dados</a></li>
+			<li><a href="../index.html">Sair</a></li>
 
 		</ul>
 
 	</div>
-
+	
+   <div id="body">
+	  <div id="chart"></div>
+    </div>
+	  
+	      <script type="text/javascript" src="script.js"></script>
+	
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
 
 <?php
 include "config.php";
