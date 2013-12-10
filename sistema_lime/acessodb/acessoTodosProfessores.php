@@ -14,6 +14,8 @@ where p.login = pd.login and pd.disciplina_id = d.surveyls_survey_id";
 
 $res = mysql_query($sql,$id);
 
+fwrite($fileCSV, ("DisciplinaID,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13\n"));
+
 while($row = mysql_fetch_array($res)){
 	
 	$linhaPronta = "";

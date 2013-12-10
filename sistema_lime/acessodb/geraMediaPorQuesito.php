@@ -42,13 +42,14 @@ function geraMediasQuesitos(){
 		fclose ( $file );
 	}
 
-	for ($i = 0; $i < 12; $i++) {
-		fwrite($mediaFile, $mediasGerais[$i].",");
+	//for ($i = 0; $i < 12; $i++) {
+		//fwrite($mediaFile, $mediasGerais[$i].",");
 	
-	}
+	//}
 
-	fwrite($mediaFile, $mediasGerais[12]."\n");
-	fclose($mediaFile);
+//	fwrite($mediaFile, $mediasGerais[12]."\n");
+	//fclose($mediaFile);
+	
 	return $mediasGerais;
 	
 }
