@@ -3,7 +3,7 @@
 include 'config.php';
 include 'csvFunction.php';
 
-$fileCSV = fopen("data.csv","a+",0);
+$fileCSV = fopen("data.csv","w",0);
 
 $id = mysql_connect($host, $login_db,$senha_db);
 $con = mysql_select_db($database, $id);
