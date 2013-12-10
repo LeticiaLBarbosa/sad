@@ -23,7 +23,7 @@ function geraMediasQuesitos(){
 				
 				if ($i >= 2) {
 	
-					$mediasGerais [$i - 2] += $token;
+					$mediasGerais [$i - 1] += $token;
 				}
 				
 				$i ++;

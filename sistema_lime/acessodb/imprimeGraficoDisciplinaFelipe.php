@@ -19,7 +19,7 @@
 			<li><a href="sessao.php">Disciplinas</a></li>
 
 		    
-			<li><a href="../usuario/logout.html">Sair</a></li>
+			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
 

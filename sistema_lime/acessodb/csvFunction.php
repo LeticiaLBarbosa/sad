@@ -10,7 +10,7 @@ function mediasPorQuesito($disciplina_id) {
 	$con = mysql_select_db ( $database, $id );
 
 
-	$linhaMontada = "".$disciplina_id;
+	$linhaMontada = "".$disciplina_id.",";
 	
 	$medias = array ();
 	$indiceResposta = 5;
