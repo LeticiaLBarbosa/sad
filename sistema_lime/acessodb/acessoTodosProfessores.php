@@ -17,8 +17,8 @@ $res = mysql_query($sql,$id);
 while($row = mysql_fetch_array($res)){
 	
 	$linhaPronta = "";
-	$linhaPronta .= $row["nome"] . "," . $row["surveyls_title"] . ",".mediasPorQuesito($row["disciplina_id"]);
-
+	//$linhaPronta .= $row["nome"] . "," . $row["surveyls_title"] . ",".mediasPorQuesito($row["disciplina_id"]);
+	$linhaPronta .= mediasPorQuesito($row["disciplina_id"]);
 	
 	fwrite($fileCSV, ($linhaPronta."\n"));
 
