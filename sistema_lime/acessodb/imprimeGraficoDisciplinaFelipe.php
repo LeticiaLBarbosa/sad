@@ -185,7 +185,7 @@ for($i = 0; $i < 14; $i ++) {
 	echo "<b>Comentarios: </b><br>";	
 	echo  '<iframe
 	name="iframe1"
-	width="300"
+	width="600"
 	height="200"
 	src="geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.'"
 	frameborder="yes"
