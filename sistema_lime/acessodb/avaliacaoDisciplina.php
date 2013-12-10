@@ -45,6 +45,9 @@ $res = mysql_query ( $sql, $id );
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
 
 <?php
+
+echo '<script type="text/javascript" > RadarChart.draw("#chart", d, mycfg); </script>';
+
 include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
