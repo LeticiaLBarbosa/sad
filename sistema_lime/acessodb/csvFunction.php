@@ -111,7 +111,7 @@ function mediasPorQuesito($disciplina_id) {
 function media($respostas) {
 	$totalRespostas = array_sum ( $respostas );
 	
-	$peso = 5;
+	$peso = 4;
 	
 	for($i = 0; $i < 5; $i ++) {
 		

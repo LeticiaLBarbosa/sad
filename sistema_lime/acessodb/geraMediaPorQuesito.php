@@ -13,25 +13,31 @@ function geraMediasQuesitos(){
 	$contaProfessores = 0;
 
 	if ($file) {
+		
+		$ignoraCabecalho = 0;
 		while ( ! feof ( $file ) ) {
 			$line = fgets ( $file );
 			
-			$token = strtok ( $line, "," );
-			
-			$i = 0;
-			while ( $token != false ) {
+			if($ignoraCabecalho == 1){
+				$token = strtok ( $line, "," );
 				
-				if ($i >= 1) {
-	
-					$mediasGerais [$i - 1] += $token;
+				$i = 0;
+				while ( $token != false ) {
+					
+					if ($i >= 1) {
+		
+						$mediasGerais [$i - 1] += $token;
+					}
+					
+					$i ++;
+					
+					$token = strtok ( "," );
 				}
 				
-				$i ++;
-				
-				$token = strtok ( "," );
+				$contaProfessores ++;
 			}
 			
-			$contaProfessores ++;
+			$ignoraCabecalho = 1;
 		}
 		
 		for($j = 0; $j < 13; $j ++) {
