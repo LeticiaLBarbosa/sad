@@ -84,7 +84,7 @@ for($i = 0; $i < 14; $i ++) {
 	$tituloQ = utf8_encode ( $row1 [0] );
 	
 	echo "<br>";
-	echo "<b>", ($i + 1), " - ",  $tituloQ, "</b>b>",;
+	echo "<b>", ($i + 1), " - ",  $tituloQ, "</b>";
 	echo "<br>";
 	$valores [$tituloQ] = array ();
 	// echo $valores[$tituloQ];
