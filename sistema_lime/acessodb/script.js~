@@ -14,7 +14,7 @@ var index = getIndex(disciplina,data);
 var indexM = getIndex("MelhoresR",data);
 
 //Indice dos Melhores Resultados
-var indexM = getIndex("PioresR",data);
+var indexP = getIndex("PioresR",data);
 
 //Legend titles
 var LegendOptions = ['Media dos resultados','Seu resultado'];

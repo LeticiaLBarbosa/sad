@@ -53,7 +53,7 @@ var d = [
 			{axis:"Q11",value:(data[index].Q11/4)},
 			{axis:"Q12",value:(data[index].Q12/4)},
 			{axis:"Q13",value:(data[index].Q13/4)}
-		  ]
+		  
 		], [//Pior resultado
 			{axis:"Q1",value:(data[indexP].Q1/4)},
 			{axis:"Q2",value:(data[indexP].Q2/4)},
