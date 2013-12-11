@@ -34,6 +34,8 @@ setcookie('disciplina_id',$disciplina_id);
    <div id="body">
 	  <div id="chart"></div>
     </div>
+    
+    <script type="text/javascript" src="script.js"></script>
 	
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
@@ -187,7 +189,7 @@ for($i = 0; $i < 14; $i ++) {
 	scrolling="yes">
 	</iframe>';
 	
-	echo "<li><a href=geraComments.php?questao=".$i. "&disciplina_id=". $disciplina_id."> Ver Mais</a>";
+	echo "<a href=geraComments.php?questao=".$i. "&disciplina_id=". $disciplina_id."> Ver Mais</a>";
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
