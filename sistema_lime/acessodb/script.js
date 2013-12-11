@@ -12,6 +12,10 @@ d3.csv("data.csv", function(data) {
 var index = getIndex(disciplina,data);
 //Indice dos Melhores Resultados
 var indexM = getIndex("MelhoresR",data);
+
+//Indice dos Melhores Resultados
+var indexP = getIndex("PioresR",data);
+
 //Legend titles
 var LegendOptions = ['Media dos resultados','Seu resultado'];
 
@@ -50,7 +54,21 @@ var d = [
 			{axis:"Q12",value:(data[index].Q12/4)},
 			{axis:"Q13",value:(data[index].Q13/4)}
 		  ]
-		];
+		], [//Pior resultado
+			{axis:"Q1",value:(data[indexP].Q1/4)},
+			{axis:"Q2",value:(data[indexP].Q2/4)},
+			{axis:"Q3",value:(data[indexP].Q3/4)},
+			{axis:"Q4",value:(data[indexP].Q4/4)},
+			{axis:"Q5",value:(data[indexP].Q5/4)},
+			{axis:"Q6",value:(data[indexP].Q6/4)},
+			{axis:"Q7",value:(data[indexP].Q7/4)},
+			{axis:"Q8",value:(data[indexP].Q8/4)},
+			{axis:"Q9",value:(data[indexP].Q9/4)},
+			{axis:"Q10",value:(data[indexP].Q10/4)},
+			{axis:"Q11",value:(data[indexP].Q11/4)},
+			{axis:"Q12",value:(data[indexP].Q12/4)},
+			{axis:"Q13",value:(data[indexP].Q13/4)}
+		  ];
 
 //Options for the Radar chart, other than default
 var mycfg = {
