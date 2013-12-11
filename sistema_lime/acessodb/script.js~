@@ -17,7 +17,7 @@ var indexM = getIndex("MelhoresR",data);
 var indexP = getIndex("PioresR",data);
 
 //Legend titles
-var LegendOptions = ['Media dos resultados','Seu resultado'];
+var LegendOptions = ['Seu resultado','Piores resultados','Melhores resultados'];
 
 /* Data
 Livia: aqui os dados vem do arquivo .csv. Foi na forca bruta, mas funciona. So tem um problema: como passar para este script
@@ -104,7 +104,7 @@ var text = svg.append("text")
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
-	.text("What % of owners use a specific service in a week");
+	.text("Resultados do semestre:");
 		
 //Initiate Legend	
 var legend = svg.append("g")
