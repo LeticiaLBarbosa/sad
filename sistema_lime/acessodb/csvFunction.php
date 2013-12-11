@@ -243,7 +243,7 @@ function geraMelhor(){
 	$linhaMelhor = "MelhoresR,";
 	
 	for($i = 0; $i < 13; $i ++) {
-		if($i == 12){$melhores[$i];}
+		if($i == 12){$linhaMelhor .= $melhores[$i];}
 		else{$linhaMelhor .= $melhores[$i] . ",";}
 	}
 	
@@ -287,7 +287,7 @@ function geraPior(){
 	$linhaPior = "PioresR,";
 	
 	for($i = 0; $i < 13; $i ++) {
-		if($i == 12){$piores[$i];}
+		if($i == 12){$linhaPior .= $piores[$i];}
 		else{$linhaPior .= $piores[$i] . ",";}
 	}
 	
