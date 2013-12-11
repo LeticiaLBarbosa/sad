@@ -186,8 +186,9 @@ for($i = 0; $i < 14; $i ++) {
 	frameborder="yes"
 	scrolling="yes">
 	</iframe>';
-	echo "<br>";
+	
 	echo "<li><a href=geraComments.php?questao=".$i. "&disciplina_id=". $disciplina_id."> Ver Mais</a>";
+	echo "<br>";
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
