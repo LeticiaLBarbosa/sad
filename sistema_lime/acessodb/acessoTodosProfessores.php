@@ -36,4 +36,7 @@ echo geraPior() . "<br>";
 
 fclose($fileCSV);
 
+
+
+
 ?>
