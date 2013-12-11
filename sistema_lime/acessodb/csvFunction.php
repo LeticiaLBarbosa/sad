@@ -207,9 +207,14 @@ function mediasPorQuesitoArray($disciplina_id) {
 	return $notas;
 
 }
+
 function geraMelhor(){
-	$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
+	$melhores = array(); //peso minimo 
 	//$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
+	
+	for($j = 0; $j < 13; $j++){
+		$melhores[$j] = 0;
+	}
 	
 	id = mysql_connect($host, $login_db,$senha_db);
 	$con = mysql_select_db($database, $id);
@@ -225,7 +230,7 @@ function geraMelhor(){
 		$quesito = array();
 		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
-		for($i =0 ; $i < sizeof($quesito); $i++){
+		for($i = 0 ; $i < 13; $i++){
 			if($quesito[$i] > $melhores[$i]){$melhores[$i] = $quesito[$i];}	
 		//	if($mediaAux < $piores){$piores[$i] = $mediaAux;}
 		
@@ -247,7 +252,11 @@ function geraMelhor(){
 function geraPior(){
 	
 	//$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
-	$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
+	$piores =   array(); 
+	
+	for($j = 0; $j < 13; $j++){
+		$piores[$j] = 4; //peso maximo
+	}
 	
 	id = mysql_connect($host, $login_db,$senha_db);
 	$con = mysql_select_db($database, $id);
