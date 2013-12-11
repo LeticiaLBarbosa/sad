@@ -1,5 +1,5 @@
 <html>
-<title>"Informacoes Disciplinas"</title>
+<title>Informacoes Disciplina</title>
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -25,7 +25,7 @@ setcookie('disciplina_id',$disciplina_id);
 	<div id="cssmenu">
 		<ul>
 			<li><a href="sessao.php">Meus dados</a></li>
-			<li><a href="../index.html">Sair</a></li>
+			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
 
