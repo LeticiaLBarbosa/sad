@@ -188,8 +188,8 @@ for($i = 0; $i < 14; $i ++) {
 	frameborder="yes"
 	scrolling="yes">
 	</iframe>';
-	echo '<input name="" type="button" onClick="window.open(geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.')" value="Ver mais">';
 	echo "<br>";
+	echo '<input name="" type="button" onClick="window.open(../acessodb/geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.')" value="Ver mais">';
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
