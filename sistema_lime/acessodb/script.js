@@ -17,29 +17,14 @@ var indexM = getIndex("MelhoresR",data);
 var indexP = getIndex("PioresR",data);
 
 //Legend titles
-var LegendOptions = ['Media dos resultados','Seu resultado'];
+var LegendOptions = ['Seu resultado','Piores resultados','Melhores resultados'];
 
 /* Data
 Livia: aqui os dados vem do arquivo .csv. Foi na forca bruta, mas funciona. So tem um problema: como passar para este script
 o indice/linha do melhor resultado e a linha da disciplina sendo apresentada?
 */
 
-var d = [
-		  [//Melhor resultado
-			{axis:"Q1",value:(data[indexM].Q1/4)},
-			{axis:"Q2",value:(data[indexM].Q2/4)},
-			{axis:"Q3",value:(data[indexM].Q3/4)},
-			{axis:"Q4",value:(data[indexM].Q4/4)},
-			{axis:"Q5",value:(data[indexM].Q5/4)},
-			{axis:"Q6",value:(data[indexM].Q6/4)},
-			{axis:"Q7",value:(data[indexM].Q7/4)},
-			{axis:"Q8",value:(data[indexM].Q8/4)},
-			{axis:"Q9",value:(data[indexM].Q9/4)},
-			{axis:"Q10",value:(data[indexM].Q10/4)},
-			{axis:"Q11",value:(data[indexM].Q11/4)},
-			{axis:"Q12",value:(data[indexM].Q12/4)},
-			{axis:"Q13",value:(data[indexM].Q13/4)}
-		  ],[// Seu resultado
+var d = [[// Seu resultado
 			{axis:"Q1",value:(data[index].Q1/4)},
 			{axis:"Q2",value:(data[index].Q2/4)},
 			{axis:"Q3",value:(data[index].Q3/4)},
@@ -54,7 +39,8 @@ var d = [
 			{axis:"Q12",value:(data[index].Q12/4)},
 			{axis:"Q13",value:(data[index].Q13/4)}
 		  
-		], [//Pior resultado
+		],
+	[//Pior resultado
 			{axis:"Q1",value:(data[indexP].Q1/4)},
 			{axis:"Q2",value:(data[indexP].Q2/4)},
 			{axis:"Q3",value:(data[indexP].Q3/4)},
@@ -68,7 +54,22 @@ var d = [
 			{axis:"Q11",value:(data[indexP].Q11/4)},
 			{axis:"Q12",value:(data[indexP].Q12/4)},
 			{axis:"Q13",value:(data[indexP].Q13/4)}
-		]
+		],
+	[//Melhor resultado
+			{axis:"Q1",value:(data[indexM].Q1/4)},
+			{axis:"Q2",value:(data[indexM].Q2/4)},
+			{axis:"Q3",value:(data[indexM].Q3/4)},
+			{axis:"Q4",value:(data[indexM].Q4/4)},
+			{axis:"Q5",value:(data[indexM].Q5/4)},
+			{axis:"Q6",value:(data[indexM].Q6/4)},
+			{axis:"Q7",value:(data[indexM].Q7/4)},
+			{axis:"Q8",value:(data[indexM].Q8/4)},
+			{axis:"Q9",value:(data[indexM].Q9/4)},
+			{axis:"Q10",value:(data[indexM].Q10/4)},
+			{axis:"Q11",value:(data[indexM].Q11/4)},
+			{axis:"Q12",value:(data[indexM].Q12/4)},
+			{axis:"Q13",value:(data[indexM].Q13/4)}
+		  ] 
 		  
 	];
 
