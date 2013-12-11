@@ -166,7 +166,7 @@ for($i = 0; $i < 14; $i ++) {
 		
 		echo $valores [$tituloQ] [$indiceArray];
 		
-		echo "A", ($indiceTituloRespostas + 1), ") ", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas];
+		echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas];
 		echo "<br>";
 		
 		array_shift ( $TituloRespostas );
@@ -179,7 +179,7 @@ for($i = 0; $i < 14; $i ++) {
 	echo "<br>";
 	echo "<br>";
 	
-	echo "<b>Comentarios: </b><br>";	
+	echo "<b>".utf8_encode ("Comentários:")." </b><br>";	
 	echo  '<iframe
 	name="iframe1"
 	width="600"
@@ -243,7 +243,7 @@ echo "<br>";
 for($i = 0; $i < 5; $i ++) {
 	
 	echo "<br>";
-	echo "A" . ($i + 1) . ") " . $enunciado [$i], " = ", $valores [$i];
+	echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i];
 }
 
 ?>
