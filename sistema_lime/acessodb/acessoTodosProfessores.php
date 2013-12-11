@@ -31,8 +31,8 @@ fwrite($fileCSV, (geraMelhor()."\n"));
 echo geraMelhor() . "<br>";
 
 
-///fwrite($fileCSV, (geraPior()."\n"));
-//echo geraPior() . "<br>";
+fwrite($fileCSV, (geraPior()."\n"));
+echo geraPior() . "<br>";
 
 fclose($fileCSV);
 

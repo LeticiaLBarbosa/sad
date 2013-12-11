@@ -206,7 +206,6 @@ function mediasPorQuesitoArray($disciplina_id) {
 }
 
 
-
 function geraMelhor(){
 	include "config.php";
 	
@@ -256,16 +255,16 @@ function geraMelhor(){
 
 }
 
-/*
+
 function geraPior(){
 	
 	include "config.php";
 	
-	//$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
-	$piores =   array(); 
+	$piores = array(); //peso minimo 
+	//$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
 	
 	for($j = 0; $j < 13; $j++){
-		$piores[$j] = 4; //peso maximo
+		$piores[$j] = 4.0;
 	}
 	
 	$id = mysql_connect($host, $login_db,$senha_db);
@@ -282,9 +281,11 @@ function geraPior(){
 		$quesito = array();
 		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
-		for($i =0 ; $i < 13; $i++){
-			//if($notas[$i] > $melhores[$i]){$melhores[$i] = $mediaAux;}	
-			if($quesito[$i] < $piores[$i]){$piores[$i] = $quesito[$i];}
+		for($i = 0 ; $i < 13; $i++){
+			if($quesito[$i] < $piores[$i]){
+				$piores[$i] = $quesito[$i];
+			}	
+		//	if($mediaAux < $piores){$piores[$i] = $mediaAux;}
 		
 		}
 	
@@ -292,15 +293,19 @@ function geraPior(){
 		
 	$linhaPior = "PioresR,";
 	
-	for($i = 0; $i < 13; $i ++) {
-		if($i == 12){$linhaPior .= $piores[$i];}
-		else{$linhaPior .= $piores[$i] . ",";}
+	for($k = 0; $k < 13; $k ++) {
+		if($k == 12){
+			$linhaPior .= $piores[$k];
+		}
+		else{
+			$linhaPior .= $piores[$k] . ",";
+			}
 	}
 	
 	return $linhaPior;
 
 }
-*/
+
 function media($respostas) {
 	$totalRespostas = array_sum ( $respostas );
 	
