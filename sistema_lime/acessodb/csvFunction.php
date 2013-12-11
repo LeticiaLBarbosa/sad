@@ -272,7 +272,7 @@ function geraPior(){
 		$quesito = array();
 		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
-		for($i =0 ; $i < sizeof($quesito); $i++){
+		for($i =0 ; $i < 13; $i++){
 			//if($notas[$i] > $melhores[$i]){$melhores[$i] = $mediaAux;}	
 			if($quesito[$i] < $piores[$i]){$piores[$i] = $quesito[$i];}
 		
