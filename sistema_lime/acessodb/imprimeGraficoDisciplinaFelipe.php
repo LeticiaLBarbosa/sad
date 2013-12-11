@@ -1,5 +1,5 @@
 <html>
-
+<title>"Informações Disciplinas"</title>
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -58,6 +58,8 @@ $con = mysql_select_db ( $database, $id );
 
 // VariÃ¡vel com o id da disciplina em questÃ£o
 $disciplina_id = $_GET ['disciplina_id'];
+
+setcookie('disciplina_id',$disciplina_id);
 
 $indiceResposta = 5;
 $lacoResposta = 0;

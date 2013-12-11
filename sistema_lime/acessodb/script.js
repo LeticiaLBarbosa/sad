@@ -3,7 +3,7 @@ var w = 500,
 	h = 500;
 
 var colorscale = d3.scale.category10();
-
+var disciplina = getcookie('disciplina_id');
 //Data from csv file
 d3.csv("teste.csv", function(data) {
 
@@ -17,7 +17,7 @@ o indice/linha do melhor resultado e a linha da disciplina sendo apresentada?
 
 var d = [
 		  [//Melhor resultado
-			{axis:"Q1",value:data[1].Q1},
+			{axis: disciplina,value:data[1].Q1},
 			{axis:"Q2",value:data[1].Q2},
 			{axis:"Q3",value:data[1].Q3},
 			{axis:"Q4",value:data[1].Q4},
@@ -31,7 +31,7 @@ var d = [
 			{axis:"Q12",value:data[1].Q12},
 			{axis:"Q13",value:data[1].Q13},
 		  ],[// Seu resultado
-			{axis:"Q1",value:data[0].Q1},
+			{axis: disciplina,value:data[0].Q1},
 			{axis:"Q2",value:data[0].Q2},
 			{axis:"Q3",value:data[0].Q3},
 			{axis:"Q4",value:data[0].Q4},
@@ -110,4 +110,29 @@ var legend = svg.append("g")
 	  .text(function(d) { return d; })
 	  ;
 });//csv file reading
+
+
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1)
+	  {
+	  c_start = c_value.indexOf(c_name + "=");
+	  }
+	if (c_start == -1)
+	  {
+	  c_value = null;
+	  }
+	else
+	  {
+	  c_start = c_value.indexOf("=", c_start) + 1;
+	  var c_end = c_value.indexOf(";", c_start);
+	  if (c_end == -1)
+	  {
+	c_end = c_value.length;
+	}
+	c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
+}
 
