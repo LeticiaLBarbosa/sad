@@ -4,10 +4,11 @@ var w = 500,
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
-var index = getIndex(disciplina);
+
 //Data from csv file
 d3.csv("data.csv", function(data) {
 
+var index = getIndex(disciplina,data);
 
 //Legend titles
 var LegendOptions = ['Media dos resultados','Seu resultado'];
@@ -33,19 +34,19 @@ var d = [
 			{axis:"Q12",value:1},
 			{axis:"Q13",value:1},
 		  ],[// Seu resultado
-			{axis: disciplina,value:data[index].Q1/4},
-			{axis:"Q2",value:data[index].Q2/4},
-			{axis:"Q3",value:data[index].Q3/4},
-			{axis:"Q4",value:data[index].Q4/4},
-			{axis:"Q5",value:data[index].Q5/4},
-			{axis:"Q6",value:data[index].Q6/4},
-			{axis:"Q7",value:data[index].Q7/4},
-			{axis:"Q8",value:data[index].Q8/4},
-			{axis:"Q9",value:data[index].Q9/4},
-			{axis:"Q10",value:data[index].Q10/4},
-			{axis:"Q11",value:data[index].Q11/4},
-			{axis:"Q12",value:data[index].Q12/4},
-			{axis:"Q13",value:data[index].Q13/4}
+			{axis:"Q1",value:(data[index].Q1/4)},
+			{axis:"Q2",value:(data[index].Q2/4)},
+			{axis:"Q3",value:(data[index].Q3/4)},
+			{axis:"Q4",value:(data[index].Q4/4)},
+			{axis:"Q5",value:(data[index].Q5/4)},
+			{axis:"Q6",value:(data[index].Q6/4)},
+			{axis:"Q7",value:(data[index].Q7/4)},
+			{axis:"Q8",value:(data[index].Q8/4)},
+			{axis:"Q9",value:(data[index].Q9/4)},
+			{axis:"Q10",value:(data[index].Q10/4)},
+			{axis:"Q11",value:(data[index].Q11/4)},
+			{axis:"Q12",value:(data[index].Q12/4)},
+			{axis:"Q13",value:(data[index].Q13/4)}
 		  ]
 		];
 
@@ -114,9 +115,9 @@ var legend = svg.append("g")
 });//csv file reading
 
 
-function getIndex(id){
+function getIndex(id,data){
 	for (var i = 0; i < data.length; i++){
-		if (data.[i].DisciplinaID == id){
+		if (data[i].DisciplinaID == id){
 			return i;		
 		}			
 	}
