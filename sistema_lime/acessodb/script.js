@@ -68,7 +68,9 @@ var d = [
 			{axis:"Q11",value:(data[indexP].Q11/4)},
 			{axis:"Q12",value:(data[indexP].Q12/4)},
 			{axis:"Q13",value:(data[indexP].Q13/4)}
-		  ];
+		]
+		  
+	];
 
 //Options for the Radar chart, other than default
 var mycfg = {
