@@ -8,8 +8,10 @@ var disciplina = getCookie('disciplina_id');
 //Data from csv file
 d3.csv("data.csv", function(data) {
 
+//Indice da Disciplina
 var index = getIndex(disciplina,data);
-
+//Indice dos Melhores Resultados
+var indexM = getIndex("MelhoresR",data);
 //Legend titles
 var LegendOptions = ['Media dos resultados','Seu resultado'];
 
@@ -20,19 +22,19 @@ o indice/linha do melhor resultado e a linha da disciplina sendo apresentada?
 
 var d = [
 		  [//Melhor resultado
-			{axis: "Q1",value:1},
-			{axis:"Q2",value:1},
-			{axis:"Q3",value:1},
-			{axis:"Q4",value:1},
-			{axis:"Q5",value:1},
-			{axis:"Q6",value:1},
-			{axis:"Q7",value:1},
-			{axis:"Q8",value:1},
-			{axis:"Q9",value:1},
-			{axis:"Q10",value:1},
-			{axis:"Q11",value:1},
-			{axis:"Q12",value:1},
-			{axis:"Q13",value:1},
+			{axis:"Q1",value:(data[indexM].Q1/4)},
+			{axis:"Q2",value:(data[indexM].Q2/4)},
+			{axis:"Q3",value:(data[indexM].Q3/4)},
+			{axis:"Q4",value:(data[indexM].Q4/4)},
+			{axis:"Q5",value:(data[indexM].Q5/4)},
+			{axis:"Q6",value:(data[indexM].Q6/4)},
+			{axis:"Q7",value:(data[indexM].Q7/4)},
+			{axis:"Q8",value:(data[indexM].Q8/4)},
+			{axis:"Q9",value:(data[indexM].Q9/4)},
+			{axis:"Q10",value:(data[indexM].Q10/4)},
+			{axis:"Q11",value:(data[indexM].Q11/4)},
+			{axis:"Q12",value:(data[indexM].Q12/4)},
+			{axis:"Q13",value:(data[indexM].Q13/4)}
 		  ],[// Seu resultado
 			{axis:"Q1",value:(data[index].Q1/4)},
 			{axis:"Q2",value:(data[index].Q2/4)},
