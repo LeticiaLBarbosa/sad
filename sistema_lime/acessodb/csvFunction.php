@@ -106,7 +106,7 @@ function mediasPorQuesito($disciplina_id) {
 	return $linhaMontada;
 
 }
-
+/*
 function mediasPorQuesitoArray($disciplina_id) {
 	include "config.php";
 
@@ -204,6 +204,8 @@ function mediasPorQuesitoArray($disciplina_id) {
 	return $medias;
 
 }
+*/
+
 
 
 function geraMelhor(){
@@ -231,7 +233,9 @@ function geraMelhor(){
 		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
 		for($i = 0 ; $i < 13; $i++){
-			if($quesito[$i] > $melhores[$i]){$melhores[$i] = $quesito[$i];}	
+			if($quesito[$i] > $melhores[$i]){
+				$melhores[$i] = $quesito[$i];
+			}	
 		//	if($mediaAux < $piores){$piores[$i] = $mediaAux;}
 		
 		}
@@ -241,8 +245,12 @@ function geraMelhor(){
 	$linhaMelhor = "MelhoresR,";
 	
 	for($k = 0; $k < 13; $k ++) {
-		if($k == 12){$linhaMelhor .= $melhores[$k];}
-		else{$linhaMelhor .= $melhores[$k] . ",";}
+		if($k == 12){
+			$linhaMelhor .= $melhores[$k];
+		}
+		else{
+			$linhaMelhor .= $melhores[$k] . ",";
+			}
 	}
 	
 	return $linhaMelhor;
