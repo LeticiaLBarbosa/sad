@@ -1,8 +1,9 @@
 <?php
 
 
-// Iniciando conexao ao BD e gerando variÃ~CÂ¡veis essenciaisis
-// VariÃ~CÂ¡vel com o id da disciplina em questÃ~CÂ£o
+$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
+$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
+
 function mediasPorQuesito($disciplina_id) {
 	include "config.php";
 
@@ -84,10 +85,16 @@ function mediasPorQuesito($disciplina_id) {
 		$ValorRespostas [3] = $valorA4;
 		$ValorRespostas [4] = $valorA5;
 		
+		$mediaAux = media ($ValorRespostas);
+		
+		
+		if($mediaAux > $melhores[$i]){$melhores[$i] = $mediaAux;}	
+		if($mediaAux < $piores){$piores[$i] = $mediaAux;}
+		
 		if ($i == 12) {
-			$linhaMontada .= media ( $ValorRespostas );
+			$linhaMontada .= $mediaAux;
 		} else {
-			$linhaMontada .= media ( $ValorRespostas ) . ",";
+			$linhaMontada .= $mediaAux . ",";
 		}
 		
 		// Laco que imprime as respostas e o valor delas
@@ -105,6 +112,31 @@ function mediasPorQuesito($disciplina_id) {
 	}
 	
 	return $linhaMontada;
+
+}
+
+function geraMelhor(){
+	$linhaMelhor = "MelhoresR,";
+	
+	for($i = 0; $i < 13; $i ++) {
+		if($i == 12){$melhores[$i];}
+		else{$linhaMelhor .= $melhores[$i] ",";}
+	}
+	
+	return $linhaMelhor;
+
+}
+
+
+function geraPior(){
+	$linhaPior = "PioresR,";
+	
+	for($i = 0; $i < 13; $i ++) {
+		if($i == 12){$piores[$i];}
+		else{$linhaPior .= $piores[$i] ",";}
+	}
+	
+	return $linhaPior;
 
 }
 
