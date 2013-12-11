@@ -208,6 +208,7 @@ function mediasPorQuesitoArray($disciplina_id) {
 
 }
 
+/*
 function geraMelhor(){
 	include 'config.php';
 	
@@ -294,7 +295,7 @@ function geraPior(){
 	return $linhaPior;
 
 }
-
+*/
 function media($respostas) {
 	$totalRespostas = array_sum ( $respostas );
 	
