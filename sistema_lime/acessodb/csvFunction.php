@@ -113,9 +113,6 @@ function mediasPorQuesitoArray($disciplina_id) {
 	$id = mysql_connect ( $host, $login_db, $senha_db );
 	$con = mysql_select_db ( $database, $id );
 
-
-	$notas = array();
-	
 	$medias = array ();
 	$indiceResposta = 5;
 	$lacoResposta = 0;
@@ -188,7 +185,7 @@ function mediasPorQuesitoArray($disciplina_id) {
 		$ValorRespostas [3] = $valorA4;
 		$ValorRespostas [4] = $valorA5;
 		
-		$notas[$i] = media ($ValorRespostas);
+		$medias[$i] = media ($ValorRespostas);
 				
 		// Laco que imprime as respostas e o valor delas
 		while ( $TituloRespostas [0] != null ) {
@@ -204,22 +201,22 @@ function mediasPorQuesitoArray($disciplina_id) {
 		$indiceQuestao = $indiceQuestao + 1;
 	}
 	
-	return $notas;
+	return $medias;
 
 }
 
 
 function geraMelhor(){
-	include 'config.php';
+	include "config.php";
 	
 	$melhores = array(); //peso minimo 
 	//$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
 	
 	for($j = 0; $j < 13; $j++){
-		$melhores[$j] = 0;
+		$melhores[$j] = 0.0;
 	}
 	
-	id = mysql_connect($host, $login_db,$senha_db);
+	$id = mysql_connect($host, $login_db,$senha_db);
 	$con = mysql_select_db($database, $id);
 
 	$sql = "SELECT p.nome, pd.disciplina_id, d.surveyls_title 
@@ -231,7 +228,7 @@ function geraMelhor(){
 	while($row = mysql_fetch_array($res)){
 		
 		$quesito = array();
-//		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
+		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
 		for($i = 0 ; $i < 13; $i++){
 			if($quesito[$i] > $melhores[$i]){$melhores[$i] = $quesito[$i];}	
@@ -243,9 +240,9 @@ function geraMelhor(){
 		
 	$linhaMelhor = "MelhoresR,";
 	
-	for($i = 0; $i < 13; $i ++) {
-		if($i == 12){$linhaMelhor .= $melhores[$i];}
-		else{$linhaMelhor .= $melhores[$i] . ",";}
+	for($k = 0; $k < 13; $k ++) {
+		if($k == 12){$linhaMelhor .= $melhores[$k];}
+		else{$linhaMelhor .= $melhores[$k] . ",";}
 	}
 	
 	return $linhaMelhor;
@@ -255,7 +252,7 @@ function geraMelhor(){
 /*
 function geraPior(){
 	
-	include 'config.php';
+	include "config.php";
 	
 	//$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
 	$piores =   array(); 
@@ -264,7 +261,7 @@ function geraPior(){
 		$piores[$j] = 4; //peso maximo
 	}
 	
-	id = mysql_connect($host, $login_db,$senha_db);
+	$id = mysql_connect($host, $login_db,$senha_db);
 	$con = mysql_select_db($database, $id);
 
 	$sql = "SELECT p.nome, pd.disciplina_id, d.surveyls_title 
