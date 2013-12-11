@@ -31,7 +31,7 @@ var d = [
 			{axis:"Q12",value:data[1].Q12},
 			{axis:"Q13",value:data[1].Q13},
 		  ],[// Seu resultado
-			{axis:"Q1",value:data[0].Q1},
+			{axis: disciplina,value:data[0].Q1},
 			{axis:"Q2",value:data[0].Q2},
 			{axis:"Q3",value:data[0].Q3},
 			{axis:"Q4",value:data[0].Q4},

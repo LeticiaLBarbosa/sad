@@ -3,7 +3,7 @@ var w = 500,
 	h = 500;
 
 var colorscale = d3.scale.category10();
-var disciplina = getcookie('disciplina_id');
+var disciplina = getCookie('disciplina_id');
 //Data from csv file
 d3.csv("teste.csv", function(data) {
 

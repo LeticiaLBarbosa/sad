@@ -1,5 +1,5 @@
 <html>
-<title>"Informações Disciplinas"</title>
+<title>"Informacoes Disciplinas"</title>
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,14 +8,9 @@
 <script src="RadarChart.js"></script>
 
 <?php
-include "config.php";
+$disciplina_id = $_GET ['disciplina_id'];
+setcookie('disciplina_id',$disciplina_id);
 
-$id = mysql_connect ( $host, $login_db, $senha_db );
-$con = mysql_select_db ( $database, $id );
-$login = $_COOKIE ['login'];
-
-$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
-$res = mysql_query ( $sql, $id );
 ?>
 </head>
 
@@ -29,7 +24,7 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php?login=<?php echo $login;?>">Meus dados</a></li>
+			<li><a href="sessao.php">Meus dados</a></li>
 			<li><a href="../index.html">Sair</a></li>
 
 		</ul>
