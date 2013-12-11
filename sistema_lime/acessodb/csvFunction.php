@@ -209,6 +209,8 @@ function mediasPorQuesitoArray($disciplina_id) {
 }
 
 function geraMelhor(){
+	include 'config.php';
+	
 	$melhores = array(); //peso minimo 
 	//$piores =   array(4,4,4,4,4,4,4,4,4,4,4,4,4); //peso maximo
 	
@@ -250,6 +252,8 @@ function geraMelhor(){
 }
 
 function geraPior(){
+	
+	include 'config.php';
 	
 	//$melhores = array(0,0,0,0,0,0,0,0,0,0,0,0,0); //peso minimo 
 	$piores =   array(); 
