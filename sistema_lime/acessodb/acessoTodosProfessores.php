@@ -27,8 +27,8 @@ while($row = mysql_fetch_array($res)){
 	echo $linhaPronta . "<br>";
 }
 
-//fwrite($fileCSV, (geraMelhor()."\n"));
-//echo geraMelhor() . "<br>";
+fwrite($fileCSV, (geraMelhor()."\n"));
+echo geraMelhor() . "<br>";
 
 
 ///fwrite($fileCSV, (geraPior()."\n"));

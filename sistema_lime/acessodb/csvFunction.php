@@ -106,7 +106,7 @@ function mediasPorQuesito($disciplina_id) {
 	return $linhaMontada;
 
 }
-/*
+
 function mediasPorQuesitoArray($disciplina_id) {
 	include "config.php";
 
@@ -204,7 +204,6 @@ function mediasPorQuesitoArray($disciplina_id) {
 	return $medias;
 
 }
-*/
 
 
 
