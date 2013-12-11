@@ -187,7 +187,7 @@ for($i = 0; $i < 14; $i ++) {
 	scrolling="yes">
 	</iframe>';
 	echo "<br>";
-	echo '<input name="Comentarios" type="button" onClick="window.open(geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.')" value="Ver mais">';
+	echo '<input name="Comentarios" type="button" onClick="window.open(href=geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.')" value="Ver mais">';
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
