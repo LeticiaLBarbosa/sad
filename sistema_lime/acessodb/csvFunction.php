@@ -208,7 +208,7 @@ function mediasPorQuesitoArray($disciplina_id) {
 
 }
 
-/*
+
 function geraMelhor(){
 	include 'config.php';
 	
@@ -231,7 +231,7 @@ function geraMelhor(){
 	while($row = mysql_fetch_array($res)){
 		
 		$quesito = array();
-		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
+//		$quesito = mediasPorQuesitoArray($row["disciplina_id"]);
 	
 		for($i = 0 ; $i < 13; $i++){
 			if($quesito[$i] > $melhores[$i]){$melhores[$i] = $quesito[$i];}	
@@ -252,6 +252,7 @@ function geraMelhor(){
 
 }
 
+/*
 function geraPior(){
 	
 	include 'config.php';
