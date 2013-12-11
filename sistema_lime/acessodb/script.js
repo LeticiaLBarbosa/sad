@@ -17,7 +17,7 @@ var indexM = getIndex("MelhoresR",data);
 var indexP = getIndex("PioresR",data);
 
 //Legend titles
-var LegendOptions = ['Seu resultado','Piores resultados','Melhores resultados'];
+var LegendOptions = ['Melhores resultados','Seu resultado','Piores resultados'];
 
 /* Data
 Livia: aqui os dados vem do arquivo .csv. Foi na forca bruta, mas funciona. So tem um problema: como passar para este script
