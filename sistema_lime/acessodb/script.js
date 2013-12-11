@@ -4,8 +4,10 @@ var w = 500,
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
+var index = getIndex(disciplina);
 //Data from csv file
-d3.csv("teste.csv", function(data) {
+d3.csv("data.csv", function(data) {
+
 
 //Legend titles
 var LegendOptions = ['Media dos resultados','Seu resultado'];
@@ -17,33 +19,33 @@ o indice/linha do melhor resultado e a linha da disciplina sendo apresentada?
 
 var d = [
 		  [//Melhor resultado
-			{axis: disciplina,value:data[1].Q1},
-			{axis:"Q2",value:data[1].Q2},
-			{axis:"Q3",value:data[1].Q3},
-			{axis:"Q4",value:data[1].Q4},
-			{axis:"Q5",value:data[1].Q5},
-			{axis:"Q6",value:data[1].Q6},
-			{axis:"Q7",value:data[1].Q7},
-			{axis:"Q8",value:data[1].Q8},
-			{axis:"Q9",value:data[1].Q9},
-			{axis:"Q10",value:data[1].Q10},
-			{axis:"Q11",value:data[1].Q11},
-			{axis:"Q12",value:data[1].Q12},
-			{axis:"Q13",value:data[1].Q13},
+			{axis: "Q1",value:1},
+			{axis:"Q2",value:1},
+			{axis:"Q3",value:1},
+			{axis:"Q4",value:1},
+			{axis:"Q5",value:1},
+			{axis:"Q6",value:1},
+			{axis:"Q7",value:1},
+			{axis:"Q8",value:1},
+			{axis:"Q9",value:1},
+			{axis:"Q10",value:1},
+			{axis:"Q11",value:1},
+			{axis:"Q12",value:1},
+			{axis:"Q13",value:1},
 		  ],[// Seu resultado
-			{axis: disciplina,value:data[0].Q1},
-			{axis:"Q2",value:data[0].Q2},
-			{axis:"Q3",value:data[0].Q3},
-			{axis:"Q4",value:data[0].Q4},
-			{axis:"Q5",value:data[0].Q5},
-			{axis:"Q6",value:data[0].Q6},
-			{axis:"Q7",value:data[0].Q7},
-			{axis:"Q8",value:data[0].Q8},
-			{axis:"Q9",value:data[0].Q9},
-			{axis:"Q10",value:data[0].Q10},
-			{axis:"Q11",value:data[0].Q11},
-			{axis:"Q12",value:data[0].Q12},
-			{axis:"Q13",value:data[0].Q13}
+			{axis: disciplina,value:data[index].Q1/4},
+			{axis:"Q2",value:data[index].Q2/4},
+			{axis:"Q3",value:data[index].Q3/4},
+			{axis:"Q4",value:data[index].Q4/4},
+			{axis:"Q5",value:data[index].Q5/4},
+			{axis:"Q6",value:data[index].Q6/4},
+			{axis:"Q7",value:data[index].Q7/4},
+			{axis:"Q8",value:data[index].Q8/4},
+			{axis:"Q9",value:data[index].Q9/4},
+			{axis:"Q10",value:data[index].Q10/4},
+			{axis:"Q11",value:data[index].Q11/4},
+			{axis:"Q12",value:data[index].Q12/4},
+			{axis:"Q13",value:data[index].Q13/4}
 		  ]
 		];
 
@@ -111,6 +113,15 @@ var legend = svg.append("g")
 	  ;
 });//csv file reading
 
+
+function getIndex(id){
+	for (var i = 0; i < data.length; i++){
+		if (data.[i].DisciplinaID == id){
+			return i;		
+		}			
+	}
+
+}
 
 function getCookie(c_name){
 	var c_value = document.cookie;
