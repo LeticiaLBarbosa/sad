@@ -34,16 +34,6 @@ setcookie('disciplina_id',$disciplina_id);
    <div id="body">
 	  <div id="chart"></div>
     </div>
-	  
-	<script type="text/javascript" src="script.js"></script>
-	
-	<script language="Javascript" type="text/Javascript">
-<!--
-function openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-</script>
 	
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
@@ -197,7 +187,7 @@ for($i = 0; $i < 14; $i ++) {
 	scrolling="yes">
 	</iframe>';
 	echo "<br>";
-	echo '<input name="" type="button" onClick="openBrWindow(geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.',a,toolbar=yes,location=no,status=no, menubar=no,scrollbars=no,resizable=no)" value="Ver mais">';
+	echo '<input name="Comentarios" type="button" onClick="window.open(geraComments.php?questao='.$i. '&disciplina_id='. $disciplina_id.')" value="Ver mais">';
 	echo "<br>";
 	echo "<br>";
 	echo "<br>";
