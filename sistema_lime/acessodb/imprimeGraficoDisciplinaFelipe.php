@@ -38,7 +38,7 @@ setcookie('disciplina_id',$disciplina_id);
     <script type="text/javascript" src="script.js"></script>
 	
 <br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>echo "aqui"<br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 
@@ -47,11 +47,11 @@ include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
 
-// Iniciando conexao ao BD e gerando variáveis essenciaisis
+// Iniciando conexao ao BD e gerando variaveis essenciais
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
 
-// Variável com o id da disciplina em questão
+// Variavel com o id da disciplina em questao
 $disciplina_id = $_GET ['disciplina_id'];
 
 setcookie('disciplina_id',$disciplina_id);
