@@ -51,7 +51,8 @@ include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
 
-echo "aqui 2"
+echo "aqui 2";
+print "aqui 3";
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id = mysql_connect ( $host, $login_db, $senha_db );
