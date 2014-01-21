@@ -43,9 +43,6 @@
 		// Laco referente as perguntas de cada disciplina
 		// Codigo abaixo Pega todas as questÃµes
 		
-	
-		// Deconsidero as 5 ultimas questoes
-	
 		for($i = 0; $i < $quesito + 1; $i ++) {
 		        
 		        $valorA1 = 0;
@@ -105,7 +102,7 @@
 		        $ValorRespostas [4] = $valorA5;
 		        $indiceTituloRespostas = 0;
 		        
-		        if ($i == $quesito) {
+		        if ($i == $quesito && $i != 14) {
 			        echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
 			        echo "<p>";
 			        echo "<br>";
@@ -134,7 +131,7 @@
 		                $indiceTituloRespostas = $indiceTituloRespostas + 1;
 		        }
 		        
-		        if ($i == $quesito) {
+		        if ($i == $quesito && $i != 14) {
 		        
 			        echo "<br>";
 			        echo "<br>";
@@ -165,7 +162,7 @@
 		        $QqidQuestao = $QqidQuestao + 1;
 		        //$indiceQuestao = $indiceQuestao + 1;
 		}
-		
+
 		// Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
 		
 		if ($i == $quesito) {
