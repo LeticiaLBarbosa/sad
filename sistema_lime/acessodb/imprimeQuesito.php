@@ -167,53 +167,60 @@
 		}
 		
 		// Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
-		$row1 = mysql_fetch_array ( $res1 );
 		
+		if ($i == $quesito) {
 		
-		echo "<br>";
-		echo "15 - ", utf8_encode ( $row1 [0] );
-		echo "<br>";
-		
-		$valor = 0;
-		
-		$indiceDoValor = 0; // so pra alternar
-		
-		$valores = array ();
-		$enunciado = array ();
-		
-		
-		while ( $row1 = mysql_fetch_array ( $res1 ) ) {
-		        $res3 = mysql_query ( $sql3, $id );
-		        
-		        while ( $row3 = mysql_fetch_array ( $res3 ) ) {
-		                if ($row3 [$indiceResposta] == "Y") {
-		                        $valor = $valor + 1;
-		                }
-		        }
-		                
-		        $valores [$indiceDoValor] = $valor;
-		        $enunciado [$indiceDoValor] = utf8_encode ( $row1 [0] );
-		        
-		        $indiceDoValor = $indiceDoValor + 1;
-		        $indiceResposta = $indiceResposta + 1;
-		        $valor = 0;
-		}
-		if ($i == 14) {
-		echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
-		
-		echo "<br>";
-		echo "<br>";
-		echo "<br>";
-		echo "<br>";
-		}
-		for($i = 0; $i < 5; $i ++) {
-		        
-		        echo "<br>";
-		        echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i];
+			$row1 = mysql_fetch_array ( $res1 );
+			
+			echo "<br>";
+			echo "15 - ", utf8_encode ( $row1 [0] );
+			echo "<br>";
+			
+			$valor = 0;
+			
+			$indiceDoValor = 0; // so pra alternar
+			
+			$valores = array ();
+			$enunciado = array ();
+			
+			
+			while ( $row1 = mysql_fetch_array ( $res1 ) ) {
+			        $res3 = mysql_query ( $sql3, $id );
+			        
+			        while ( $row3 = mysql_fetch_array ( $res3 ) ) {
+			                if ($row3 [$indiceResposta] == "Y") {
+			                        $valor = $valor + 1;
+			                }
+			        }
+			                
+			        $valores [$indiceDoValor] = $valor;
+			        $enunciado [$indiceDoValor] = utf8_encode ( $row1 [0] );
+			        
+			        $indiceDoValor = $indiceDoValor + 1;
+			        $indiceResposta = $indiceResposta + 1;
+			        $valor = 0;
+			}
+			
+			
+			if ($i == 14) {
+				echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
+				
+				echo "<br>";
+				echo "<br>";
+				echo "<br>";
+				echo "<br>";
+			}
+			
+			for($i = 0; $i < 5; $i ++) {
+			        
+			        echo "<br>";
+			        echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i];
+			}
+			
 		}
 }
 
-echo imprimeQuesito(5);
+echo imprimeQuesito(14);
 
 ?>
 
