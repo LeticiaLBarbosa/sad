@@ -262,7 +262,7 @@ for($i = 0; $i < 5; $i ++) {
 }
 }
 
-echo "passou";
+echo imprimeQuesito(5);
 ?>
 <br>
 	<br>
