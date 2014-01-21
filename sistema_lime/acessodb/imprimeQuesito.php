@@ -110,16 +110,17 @@
 			        echo "<p>";
 			        echo "<br>";
 			        echo "<br>";	
-				} 
+				 
 				
-		        if($i < 13){
-		                $arrayMediasQuesito = geraMediasQuesitos();
-		                echo utf8_encode ("<b>Média do DSC: </b>"). $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+			        if($i < 13){
+			                $arrayMediasQuesito = geraMediasQuesitos();
+			                echo utf8_encode ("<b>Média do DSC: </b>"). $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+			        }
+			
+			        echo "<br>";
+			        echo "<br>";
+			
 		        }
-		
-		        echo "<br>";
-		        echo "<br>";
-		
 		        
 		        // Laco que imprime as respostas e o valor delas
 		        while ( $TituloRespostas [0] != null ) {
