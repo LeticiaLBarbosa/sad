@@ -29,8 +29,8 @@ setcookie('disciplina_id',$disciplina_id);
 	
     <iframe
 	name="iframe2"
-	width="600"
-	height="200"
+	width="700"
+	height="500"
 	src="radar.html"
 	frameborder="yes"
 	>
