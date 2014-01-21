@@ -50,7 +50,7 @@ $res = mysql_query ( $sql, $id );
 
 		    </ul></li>
 
-			<li><a href="sistema_lime/usuario/logout.php">Sair</a></li>
+			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
 
