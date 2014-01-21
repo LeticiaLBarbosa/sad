@@ -42,8 +42,14 @@
 		// Array de medias
 		// Laco referente as perguntas de cada disciplina
 		// Codigo abaixo Pega todas as questÃµes
+
+		$range = $quesito;
+
+		if($range == 14){
+			$range = 13;
+		}
 		
-		for($i = 0; $i < $quesito + 1; $i ++) {
+		for($i = 0; $i < $range + 1; $i ++) {
 		        
 		        $valorA1 = 0;
 		        $valorA2 = 0;
@@ -102,7 +108,7 @@
 		        $ValorRespostas [4] = $valorA5;
 		        $indiceTituloRespostas = 0;
 		        
-		        if ($i == $quesito && $i != 14) {
+		        if ($i == $quesito) {
 			        echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
 			        echo "<p>";
 			        echo "<br>";
@@ -131,7 +137,7 @@
 		                $indiceTituloRespostas = $indiceTituloRespostas + 1;
 		        }
 		        
-		        if ($i == $quesito && $i != 14) {
+		        if ($i == $quesito) {
 		        
 			        echo "<br>";
 			        echo "<br>";
