@@ -172,7 +172,7 @@ for($i = 0; $i < $quesito + 1; $i ++) {
 	// Laco que imprime as respostas e o valor delas
 	while ( $TituloRespostas [0] != null ) {
 		
-		$valores [$	] [$TituloRespostas [0]] = $ValorRespostas [$indiceTituloRespostas];
+		$valores [$tituloQ] [$TituloRespostas [0]] = $ValorRespostas [$indiceTituloRespostas];
 	if ($i == $quesito) {
 		
 		echo $valores [$tituloQ] [$indiceArray];
