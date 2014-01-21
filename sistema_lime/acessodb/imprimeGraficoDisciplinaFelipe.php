@@ -25,16 +25,11 @@ setcookie('disciplina_id',$disciplina_id);
                         <li><a href="../usuario/logout.php">Sair</a></li>
 
                 </ul>
-
         </div>
-        
-   <div id="body">
-          <div id="chart"></div>
-    </div>
 	
     <iframe
 	name="iframe2"
-	width="100"
+	width="600"
 	height="200"
 	src="radar.html"
 	frameborder="yes"
