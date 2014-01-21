@@ -32,7 +32,16 @@ setcookie('disciplina_id',$disciplina_id);
    <div id="body">
           <div id="chart"></div>
     </div>
-            
+	
+    <iframe
+	name="iframe2"
+	width="100"
+	height="200"
+	src="radar.html"
+	frameborder="yes"
+	>
+	</iframe>        
+
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
