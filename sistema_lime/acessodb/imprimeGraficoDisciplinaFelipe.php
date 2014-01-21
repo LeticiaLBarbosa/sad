@@ -14,6 +14,16 @@ setcookie('disciplina_id',$disciplina_id);
 ?>
 </head>
 
+
+<?php
+include "imprimeQuesito.php";
+
+echo imprimeQuesito(5);
+
+?>
+
+
+
 <body>
 	<div id='banner' align='center'>
 		<img style='display: block; margin-left: auto; margin-right: auto'
@@ -264,10 +274,3 @@ for($i = 0; $i < 5; $i ++) {
 	</h2>
 
 </html>
-<?php
-include "imprimeQuesito.php";
-
-echo imprimeQuesito(5);
-
-?>
-
