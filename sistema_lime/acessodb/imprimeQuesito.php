@@ -84,8 +84,11 @@ $res1 = mysql_query ( $sql1, $id );
 // Laco referente as perguntas de cada disciplina
 // Codigo abaixo Pega todas as questÃµes
 
+echo "PASSOU";
+
 // Deconsidero as 5 ultimas questoes
 function imprimeQuesito($quesito){
+
 
 for($i = 0; $i < $quesito + 1; $i ++) {
 	
