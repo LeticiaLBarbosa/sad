@@ -40,7 +40,7 @@ setcookie('disciplina_id',$disciplina_id);
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
 
-print "aqui";
+
 
 <br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
@@ -51,7 +51,7 @@ include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
 
-echo "aqui 2"
+
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id = mysql_connect ( $host, $login_db, $senha_db );
