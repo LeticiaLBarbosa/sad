@@ -226,7 +226,7 @@ $indiceDoValor = 0; // so pra alternar
 
 $valores = array ();
 $enunciado = array ();
-if ($i == 14) {
+
 
 while ( $row1 = mysql_fetch_array ( $res1 ) ) {
 	$res3 = mysql_query ( $sql3, $id );
@@ -244,7 +244,7 @@ while ( $row1 = mysql_fetch_array ( $res1 ) ) {
 	$indiceResposta = $indiceResposta + 1;
 	$valor = 0;
 }
-
+if ($i == 14) {
 echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
 
 echo "<br>";
@@ -258,6 +258,8 @@ for($i = 0; $i < 5; $i ++) {
 	echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i];
 }
 }
+
+echo "passou";
 ?>
 <br>
 	<br>
