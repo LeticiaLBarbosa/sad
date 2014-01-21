@@ -157,7 +157,7 @@ for($i = 0; $i < 14; $i ++) {
 	if($i < 13){
 
 		$arrayMediasQuesito = geraMediasQuesitos();
-		echo utf8_encode ("<b>Média do DSC: </b>").  $arrayMediasQuesito[$i]  . " || " .  utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+		echo utf8_encode ("<b>Mï¿½dia do DSC: </b>").  $arrayMediasQuesito[$i]  . " || " .  utf8_encode ("<b>Sua Mï¿½dia: </b>") . media($ValorRespostas);
 	}
 
 	echo "<br>";
@@ -184,7 +184,7 @@ for($i = 0; $i < 14; $i ++) {
 	echo "<br>";
 	echo "<br>";
 	
-	echo "<b>".utf8_encode ("Comentários:")." </b><br>";	
+	echo "<b>".utf8_encode ("Comentï¿½rios:")." </b><br>";	
 	echo  '<iframe
 	name="iframe1"
 	width="600"
@@ -264,4 +264,10 @@ for($i = 0; $i < 5; $i ++) {
 	</h2>
 
 </html>
+<?php
+include "imprimeQuesito.php";
+
+echo imprimeQuesito(5);
+
+?>
 
