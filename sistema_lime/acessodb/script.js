@@ -81,7 +81,7 @@ var mycfg = {
   w: w,
   h: h,
   maxValue: 1,
-  levels: 2, //aqui
+  levels: 5,
   ExtraWidthX: 200 // Espaço extra ao lado
 }
 
