@@ -46,9 +46,7 @@ setcookie('disciplina_id',$disciplina_id);
         src="texto.html"
         frameborder="yes"
         >
-            <a href="#" class="btn btn-default">Q1</a>            
-
-        </iframe> 
+          </iframe> 
 
 <br><br><br><br><br><br><br><br><br><br>
 
