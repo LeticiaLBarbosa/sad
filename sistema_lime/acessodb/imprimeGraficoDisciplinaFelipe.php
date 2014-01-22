@@ -30,7 +30,7 @@ setcookie('disciplina_id',$disciplina_id);
         
     <iframe
         name="iframe2"
-        width="600"
+        width="750"
         height="600"
         src="radar.html"
         frameborder="yes"
