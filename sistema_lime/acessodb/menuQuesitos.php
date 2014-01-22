@@ -12,8 +12,10 @@
 
 
 for ($i = 0; $i < 15; $i++) {
+   
+   $quesito = "Q".$i;
 
-echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>Q.$i</a></li>";}
+echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$quesito</a></li>";}
 
 ?>
 </ul>
