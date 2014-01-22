@@ -97,7 +97,7 @@ var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", w+300)
-	.attr("height", h)
+	.attr("height", 400)
 
 //Create the title for the legend
 var text = svg.append("text")
