@@ -38,7 +38,7 @@ setcookie('disciplina_id',$disciplina_id);
 
 	<iframe
 	name="iframe3"
-	width="700"
+	width="500"
 	background="#000000"
 	bgcolor="#000000"
 	style="background-color:#000000"
