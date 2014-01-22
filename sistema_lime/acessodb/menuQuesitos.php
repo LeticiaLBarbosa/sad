@@ -13,7 +13,7 @@
 
 for ($i = 0; $i < 15; $i++) {
 
-echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$i</a></li>";}
+echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>Q.$i</a></li>";}
 
 ?>
 </ul>
