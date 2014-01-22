@@ -1,4 +1,3 @@
-
 <?php
 
 	function imprimeQuesito($quesito){
@@ -222,8 +221,6 @@
 			
 		}
 }
-
-echo imprimeQuesito(14);
 
 ?>
 
