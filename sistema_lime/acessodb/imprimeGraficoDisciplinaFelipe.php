@@ -43,7 +43,7 @@ setcookie('disciplina_id',$disciplina_id);
         width="600"
         style="background-color:#FAEBD7"
         height="600"
-        src="menuQuesito.php"
+        src="menuQuesitos.php"
         frameborder="yes"
         >
           </iframe> 
