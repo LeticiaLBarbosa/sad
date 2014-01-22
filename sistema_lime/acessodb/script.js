@@ -112,8 +112,8 @@ var text = svg.append("text")
 //Initiate Legend	
 var legend = svg.append("g")
 	.attr("class", "legend")
-	.attr("height", 150)
-	.attr("width", 200)
+	.attr("height", 10)
+	.attr("width", 10)
 	.attr('transform', 'translate(90,20)') 
 	;
 	//Create colour squares
