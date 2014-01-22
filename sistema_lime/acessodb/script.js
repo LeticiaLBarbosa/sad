@@ -82,7 +82,7 @@ var mycfg = {
   h: h,
   maxValue: 1,
   levels: 5,
-  ExtraWidthX: 150
+  ExtraWidthX: 200 // Espaço extra ao lado
 }
 
 //Call function to draw the Radar chart
@@ -103,7 +103,7 @@ var svg = d3.select('#body')
 var text = svg.append("text")
 	.attr("class", "title")
 	.attr('transform', 'translate(90,0)') 
-	.attr("x", w - 50)
+	.attr("x", w - 50) //localização do titulo da legenda
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
