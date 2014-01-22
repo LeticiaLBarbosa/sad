@@ -2,7 +2,7 @@
 
 // Tamanho do radar
 var w = 200, 
-	h = 200;
+	h = 100;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
