@@ -32,10 +32,7 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-			
-			
-			
-
+		
 		</ul>
 
 	</div>
@@ -43,9 +40,6 @@ $res = mysql_query ( $sql, $id );
 	<!-- Menu Disciplinas -->
 
 	<div id="cssmenu">
-		
-		
-		
 		
 		<ul>
 			
