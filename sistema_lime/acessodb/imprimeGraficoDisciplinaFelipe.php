@@ -41,6 +41,7 @@ setcookie('disciplina_id',$disciplina_id);
 	width="700"
 	background="#000000"
 	bgcolor="#000000"
+	style="background-color:#000000"
 	height="600"
 	src="texto.html"
 	frameborder="yes"
