@@ -1,6 +1,6 @@
 // Livia: esse é o arquivo que vai mudar para ler os dados do .csv
-var w = 100,
-	h = 100;
+var w = 500,
+	h = 500;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
