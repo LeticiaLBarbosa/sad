@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <?php
+include "imprimeQuesito.php";
 $disciplina_id = $_GET ['disciplina_id'];
 setcookie('disciplina_id',$disciplina_id);
 
@@ -39,7 +40,7 @@ setcookie('disciplina_id',$disciplina_id);
 	<iframe
 	name="iframe3"
 	width="600"
-	style="background-color:#000000"
+	style="background-color:#FAEBD7"
 	height="600"
 	src="texto.html"
 	frameborder="yes"
