@@ -1,8 +1,8 @@
 // Livia: esse é o arquivo que vai mudar para ler os dados do .csv
 
 // Tamanho do radar
-var w = 400, 
-	h = 400;
+var w = 300, 
+	h = 300;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
@@ -82,7 +82,7 @@ var mycfg = {
   h: h,
   maxValue: 1,
   levels: 5,
-  ExtraWidthX: 300
+  ExtraWidthX: 200
 }
 
 //Call function to draw the Radar chart
