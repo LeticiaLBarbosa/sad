@@ -38,16 +38,16 @@ $res = mysql_query ( $sql, $id );
 
 	</div>
 	
-	<div align='center'>
+	<div>
 		<p>
-			<iframe
-				name="disciplinas"
-				width="1200"
-				height="900"
-				src='disciplinas.php'
-				frameborder="yes"
-				scrolling="yes">
-			</iframe>
+			
+			<frameset rows="100%">
+		
+				<frame	src='disciplinas.php'>
+			</frame>
+			
+			
+			</frameset>
 		</p>
 	</div>
 	

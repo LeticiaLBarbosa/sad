@@ -10,6 +10,20 @@ $disciplina_id = $_GET ['disciplina_id'];
 setcookie('disciplina_id',$disciplina_id);
 
 ?>
+
+<?php
+
+include "config.php";
+
+$id = mysql_connect ( $host, $login_db, $senha_db );
+$con = mysql_select_db ( $database, $id );
+$login = $_COOKIE["login"];
+
+$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
+$res = mysql_query ( $sql, $id );
+
+?>
+
 </head>
 
 <body>
