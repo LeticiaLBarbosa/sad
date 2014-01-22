@@ -82,7 +82,7 @@ var mycfg = {
   h: h,
   maxValue: 1,
   levels: 5,
-  ExtraWidthX: 200
+  ExtraWidthX: 10
 }
 
 //Call function to draw the Radar chart
@@ -96,7 +96,7 @@ RadarChart.draw("#chart", d, mycfg);
 var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
-	.attr("width", w+700)
+	.attr("width", w+300)
 	.attr("height", h)
 
 //Create the title for the legend
