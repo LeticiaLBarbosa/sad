@@ -1,8 +1,8 @@
 // Livia: esse é o arquivo que vai mudar para ler os dados do .csv
 
 // Tamanho do radar
-var w = 200, 
-	h = 200;
+var w = 90, 
+	h = 500;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
