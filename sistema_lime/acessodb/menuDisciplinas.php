@@ -25,8 +25,6 @@ $res = mysql_query ( $sql, $id );
 			bgcolor='black' src='../imagens/ba.jpg'>
 	</div>
 
-	</p>
-
 	<!-- Menu inicial -->
 
 	<div id="cssmenu">
@@ -42,7 +40,7 @@ $res = mysql_query ( $sql, $id );
 			<iframe
 				name="disciplinas"
 				width="1200"
-				height="1100"
+				height="1200"
 				src='disciplinas.php'
 				frameborder="yes"
 				scrolling="yes">
