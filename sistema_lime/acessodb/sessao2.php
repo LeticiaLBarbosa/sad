@@ -57,7 +57,6 @@ $res = mysql_query ( $sql, $id );
 				}
 			?>
 			
-			
 			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
