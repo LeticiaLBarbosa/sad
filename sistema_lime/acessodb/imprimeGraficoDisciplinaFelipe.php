@@ -27,25 +27,25 @@ setcookie('disciplina_id',$disciplina_id);
 
                 </ul>
         </div>
-	
+        
     <iframe
-	name="iframe2"
-	width="600"
-	height="600"
-	src="radar.html"
-	frameborder="yes"
-	>
-	</iframe>        
+        name="iframe2"
+        width="600"
+        height="600"
+        src="radar.html"
+        frameborder="yes"
+        >
+        </iframe>        
 
-	<iframe
-	name="iframe3"
-	width="600"
-	style="background-color:#FAEBD7"
-	height="600"
-	src="texto.html"
-	frameborder="yes"
-	>
-	</iframe> 
+        <iframe
+        name="iframe3"
+        width="600"
+        style="background-color:#FAEBD7"
+        height="600"
+        src="texto.html"
+        frameborder="yes"
+        >
+        </iframe> 
 
 <br><br><br><br><br><br><br><br><br><br>
 
