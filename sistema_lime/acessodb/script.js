@@ -81,7 +81,7 @@ var mycfg = {
   w: w,
   h: h,
   maxValue: 1,
-  levels: 5,
+  levels: 2, //aqui
   ExtraWidthX: 200 // Espaço extra ao lado
 }
 
@@ -97,7 +97,7 @@ var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", w+300)
-	.attr("height", 400)
+	.attr("height", h)
 
 //Create the title for the legend
 var text = svg.append("text")
