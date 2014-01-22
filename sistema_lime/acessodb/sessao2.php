@@ -32,7 +32,9 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-		
+			<li><a href="sessao.php">Meus dados</a></li>
+			
+			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 
 	</div>
@@ -43,7 +45,7 @@ $res = mysql_query ( $sql, $id );
 		
 		<ul>
 			
-			<li><a href="sessao.php">Meus dados</a></li>
+			
 			
 			<li><a>Disciplinas:</a></li>
 
@@ -57,7 +59,7 @@ $res = mysql_query ( $sql, $id );
 				}
 			?>
 			
-			<li><a href="../usuario/logout.php">Sair</a></li>
+			
 
 		</ul>
 
