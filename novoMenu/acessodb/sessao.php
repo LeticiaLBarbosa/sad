@@ -1,8 +1,7 @@
+
 <head>
-<link href="../menu_assets/styles.css" rel="stylesheet" type="text/css">
+<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-
-
 
 <?php
 
@@ -26,46 +25,37 @@ $res = mysql_query ( $sql, $id );
 			bgcolor='black' src='../imagens/ba.jpg'>
 	</div>
 
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="RadarChart.js"></script>
+
 	</p>
 
 	<!-- Menu inicial -->
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php">Início</a></li>
-			<li><a href="disciplinas.php">Disciplinas:</a></li>
+			<li><a href="sessao.php">Meus dados</a></li>
+			<li><a>Disciplinas</a>
+
+				<ul>
+				<?php
+				
+				while ( $row = mysql_fetch_array ( $res ) ) {
+					$disciplina = utf8_encode ( $row ["surveyls_title"] );
+					$disciplina_id = $row ["disciplina_id"];
+					
+					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+				}
+				?>
+
+		    </ul></li>
+
 			<li><a href="../usuario/logout.php">Sair</a></li>
+
 		</ul>
 
 	</div>
-	
-	
+
 	<h2 align="center">Login efetuado com sucesso!</h2>
 	<h2 align="center"> Bem vindo(a) <? echo $login ?></h2>
-	
-	
-	<!-- COMENTARIO DESENVOLVEDOR -->
-
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-
-	<div id="rodape">
-
-	 <p style="text-align: center;">
-					&copy; Copyright 2013 <a href="http://www.dsc.ufcg.edu.br/~pet"> PET Computa&ccedil;&atilde;o UFCG</a>. All rights reserved.</p>
-
-	</div>
 </html>

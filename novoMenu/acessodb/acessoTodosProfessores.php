@@ -1,7 +1,5 @@
 <?php
 
-// Gera o arquivo CSV contendo todos os professores
-
 include 'config.php';
 include 'csvFunction.php';
 
@@ -21,7 +19,7 @@ fwrite($fileCSV, ("DisciplinaID,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13\n"));
 while($row = mysql_fetch_array($res)){
 	
 	$linhaPronta = "";
-
+	//$linhaPronta .= $row["nome"] . "," . $row["surveyls_title"] . ",".mediasPorQuesito($row["disciplina_id"]);
 	$linhaPronta .= mediasPorQuesito($row["disciplina_id"]);
 	
 	fwrite($fileCSV, ($linhaPronta."\n"));
