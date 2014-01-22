@@ -36,9 +36,15 @@ setcookie('disciplina_id',$disciplina_id);
 	>
 	</iframe>        
 
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
+	<iframe
+	name="iframe3"
+	width="700"
+	height="600"
+	src="texto.html"
+	frameborder="yes"
+	>
+	</iframe> 
+
 <br><br><br><br><br><br><br><br><br><br>
 
 <?php
