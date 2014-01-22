@@ -96,7 +96,7 @@ RadarChart.draw("#chart", d, mycfg);
 var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
-	.attr("width", w+300)
+	.attr("width", w+320)
 	.attr("height", h)
 
 //Create the title for the legend
