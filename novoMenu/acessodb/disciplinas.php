@@ -1,5 +1,5 @@
 <head>
-<link href="../menu_assets/styles.css" rel="stylesheet" type="text/css">
+<link href="../menu_assets/stylesTeste.css" rel="stylesheet" type="text/css">
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
 
@@ -33,16 +33,41 @@ $res = mysql_query ( $sql, $id );
 	<div id="cssmenu">
 		<ul>
 			<li><a href="sessao.php">Início</a></li>
-			<li><a href="disciplinas.php">Disciplinas:</a></li>
+			
 			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 
 	</div>
 	
+	<!-- Menu Disciplinas -->
+
+	<div id="cssmenu">
+		
+		<ul>
+			
+			
+			
+			<li><a>Disciplinas:</a></li>
+
+			<?php				
+				
+				while ( $row = mysql_fetch_array ( $res ) ) {
+					$disciplina = utf8_encode ( $row ["surveyls_title"] );
+					$disciplina_id = $row ["disciplina_id"];
+					
+					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+				}
+			?>
+			
+			
+
+		</ul>
+
+	</div>
 	
+
 	<h2 align="center">Login efetuado com sucesso!</h2>
 	<h2 align="center"> Bem vindo(a) <? echo $login ?></h2>
-	
 	
 	<!-- COMENTARIO DESENVOLVEDOR -->
 
@@ -68,4 +93,7 @@ $res = mysql_query ( $sql, $id );
 					&copy; Copyright 2013 <a href="http://www.dsc.ufcg.edu.br/~pet"> PET Computa&ccedil;&atilde;o UFCG</a>. All rights reserved.</p>
 
 	</div>
+	
 </html>
+
+
