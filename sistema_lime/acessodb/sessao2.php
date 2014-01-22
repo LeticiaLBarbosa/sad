@@ -1,5 +1,5 @@
 <head>
-<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
+<link href="../menu_assets/stylesTeste.css" rel="stylesheet" type="text/css">
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
 
@@ -45,7 +45,7 @@ $res = mysql_query ( $sql, $id );
 	<div id="cssmenu">
 		<ul>
 			
-			<li><a>Disciplinas</a></li>
+			<li><a>Disciplinas:</a></li>
 
 			<?php				
 				
