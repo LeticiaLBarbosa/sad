@@ -49,6 +49,7 @@ setcookie('disciplina_id',$disciplina_id);
 <br><br><br><br><br><br><br><br><br><br>
 
 <?php
+
 include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
@@ -76,13 +77,13 @@ $ValorRespostas = array ();
 $indiceArrayTituloRespostas = 0;
 $indiceArrayTituloRespostasImpressao = 0;
 
-// Criando a váriavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada questão
+// Criando a vï¿½riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada questï¿½o
 $sql = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid ";
 $res = mysql_query ( $sql, $id );
 $row = mysql_fetch_array ( $res );
 $QqidQuestao = $row ["qid"];
 
-// Consulta para exibir as questões
+// Consulta para exibir as questï¿½es
 $sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
 $res1 = mysql_query ( $sql1, $id );
 
@@ -92,7 +93,7 @@ $res1 = mysql_query ( $sql1, $id );
 
 
 // Laco referente as perguntas de cada disciplina
-// Codigo abaixo Pega todas as questões
+// Codigo abaixo Pega todas as questï¿½es
 
 // Deconsidero as 5 ultimas questoes
 for($i = 0; $i < 14; $i ++) {
