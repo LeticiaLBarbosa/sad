@@ -36,14 +36,7 @@ setcookie('disciplina_id',$disciplina_id);
         frameborder="yes"
         >
         </iframe>        
-    <!--    <?php
-        
-        for ($i = 0; $i < 15; $i++) {
-            <a href="#" class="btn btn-default">$i</a>            
-        }
-        
-        ?>
-     -->
+
 
         <iframe
         name="iframe3"
