@@ -114,7 +114,7 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 200)
 	.attr("width", 200)
-	.attr('transform', 'translate(115,2)') 
+	.attr('transform', 'translate(130,20)') // localização da legenda 
 	;
 	//Create colour squares
 	legend.selectAll('rect')
@@ -132,7 +132,7 @@ var legend = svg.append("g")
 	  .data(LegendOptions)
 	  .enter()
 	  .append("text")
-	  .attr("x", w - 52)
+	  .attr("x", w - 5)
 	  .attr("y", function(d, i){ return i * 20 + 9;})
 	  .attr("font-size", "11px")
 	  .attr("fill", "#737373")
