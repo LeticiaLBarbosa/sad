@@ -39,8 +39,8 @@ $res = mysql_query ( $sql, $id );
 	<div>
 			<iframe
 				name="disciplinas"
-				width="1400"
-				height="1400"
+				width="1320"
+				height="1320"
 				src='disciplinas.php'
 				frameborder="yes"
 				scrolling="yes">
