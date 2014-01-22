@@ -114,7 +114,7 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 200)
 	.attr("width", 200)
-	.attr('transform', 'translate(100,20)') 
+	.attr('transform', 'translate(115,2)') 
 	;
 	//Create colour squares
 	legend.selectAll('rect')
