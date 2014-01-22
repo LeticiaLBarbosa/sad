@@ -32,9 +32,9 @@ $res = mysql_query ( $sql, $id );
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php">Meus dados</a></li>
 			
-			<li><a href="../usuario/logout.php">Sair</a></li>
+			
+			
 
 		</ul>
 
@@ -43,7 +43,13 @@ $res = mysql_query ( $sql, $id );
 	<!-- Menu Disciplinas -->
 
 	<div id="cssmenu">
+		
+		
+		
+		
 		<ul>
+			
+			<li><a href="sessao.php">Meus dados</a></li>
 			
 			<li><a>Disciplinas:</a></li>
 
@@ -56,6 +62,9 @@ $res = mysql_query ( $sql, $id );
 					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
 			?>
+			
+			
+			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
 
