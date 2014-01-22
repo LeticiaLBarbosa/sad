@@ -2,7 +2,7 @@
 
 // Tamanho do radar
 var w = 200, 
-	h = 100;
+	h = 200;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
@@ -78,8 +78,8 @@ var d = [ [//Melhor resultado
 
 //Options for the Radar chart, other than default
 var mycfg = {
-  w: 300,
-  h: 300,
+  w: w,
+  h: h,
   maxValue: 1,
   levels: 5,
   ExtraWidthX: 200 // Espaço extra ao lado
