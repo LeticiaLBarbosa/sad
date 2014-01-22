@@ -78,8 +78,8 @@ var d = [ [//Melhor resultado
 
 //Options for the Radar chart, other than default
 var mycfg = {
-  w: 400,
-  h: 400,
+  w: 300,
+  h: 300,
   maxValue: 1,
   levels: 5,
   ExtraWidthX: 200 // Espaço extra ao lado
