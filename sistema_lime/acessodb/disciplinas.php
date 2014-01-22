@@ -6,14 +6,14 @@
 
 <?php
 
-include "config.php";
+	include "config.php";
 
-$id = mysql_connect ( $host, $login_db, $senha_db );
-$con = mysql_select_db ( $database, $id );
-$login = $_COOKIE["login"];
+	$id = mysql_connect ( $host, $login_db, $senha_db );
+	$con = mysql_select_db ( $database, $id );
+	$login = $_COOKIE["login"];
 
-$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
-$res = mysql_query ( $sql, $id );
+	$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
+	$res = mysql_query ( $sql, $id );
 
 ?>
 
@@ -24,15 +24,14 @@ $res = mysql_query ( $sql, $id );
 	<div id="cssmenu">
 		
 		<ul>
-			<li><a>Disciplinas:</a></li>
-
+			
 			<?php				
 				
 				while ( $row = mysql_fetch_array ( $res ) ) {
 					$disciplina = utf8_encode ( $row ["surveyls_title"] );
 					$disciplina_id = $row ["disciplina_id"];
 					
-					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+					echo "<li><a href=imprimeDisciplina.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
 			?>
 
