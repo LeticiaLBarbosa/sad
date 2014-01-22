@@ -1,7 +1,8 @@
-
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+
 
 <?php
 
@@ -11,10 +12,7 @@ include "config.php";
 
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
-$login = $_GET ['login'];
-$_SESSION['loginSession'] = $login;
-$_SESSION['senhaSession'] = $senha;
-
+$login = $_COOKIE["login"];
 
 $sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
 $res = mysql_query ( $sql, $id );
@@ -28,16 +26,13 @@ $res = mysql_query ( $sql, $id );
 			bgcolor='black' src='../imagens/ba.jpg'>
 	</div>
 
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-	<script src="RadarChart.js"></script>
-
 	</p>
 
 	<!-- Menu inicial -->
 
 	<div id="cssmenu">
 		<ul>
-			<li><a href="sessao.php?login=<?php echo $login ?>">Meus dados</a></li>
+			<li><a href="sessao.php">Meus dados</a></li>
 			<li><a>Disciplinas</a>
 
 				<ul>
@@ -47,17 +42,42 @@ $res = mysql_query ( $sql, $id );
 					$disciplina = utf8_encode ( $row ["surveyls_title"] );
 					$disciplina_id = $row ["disciplina_id"];
 					
-					echo "<li><a href=/sistema_lime_2/sistema_lime/acessodb/imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
 				?>
 
 		    </ul></li>
 
-			<li><a href="/var/www/sistema_lime_2/sistema_lime/index.html">Sair</a></li>
+			<li><a href="../usuario/logout.php">Sair</a></li>
 
 		</ul>
 
 	</div>
+	
+	<!-- Menu Disciplinas -->
+
+	<div id="cssmenu">
+		<ul>
+			
+			<li><a>Disciplinas</a></li>
+
+			<?php				
+				
+				while ( $row = mysql_fetch_array ( $res ) ) {
+					$disciplina = utf8_encode ( $row ["surveyls_title"] );
+					$disciplina_id = $row ["disciplina_id"];
+					
+					echo "<li><a href=imprimeGraficoDisciplinaFelipe.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+				}
+			?>
+
+		    
+			<li><a href="../usuario/logout.php">Sair</a></li>
+
+		</ul>
+
+	</div>
+	
 
 	<h2 align="center">Login efetuado com sucesso!</h2>
 	<h2 align="center"> Bem vindo(a) <? echo $login ?></h2>
