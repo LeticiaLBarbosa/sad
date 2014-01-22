@@ -9,10 +9,10 @@ menu {
   width: auto;
 }
 #chart {
-		  position: absolute;
-		  top: 250px;
-		  left: 290px;
-		}	
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}	
 
 #cssmenu ul {
   border-bottom: solid 1px;
