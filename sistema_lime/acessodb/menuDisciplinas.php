@@ -30,7 +30,7 @@ $res = mysql_query ( $sql, $id );
 	<div id="cssmenu">
 		<ul>
 			<li><a href="sessao.php">Inicio</a></li>
-			<li><a href="disciplinas.php">Disciplinas</a></li>
+			<li><a href="menuDisciplinas.php">Disciplinas</a></li>
 			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 
@@ -39,8 +39,8 @@ $res = mysql_query ( $sql, $id );
 	<div>
 			<iframe
 				name="disciplinas"
-				width="1200"
-				height="1200"
+				width="1400"
+				height="1400"
 				src='disciplinas.php'
 				frameborder="yes"
 				scrolling="yes">
