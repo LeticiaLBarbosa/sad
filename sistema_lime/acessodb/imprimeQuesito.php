@@ -89,7 +89,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 		        $tituloQ = utf8_encode ( $row1 [0] );
 		        if ($i == $quesito) {
 		        echo "<br>";
-		        echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
+		        echo "<br>", ($quesito + 1), " - ", $tituloQ, "</b>";
 		        echo "<br>";
 		        }
 		        $valores [$tituloQ] = array ();
