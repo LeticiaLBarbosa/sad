@@ -50,7 +50,6 @@
         name="Radar"
         width="630"
         height="600"
-	style="background-color:#EED2EE"
         src="radar.html"
         <!-- frameborder="yes" -->
         >
