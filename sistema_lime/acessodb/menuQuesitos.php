@@ -29,7 +29,7 @@ for ($i = 0; $i < 15; $i++) {
 
 echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a>" ;
 
-echo "   ";
+echo "&nbsp";
 }
 
 ?>
