@@ -48,9 +48,9 @@
                 
     <iframe
         name="Radar"
-        width="650"
+        width="630"
         height="600"
-		style="background-color:#EED2EE"
+	style="background-color:#EED2EE"
         src="radar.html"
         <!-- frameborder="yes" -->
         >
