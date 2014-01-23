@@ -18,6 +18,7 @@ for ($i = 0; $i < 15; $i++) {
 echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 
 ?>
+<br><br>
 </ul>
 
         </div>
