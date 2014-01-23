@@ -91,7 +91,8 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                            echo "<br>";
                            echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
                            
-                           <iframe
+                           echo
+                           '<iframe
                                 name="Ranking"
                                 width="600"
                                 style="background-color:#FAEBD7"
@@ -99,7 +100,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 src="../ranking/index.html"
                                 
                                 
-                           >
+                           >';
                            
                         }
                         
