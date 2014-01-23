@@ -27,9 +27,8 @@ for ($i = 0; $i < 15; $i++) {
    
    $quesito = "Q".($i + 1);
 
-echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp; &nbsp;" ;
+echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
 
-echo "&nbsp;";
 }
 
 ?>
