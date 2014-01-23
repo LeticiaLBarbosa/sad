@@ -95,7 +95,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                   name="Ranking"
                                   width="600"
                                   style="background-color:#FAEBD7"
-                                  height="200"
+                                  height="80"
                                   src="../ranking/index.html"
                                 >';
                            
