@@ -4,8 +4,9 @@
 	
 		$quesito = $_GET['quesito'];
 		echo $quesito;
-		echo $disciplina_id;
+	
 		$disciplina_id = ($_COOKIE['disciplina_id']);
+		echo $disciplina_id;
 
 		include "config.php";
 		include "geraMediaPorQuesito.php";
@@ -15,9 +16,8 @@
 		$id = mysql_connect ( $host, $login_db, $senha_db );
 		$con = mysql_select_db ( $database, $id );
 		
-		// Variavel com o id da disciplina em questao
-		$disciplina_id = $_GET ['disciplina_id'];
-		
+
+
 		setcookie('disciplina_id',$disciplina_id);
 		
 		$indiceResposta = 5;
