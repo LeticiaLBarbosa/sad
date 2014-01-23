@@ -1,7 +1,9 @@
 <?php
 
-	function imprimeQuesito($quesito){
+//	function imprimeQuesito($quesito){
 	
+		$quesito = $_GET['quesito'];
+		echo $quesito;
 		$disciplina_id = $_GET ['disciplina_id'];
 		setcookie('disciplina_id',$disciplina_id);
 	
@@ -220,7 +222,7 @@
 			}
 			
 		}
-}
+//}
 
 ?>
 
