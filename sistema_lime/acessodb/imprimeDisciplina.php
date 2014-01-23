@@ -59,7 +59,6 @@
         <iframe
         name="Quesito"
         width="650"
-        style="background-color:#FAEBD7"
         height="600"
         src="menuQuesitos.php"
         
