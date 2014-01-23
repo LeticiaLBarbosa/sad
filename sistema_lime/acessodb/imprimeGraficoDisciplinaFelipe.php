@@ -32,9 +32,6 @@ setcookie('disciplina_id',$disciplina_id);
         name="iframe2"
         width="600"
         height="600"
-	<!--
-	style="background-color:#EED2EE" -->
-        
         src="radar.html"
         frameborder="yes"
         >
