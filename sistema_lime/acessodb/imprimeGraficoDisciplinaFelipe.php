@@ -41,7 +41,7 @@ setcookie('disciplina_id',$disciplina_id);
 
         <iframe
         name="iframe3"
-        width="600"
+        width="650"
         style="background-color:#FAEBD7"
         height="600"
         src="menuQuesitos.php"
