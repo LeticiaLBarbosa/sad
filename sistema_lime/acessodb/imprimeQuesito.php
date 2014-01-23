@@ -1,13 +1,12 @@
 <html>
 <head>
-<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
-   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 </head>
 
 <body>
 
-   <div id="cssmenu">
-                <ul>
+
 <?php
 
 
@@ -15,12 +14,11 @@ for ($i = 0; $i < 15; $i++) {
    
    $quesito = "Q".($i + 1);
 
-echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
+echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
+
+}
 
 ?>
-</ul>
-
-        </div>
 
 <?php
 
@@ -88,12 +86,13 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                         
                         $tituloQ = utf8_encode ( $row1 [0] );
                         if ($i == $quesito) {
-                        echo "<br>";
-                                                echo "<br>";
-                                                                        echo "<br>";
-                        echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
-                        echo "<br>";
+                           echo "<br>";
+                           echo "<br>";
+                           echo "<br>";
+                           echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
+                           
                         }
+                        
                         $valores [$tituloQ] = array ();
                         // echo $valores[$tituloQ];
                         
@@ -133,7 +132,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                         $indiceTituloRespostas = 0;
                         
                         if ($i == $quesito) {
-                                echo "<br>";
+                        //        echo "<br>";
                  //               echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
                                 echo "<p>";
                                 echo "<br>";
@@ -164,8 +163,8 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                         
                         if ($i == $quesito) {
                         
-                                echo "<br>";
-                                echo "<br>";
+                                //echo "<br>";
+                                //echo "<br>";
                                 echo "<br>";
                                 
                                 echo "<b>".utf8_encode ("Comentários:")." </b><br>";        
@@ -232,7 +231,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                         
                         if ($i == 14) {
                                 echo "<br>";
-                                echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
+                               // echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
                                 
                                 echo "<br>";
                                 echo "<br>";
