@@ -228,6 +228,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 			
 			
 			if ($i == 14) {
+				echo <br>;
 				echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
 				
 				echo "<br>";
