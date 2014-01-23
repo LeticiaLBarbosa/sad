@@ -13,7 +13,7 @@
 
 for ($i = 0; $i < 15; $i++) {
    
-   $quesito = "Q".$i;
+   $quesito = "Q".($i + 1);
 
 echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 
@@ -134,7 +134,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                         
                         if ($i == $quesito) {
                                 echo "<br>";
-                                echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
+                 //               echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
                                 echo "<p>";
                                 echo "<br>";
                                 echo "<br>";        
