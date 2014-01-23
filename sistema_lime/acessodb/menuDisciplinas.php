@@ -40,7 +40,7 @@ $res = mysql_query ( $sql, $id );
 			<iframe
 				name="disciplinas"
 				width="1320"
-				height="630"
+				height="640"
 				src='disciplinas.php'
 				frameborder="yes"
 				scrolling="yes">
