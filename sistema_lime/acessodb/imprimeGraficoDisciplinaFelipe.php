@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <?php
-include "imprimeQuesito.php";
+
 $disciplina_id = $_GET ['disciplina_id'];
 setcookie('disciplina_id',$disciplina_id);
 
