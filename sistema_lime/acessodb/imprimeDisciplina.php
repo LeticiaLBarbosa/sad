@@ -52,7 +52,7 @@
         height="600"
 		style="background-color:#EED2EE"
         src="radar.html"
-        frameborder="yes"
+        <!-- frameborder="yes" -->
         >
         </iframe>        
 
@@ -63,7 +63,8 @@
         style="background-color:#FAEBD7"
         height="600"
         src="menuQuesitos.php"
-        frameborder="yes"
+        
+        <!--frameborder="yes" -->
         >
           </iframe> 
 
