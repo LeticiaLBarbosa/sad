@@ -48,7 +48,7 @@
                 
     <iframe
         name="Radar"
-        width="659"
+        width="650"
         height="600"
 		style="background-color:#EED2EE"
         src="radar.html"
@@ -59,7 +59,7 @@
 
         <iframe
         name="Quesito"
-        width="659"
+        width="650"
         style="background-color:#FAEBD7"
         height="600"
         src="menuQuesitos.php"
