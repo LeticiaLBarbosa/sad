@@ -13,7 +13,7 @@
 
 for ($i = 0; $i < 15; $i++) {
    
-   $quesito = "Q".$i;
+   $quesito = "Q".($i + 1);
 
 echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 
@@ -134,7 +134,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 		        
 		        if ($i == $quesito) {
 		        	echo "<br>";
-			        echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
+			     //   echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
 			        echo "<p>";
 			        echo "<br>";
 			        echo "<br>";	
@@ -142,7 +142,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 				
 			        if($i < 13){
 			                $arrayMediasQuesito = geraMediasQuesitos();
-			                echo utf8_encode ("<b>Média do DSC: </b>"). $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+			                echo "<b>". utf8_encode ("Média do DSC)".": </b>". $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
 			        }
 			
 			        echo "<br>";
@@ -168,7 +168,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 			        echo "<br>";
 			        echo "<br>";
 			        
-			        echo "<b>".utf8_encode ("Comentários:")." </b><br>";        
+			        echo "<b>".utf8_encode ("Comentários").": </b><br>";        
 			        echo '<iframe
 			        name="iframe1"
 			        width="600"
