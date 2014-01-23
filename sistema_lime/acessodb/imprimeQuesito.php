@@ -5,6 +5,7 @@
 		$quesito = $_GET['quesito'];
 		echo $quesito;
 		$disciplina_id = $_GET ['disciplina_id'];
+		echo $disciplina_id;
 		setcookie('disciplina_id',$disciplina_id);
 	
 		include "config.php";
