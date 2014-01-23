@@ -178,7 +178,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 </iframe>';
                                 
                                 echo "<br>";
-                                echo "<a href=geraComments.php?questao=".$i. "&disciplina_id=". $disciplina_id."> Ver Mais</a>";
+                                //echo "<a href=geraComments.php?questao=".$i. "&disciplina_id=". $disciplina_id."> Ver Mais</a>";
                                 echo "<br>";
                                 echo "<br>";
                                 echo "<br>";
