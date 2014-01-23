@@ -12,8 +12,8 @@ var RadarChart = {
   draw: function(id, d, options){
   var cfg = {
 	 radius: 5,
-	 w: 200,
-	 h: 200,
+	 w: 600,
+	 h: 600,
 	 factor: 1,
 	 factorLegend: .85,
 	 levels: 3,
@@ -23,8 +23,8 @@ var RadarChart = {
 	 ToRight: 5,
 	 TranslateX: 80,
 	 TranslateY: 30,
-	 ExtraWidthX: 100,
-	 ExtraWidthY: 100,
+	 ExtraWidthX: 50,
+	 ExtraWidthY: 50,
 	 color: d3.scale.category10()
 	};
 	
