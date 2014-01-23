@@ -91,6 +91,16 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                            echo "<br>";
                            echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
                            
+                           <iframe
+                                name="Ranking"
+                                width="600"
+                                style="background-color:#FAEBD7"
+                                height="200"
+                                src="../ranking/index.html"
+                                
+                                
+                           >
+                           
                         }
                         
                         $valores [$tituloQ] = array ();
