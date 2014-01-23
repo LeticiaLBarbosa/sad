@@ -36,11 +36,11 @@ $res = mysql_query ( $sql, $id );
 
 	</div>
 	
-	<div>
+	<div align='center'>
 			<iframe
 				name="disciplinas"
 				width="1320"
-				height="800"
+				height="700"
 				src='disciplinas.php'
 				frameborder="yes"
 				scrolling="yes">
