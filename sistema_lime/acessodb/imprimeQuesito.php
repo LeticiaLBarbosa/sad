@@ -4,10 +4,9 @@
 	
 		$quesito = $_GET['quesito'];
 		echo $quesito;
-		$disciplina_id = ($_COOKIE['disciplina_id']);
 		echo $disciplina_id;
-		setcookie('disciplina_id',$disciplina_id);
-	
+		$disciplina_id = ($_COOKIE['disciplina_id']);
+
 		include "config.php";
 		include "geraMediaPorQuesito.php";
 		include "csvFunction.php";
