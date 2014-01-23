@@ -15,10 +15,10 @@ for ($i = 0; $i < 15; $i++) {
    
    $quesito = "Q".$i;
 
-echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
+echo "<br><li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 
 ?>
-<br><br>
+
 </ul>
 
         </div>
