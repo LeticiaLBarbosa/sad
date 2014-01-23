@@ -131,7 +131,7 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
 		        $indiceTituloRespostas = 0;
 		        
 		        if ($i == $quesito) {
-		        	echo "<br>";
+
 			        echo '<img src="geraGraficoFelipe.php?value1=' . $valorA1 . '&value2=' . $valorA2 . '&value3=' . $valorA3 . '&value4=' . $valorA4 . '&value5=' . $valorA5 . '" align="left" >';
 			        echo "<p>";
 			        echo "<br>";
