@@ -1,10 +1,11 @@
 <html>
 <head>
-
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+   <script type="text/javascript" src="d3.v3.js"></script>
+   <script type="text/javascript" src="ranking.js"></script>
 </head>
 
-<body>
+<body onload="loadData();">
 
 
 <?php
@@ -91,13 +92,9 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                            echo "<br>";
                            echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
                            
-                           echo '<iframe
-                                  name="Ranking"
-                                  width="600"
-                                  style="background-color:#FAEBD7"
-                                  height="80"
-                                  src="../ranking/index.html"
-                                >';
+                           echo '<a href="javascript:plot_bar_disciplina_ranking('."'EDA'".', '."'Q2'".');">Ranking...</a>
+                                    <div id="infos" class="plot-info2" style="text-align:left; font-size : 14px;">
+                                      </div>';
                            
                         }
                         
