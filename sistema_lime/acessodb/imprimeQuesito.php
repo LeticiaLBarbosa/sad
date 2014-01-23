@@ -143,7 +143,9 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
-                                        echo "<b>". utf8_encode ("Média do DSC)".": </b>". $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+                                        $m = utf8_encode ("Média do DSC)";
+                                        $s = utf8_encode ("Sua Média");
+                                        echo "<b>". $m .": </b>". $arrayMediasQuesito[$i] . " || " . "<b>". $s .":</b> " . media($ValorRespostas);
                                 }
                         
                                 echo "<br>";
@@ -169,7 +171,8 @@ echo "<li><a href=imprimeQuesito.php?quesito=$i>$quesito</a></li>";}
                                 echo "<br>";
                                 echo "<br>";
                                 
-                                echo "<b>".utf8_encode ("Comentários").": </b><br>";        
+                                $c = utf8_encode ("Comentários");
+                                echo "<b>".$c.": </b><br>";        
                                 echo '<iframe
                                 name="iframe1"
                                 width="600"
