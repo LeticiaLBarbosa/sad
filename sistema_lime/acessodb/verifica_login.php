@@ -4,6 +4,7 @@ include "config.php";
 
 function verificaLogin(){
 	
+	$login = "";
 	$login = $_COOKIE["login"];
 	
 	$db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
