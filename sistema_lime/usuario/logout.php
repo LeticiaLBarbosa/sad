@@ -1,6 +1,9 @@
 <?php
 
 	session_start();
+	
+	setcookie("login","",time()-3600);
+	setcookie("senha","",time()-3600);
 
 	unset($_SESSION['loginSession']);
 	unset($_SESSION['senhaSession']);
