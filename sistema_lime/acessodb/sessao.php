@@ -4,7 +4,7 @@
 
 include "verifica_login.php";
 
-verificaLogin();
+//verificaLogin();
 
 ?>
 
@@ -14,8 +14,6 @@ verificaLogin();
 
 <?php
 	
-//include "config.php";
-
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
 $login = $_SESSION['login'];
