@@ -5,22 +5,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <?php
-include "imprimeQuesito.php";
-$disciplina_id = $_GET ['disciplina_id'];
-setcookie('disciplina_id',$disciplina_id);
+	//include "imprimeQuesito.php";
+	$disciplina_id = $_GET ['disciplina_id'];
+	setcookie('disciplina_id',$disciplina_id);
 
 ?>
 
 <?php
 
-include "config.php";
+	include "config.php";
 
-$id = mysql_connect ( $host, $login_db, $senha_db );
-$con = mysql_select_db ( $database, $id );
-$login = $_COOKIE["login"];
+	$id = mysql_connect ( $host, $login_db, $senha_db );
+	$con = mysql_select_db ( $database, $id );
+	$login = $_COOKIE["login"];
 
-$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
-$res = mysql_query ( $sql, $id );
+	$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
+	$res = mysql_query ( $sql, $id );
 
 ?>
 
@@ -47,24 +47,24 @@ $res = mysql_query ( $sql, $id );
 	</div>
                 
     <iframe
-        name="iframe2"
-        width="600"
+        name="Radar"
+        width="630"
         height="600"
         src="radar.html"
-        frameborder="yes"
+        <!-- frameborder="yes" -->
         >
-    </iframe>        
+        </iframe>        
 
 
-    <iframe
-        name="iframe3"
-        width="600"
-        style="background-color:#FAEBD7"
+        <iframe
+        name="Quesito"
+        width="650"
         height="600"
         src="menuQuesitos.php"
-        frameborder="yes"
+        
+        <!-- frameborder="yes" -->
         >
-     </iframe> 
+          </iframe> 
 
 
 </html>

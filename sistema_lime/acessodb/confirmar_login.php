@@ -1,5 +1,5 @@
 <?php
-	include "config.php"; //inclui o arquivo de configurações
+	include "config.php"; //inclui o arquivo de configuraï¿½ï¿½es
 
 	$db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
 	$basedados	=	mysql_select_db($database); //conecta a base de dados
@@ -18,13 +18,14 @@
 	  $_SESSION['senhaSession'] = $senha;
 	  	
 	  setcookie('login', $login); //grava o cookie com o login
+	  setcookie('senha', $senha);
 	  //setcookie ("senha", $senha); //grava o cookie com a senha
-	  echo "Usuário logado." , $_SESSION['loginSession']; //se a senha digitada está correta, mostra a mensagem
+	  echo "Usuï¿½rio logado." , $_SESSION['loginSession']; //se a senha digitada estï¿½ correta, mostra a mensagem
 	  
 	  header("Location: sessao.php");
 	  exit(2);   
 	  
 	  } else {
-	  echo "Login ou senha inválidos. <a href=javascript:history.go(-1)>Clique aqui para voltar.</a>"; //se a senha está incorreta mostra essa mensagem
+	 	 echo "Login ou senha invï¿½lidos. <a href=javascript:history.go(-1)>Clique aqui para voltar.</a>"; //se a senha estï¿½ incorreta mostra essa mensagem
 	  }
 ?>
