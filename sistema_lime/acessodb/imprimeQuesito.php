@@ -26,7 +26,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
 //        function imprimeQuesito($quesito){
         
                 $quesito = $_GET['quesito'];
-                $disciplina_id = ($_COOKIE['disciplina_id']);
+                $disciplina_id = ($_SESSION['disciplina_id']);
 
                 include "config.php";
                 include "geraMediaPorQuesito.php";
