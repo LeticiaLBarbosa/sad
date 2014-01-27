@@ -1,9 +1,9 @@
 <?php
 
+include "config.php";
 
 function verificaLogin(){
-	include "config.php";
-
+	
 	$login = $_COOKIE["login"];
 
 	$confirmacao = mysql_query("SELECT * FROM $tabela WHERE login = '$login'", $db) or die(mysql_error()); //verifica se o login e a senha conferem

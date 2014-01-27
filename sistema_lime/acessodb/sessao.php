@@ -1,18 +1,21 @@
 <html>
 
+<?php
+
+include "verifica_login.php";
+
+verificaLogin();
+
+
+?>
+
 <head>
 <link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
-   
-   
-   
 <?php
 
 include "config.php";
-include "verifica_login.php";
-
-verificaLogin();
 
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
