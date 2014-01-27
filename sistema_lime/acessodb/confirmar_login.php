@@ -14,13 +14,13 @@
 
 	if ( $contagem == 1 ) {
 		
-	  $_SESSION['loginSession'] = $login;
-	  $_SESSION['senhaSession'] = $senha;
+	  //$_SESSION['loginSession'] = $login;
+	  //$_SESSION['senhaSession'] = $senha;
 	  	
 	  setcookie('login', $login); //grava o cookie com o login
 	  setcookie('senha', $senha);
 	  //setcookie ("senha", $senha); //grava o cookie com a senha
-	  echo "Usu�rio logado." , $_SESSION['loginSession']; //se a senha digitada est� correta, mostra a mensagem
+	  echo "Usu�rio logado." , $login; //se a senha digitada est� correta, mostra a mensagem
 	  
 	  header("Location: sessao.php");
 	  exit(2);   
