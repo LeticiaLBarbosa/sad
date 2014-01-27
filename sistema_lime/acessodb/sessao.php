@@ -14,7 +14,7 @@ verificaLogin();
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
 <?php
-
+	
 include "config.php";
 
 $id = mysql_connect ( $host, $login_db, $senha_db );
