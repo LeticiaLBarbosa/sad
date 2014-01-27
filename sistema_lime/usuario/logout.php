@@ -1,6 +1,8 @@
 <?php
 
 ///	session_start();
+	setcookie("login","");
+	setcookie("senha","");
 	
 	
 	//unset($_SESSION['loginSession']);
@@ -10,10 +12,8 @@
 	unset($_COOKIE['disciplina_id']);
 	unset($_COOKIE['senha']);
 	
-	setcookie("login","",time()-3600);
-	setcookie("senha","",time()-3600);
 	
-	//session_destroy();
+	session_destroy();
 
 	header("Location: ../index.html");
 	
