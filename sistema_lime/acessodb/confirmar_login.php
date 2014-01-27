@@ -18,6 +18,7 @@
 	  $_SESSION['senhaSession'] = $senha;
 	  	
 	  setcookie('login', $login); //grava o cookie com o login
+	  setcookie('senha', $senha);
 	  //setcookie ("senha", $senha); //grava o cookie com a senha
 	  echo "Usu�rio logado." , $_SESSION['loginSession']; //se a senha digitada est� correta, mostra a mensagem
 	  
