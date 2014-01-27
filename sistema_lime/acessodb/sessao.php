@@ -1,10 +1,3 @@
-<?php
-
-include "verifica_login.php";
-
-?>
-
-
 <html>
 
 <head>
@@ -16,8 +9,10 @@ include "verifica_login.php";
    
 <?php
 
+include "config.php";
+include "verifica_login.php";
 
-//include "config.php";
+verificaLogin();
 
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );
