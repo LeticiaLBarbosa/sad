@@ -143,11 +143,12 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 echo "<p>";
                                 echo "<br>";
                                 echo "<br>";        
-                                 
+                              
+                                 $mediaToUTF = utf8_encode("Média");
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
-                                        echo utf8_encode ("Média do DSC: "). $arrayMediasQuesito[$i] . " || " . utf8_encode ("Sua Média: ") . media($ValorRespostas);
+                                        echo  $mediaToUTF, " do DSC: ", "<b>", $arrayMediasQuesito[$i] , "</b>", " || " , "Sua ", $mediaToUTF , ": " , "<b>", media($ValorRespostas) , "</b>",;
                                 }
                         
                                 echo "<br>";
