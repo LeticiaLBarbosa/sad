@@ -174,7 +174,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 //echo "<br>";
                                 echo "<br>";
                                 
-                                $c = utf8_encode ( "Comentário" );
+                                $c =  "Comentário" ;
                                 
                                 echo "<b>", $c ,": </b><br>";        
                                 echo '<iframe
