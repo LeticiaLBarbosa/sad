@@ -241,7 +241,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         for($i = 0; $i < 5; $i ++) {
                                 
                                 echo "<br>";
-                                echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i];
+                                echo "<b>A" . ($i + 1) . ") </b>" . $enunciado [$i], " = ", $valores [$i], " voto(s)";
                         }
                         
                 }
