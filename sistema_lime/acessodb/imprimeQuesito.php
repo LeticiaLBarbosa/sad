@@ -100,7 +100,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                             //        <div id="infos" class="plot-info2" style="text-align:left; font-size : 14px;">
                                     //  </div>';
                                     
-                                    echo '<script type="text/javascript" src="ranking.js"></script>';
+                                    echo '<script type="text/javascript" src="../ranking/ranking.js"></script>';
                            
                         }
                         
