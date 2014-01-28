@@ -144,7 +144,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 echo "<br>";
                                 echo "<br>";        
                               
-                                 $mediaToUTF = utf8_encode("Média");
+                                 $mediaToUTF = utf8_encode ( "Média" );
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
