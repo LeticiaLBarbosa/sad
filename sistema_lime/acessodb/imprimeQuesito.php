@@ -159,7 +159,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 $valores [$tituloQ] [$TituloRespostas [0]] = $ValorRespostas [$indiceTituloRespostas];
                                         if ($i == $quesito) {
                                                        echo $valores [$tituloQ] [$indiceArray];
-                                        echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas];
+                                        echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas], " votos";
                                         echo "<br>";
                                         }                
                                 array_shift ( $TituloRespostas );
