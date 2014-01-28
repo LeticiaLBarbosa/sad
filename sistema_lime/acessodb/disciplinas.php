@@ -29,12 +29,19 @@
 			
 			<?php				
 				
+				
 				while ( $row = mysql_fetch_array ( $res ) ) {
+					
 					$disciplina = utf8_encode ( $row ["surveyls_title"] );
 					$disciplina_id = $row ["disciplina_id"];
+				
+					header("Location: imprimeDisciplina.php?disciplina_id=$disciplina_id");
 					
-					echo "<li><a href=imprimeDisciplina.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
+				//	echo "<li><a href=imprimeDisciplina.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
+				
+				
+				
 			?>
 
 		</ul>
