@@ -25,9 +25,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
 
 //        function imprimeQuesito($quesito){
         
-                $quesito = $_GET['quesito'];
-                $disciplina_id = ($_SESSION['disciplina_id']);
-
+                
                 include "config.php";
                 include "geraMediaPorQuesito.php";
                 include "csvFunction.php";
@@ -36,9 +34,12 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                 $id = mysql_connect ( $host, $login_db, $senha_db );
                 $con = mysql_select_db ( $database, $id );
                 
+                
+                $quesito = $_GET['quesito'];
+                $disciplina_id = $_COOKIE['disciplina_id'];
 
 
-                setcookie('disciplina_id',$disciplina_id);
+               // setcookie('disciplina_id',$disciplina_id);
                 
                 $indiceResposta = 5;
                 $lacoResposta = 0;
@@ -142,11 +143,12 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 echo "<p>";
                                 echo "<br>";
                                 echo "<br>";        
-                                 
+                              
+                                 $mediaToUTF =  "Média" ;
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
-                                        echo utf8_encode ("<b>Média do DSC: </b>"). $arrayMediasQuesito[$i] . " || " . utf8_encode ("<b>Sua Média: </b>") . media($ValorRespostas);
+                                        echo  $mediaToUTF, " do DSC: ", "<b>", $arrayMediasQuesito[$i] , "</b>", " || " , "Sua ", $mediaToUTF , ": " , "<b>", media($ValorRespostas) , "</b>";
                                 }
                         
                                 echo "<br>";
@@ -172,7 +174,9 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 //echo "<br>";
                                 echo "<br>";
                                 
-                                echo "<b>".utf8_encode ("Comentários:")." </b><br>";        
+                                $c =  "Comentário" ;
+                                
+                                echo "<b>", $c ,": </b><br>";        
                                 echo '<iframe
                                 name="iframe1"
                                 width="600"
@@ -233,16 +237,6 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 $valor = 0;
                         }
                         
-                        
-                        if ($i == 14) {
-                                echo "<br>";
-                               // echo '<img src="geraGraficoFelipe.php?value1=' . $valores [0] . '&value2=' . $valores [1] . '&value3=' . $valores [2] . '&value4=' . $valores [3] . '&value5=' . $valores [4] . '" align="left" >';
-                                
-                                echo "<br>";
-                                echo "<br>";
-                                echo "<br>";
-                                echo "<br>";
-                        }
                         
                         for($i = 0; $i < 5; $i ++) {
                                 

@@ -4,7 +4,7 @@
 
 include "verifica_login.php";
 
-//verificaLogin();
+verificaLogin();
 
 ?>
 
@@ -13,6 +13,8 @@ include "verifica_login.php";
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
 <?php
+
+session_start();
 	
 $id = mysql_connect ( $host, $login_db, $senha_db );
 $con = mysql_select_db ( $database, $id );

@@ -1,6 +1,8 @@
 <?php
 
 function verificaLogin(){
+	
+	session_start();
 		
 	include "config.php";	
 	
