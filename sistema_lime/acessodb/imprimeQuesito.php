@@ -209,7 +209,9 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         $row1 = mysql_fetch_array ( $res1 );
                         
                         echo "<br>";
-                        echo "15 - ", utf8_encode ( $row1 [0] );
+                        echo "<br>";
+                        echo "<br>";
+                        echo "<b> 15 - ", utf8_encode ( $row1 [0] ) "</b>";
                         echo "<br>";
                         
                         $valor = 0;
