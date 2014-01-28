@@ -1,16 +1,7 @@
 var duration = 1000;
 var dados_ranking = [];
 
-// Ainda falta gerar o CSV correto;	
-//var disciplina = getCookie('disciplina_id');
-//var quesito = getCookie('quesito');
 
-var disciplina = 'EDA';
-var quesito = 'Q2';
-
-loadData();
-
-plot_bar_disciplina_ranking(disciplina, quesito);
 
 function loadData(){
 
