@@ -4,8 +4,8 @@ function verificaLogin(){
 		
 	include "config.php";	
 	
-	$login = $_COOKIE["login"];
-	$senha = $_COOKIE["senha"];
+	$login = $_SESSION['login'];
+	$senha = $_SESSION['senha'];
 	
 	$db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
 	$basedados	=	mysql_select_db($database); //conecta a base de dados
