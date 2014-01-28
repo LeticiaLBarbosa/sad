@@ -8,7 +8,7 @@ var dados_ranking = [];
 var disciplina = 'EDA';
 var quesito = 'Q2';
 
-//loadData();
+loadData();
 
 plot_bar_disciplina_ranking('EDA', 'Q2');
 
