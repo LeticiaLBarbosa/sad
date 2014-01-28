@@ -96,9 +96,11 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                            echo "<br>";
                            echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
                            
-                           echo '<a href="javascript:plot_bar_disciplina_ranking('."'EDA'".', '."'Q2'".');">Ranking...</a>
-                                    <div id="infos" class="plot-info2" style="text-align:left; font-size : 14px;">
-                                      </div>';
+                          // echo '<a href="javascript:plot_bar_disciplina_ranking('."'EDA'".', '."'Q2'".');">Ranking...</a>
+                            //        <div id="infos" class="plot-info2" style="text-align:left; font-size : 14px;">
+                                    //  </div>';
+                                    
+                                    echo '<script type="text/javascript" src="ranking.js"></script>';
                            
                         }
                         
