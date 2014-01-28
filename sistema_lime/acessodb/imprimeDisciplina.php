@@ -11,7 +11,7 @@
 	
 	$disciplina_id = $_GET ['disciplina_id'];
 	
-	$_SESSION['disciplina_id'] = $disciplina_id;
+	$_COOKIE['disciplina_id'] = $disciplina_id;
 
 
 	include "config.php";
