@@ -5,7 +5,7 @@ var w = 300,
 	h = 300;
 
 var colorscale = d3.scale.category10();
-var disciplina = <%= session.getAttribute("disciplina_id")%>;
+var disciplina = "<?php echo $_SESSION['disciplina_id']; ?>";
 
 //Data from csv file
 d3.csv("data.csv", function(data) {
