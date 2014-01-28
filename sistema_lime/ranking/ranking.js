@@ -8,7 +8,7 @@ var dados_ranking = [];
 var disciplina = 'EDA';
 var quesito = 'Q2';
 
-loadData();
+
 
 plot_bar_disciplina_ranking('EDA', 'Q2');
 
@@ -22,6 +22,9 @@ function loadData(){
 //livia: a funcao getRanking foi removida pois nao era usada
 
 function plot_bar_disciplina_ranking(nome, p){
+	
+	loadData();
+	
 disciplina = nome;
 questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var h1 = 60;
