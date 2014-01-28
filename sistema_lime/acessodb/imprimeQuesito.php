@@ -148,7 +148,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
-                                        echo  $mediaToUTF, " do DSC: ", "<b>", $arrayMediasQuesito[$i] , "</b>", " || " , "Sua ", $mediaToUTF , ": " , "<b>", media($ValorRespostas) , "</b>",;
+                                        echo  $mediaToUTF, " do DSC: ", "<b>", $arrayMediasQuesito[$i] , "</b>", " || " , "Sua ", $mediaToUTF , ": " , "<b>", media($ValorRespostas) , "</b>";
                                 }
                         
                                 echo "<br>";
