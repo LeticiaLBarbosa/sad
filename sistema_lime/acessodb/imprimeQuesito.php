@@ -211,7 +211,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         echo "<br>";
                         echo "<br>";
                         echo "<br>";
-                        echo "<b> 15 - ", utf8_encode ( $row1 [0] ) "</b>";
+                        echo "<b> 15 - ", utf8_encode ( $row1 [0] ), "</b>";
                         echo "<br>";
                         
                         $valor = 0;
