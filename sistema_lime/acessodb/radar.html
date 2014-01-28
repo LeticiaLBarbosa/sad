@@ -24,9 +24,8 @@
 	$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
 	$res = mysql_query ( $sql, $id );
 	
-	echo "<br>";
 	echo $disciplina_id;
-	echo "<br>";
+
 
 ?>
   <br>
