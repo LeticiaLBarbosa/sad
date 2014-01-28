@@ -16,6 +16,8 @@ function loadData(){
     d3.csv("data_teste_2.csv",function(data){
         dados_ranking = data;
     });
+    
+    plot_bar_disciplina_ranking('EDA', 'Q2');
 }
 
 //livia: a funcao getRanking foi removida pois nao era usada
