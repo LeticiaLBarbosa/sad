@@ -1,11 +1,11 @@
-// Livia: esse é o arquivo que vai mudar para ler os dados do .csv
+// Livia: esse ï¿½ o arquivo que vai mudar para ler os dados do .csv
 
 // Tamanho do radar
 var w = 300, 
 	h = 300;
 
 var colorscale = d3.scale.category10();
-var disciplina = getCookie('disciplina_id');
+var disciplina = getSession().getAttribute('disciplina_id');
 
 //Data from csv file
 d3.csv("data.csv", function(data) {
@@ -82,7 +82,7 @@ var mycfg = {
   h: h,
   maxValue: 1,
   levels: 5,
-  ExtraWidthX: 200 // Espaço extra ao lado
+  ExtraWidthX: 200 // Espaï¿½o extra ao lado
 }
 
 //Call function to draw the Radar chart
@@ -103,7 +103,7 @@ var svg = d3.select('#body')
 var text = svg.append("text")
 	.attr("class", "title")
 	.attr('transform', 'translate(90,0)') 
-	.attr("x", w - 20) //localização do titulo da legenda
+	.attr("x", w - 20) //localizaï¿½ï¿½o do titulo da legenda
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
@@ -114,7 +114,7 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 200)
 	.attr("width", 200)
-	.attr('transform', 'translate(160,20)') // localização da legenda 
+	.attr('transform', 'translate(160,20)') // localizaï¿½ï¿½o da legenda 
 	;
 	//Create colour squares
 	legend.selectAll('rect')
