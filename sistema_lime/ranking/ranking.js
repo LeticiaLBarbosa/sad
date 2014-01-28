@@ -10,20 +10,22 @@ var quesito = 'Q2';
 
 
 
-plot_bar_disciplina_ranking('EDA', 'Q2');
 
-function loadData(){
+
+//function loadData(){
 
     d3.csv("data_teste_2.csv",function(data){
         dados_ranking = data;
     });
-}
+//}
+
+plot_bar_disciplina_ranking('EDA', 'Q2');
 
 //livia: a funcao getRanking foi removida pois nao era usada
 
 function plot_bar_disciplina_ranking(nome, p){
 	
-	loadData();
+	//loadData();
 	
 disciplina = nome;
 questao_avaliada = p; //livia: guarda o identificador da questao escolhida
