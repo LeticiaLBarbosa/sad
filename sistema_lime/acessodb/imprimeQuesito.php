@@ -36,6 +36,9 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                 
                 
                 $quesito = $_GET['quesito'];
+                
+                setcookie('quesito',$quesito);
+                
                 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
