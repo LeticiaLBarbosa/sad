@@ -1,10 +1,10 @@
 <?php
+	session_start();
+	
 	include "config.php"; //inclui o arquivo de configura��es
 
 	$db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
 	$basedados	=	mysql_select_db($database); //conecta a base de dados
-
-	session_start();
 	
 	$login = $_POST['login'];
 	$senha = $_POST['senha'];
