@@ -4,7 +4,7 @@
 
 include "verifica_login.php";
 
-//verificaLogin();
+verificaLogin();
 
 ?>
 
