@@ -5,7 +5,8 @@ var w = 300,
 	h = 300;
 
 var colorscale = d3.scale.category10();
-var disciplina = "<?php echo json_encode($_SESSION['disciplina_id'], JSON_HEX_TAG); ?>;;
+var disciplina = getCookie('disciplina_id');
+
 
 //Data from csv file
 d3.csv("data.csv", function(data) {
