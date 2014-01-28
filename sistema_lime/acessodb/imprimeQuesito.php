@@ -160,8 +160,8 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         while ( $TituloRespostas [0] != null ) {
                                 $valores [$tituloQ] [$TituloRespostas [0]] = $ValorRespostas [$indiceTituloRespostas];
                                         if ($i == $quesito) {
-                                        echo $valores [$tituloQ] [$indiceArray], " oi ";
-                                        echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas], " votos";
+                                        echo $valores [$tituloQ] [$indiceArray];
+                                        echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas [0], " = ", $ValorRespostas [$indiceTituloRespostas], " voto(s)";
                                         echo "<br>";
                                         }                
                                 array_shift ( $TituloRespostas );
