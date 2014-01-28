@@ -10,7 +10,7 @@ var quesito = 'Q2';
 
 //loadData();
 
-plot_bar_disciplina_ranking(disciplina, quesito);
+plot_bar_disciplina_ranking('EDA', 'Q2');
 
 function loadData(){
 
