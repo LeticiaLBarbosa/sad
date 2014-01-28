@@ -144,7 +144,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 echo "<br>";
                                 echo "<br>";        
                               
-                                 $mediaToUTF = utf8_encode ( "Média" );
+                                 $mediaToUTF =  "Média" ;
                                 
                                 if($i < 13){
                                         $arrayMediasQuesito = geraMediasQuesitos();
@@ -174,7 +174,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 //echo "<br>";
                                 echo "<br>";
                                 
-                                $c =  "Comentário" ;
+                                $c = utf8_encode ( "Comentário" );
                                 
                                 echo "<b>", $c ,": </b><br>";        
                                 echo '<iframe
