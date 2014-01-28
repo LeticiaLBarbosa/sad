@@ -22,7 +22,7 @@ function loadData(){
 
 function plot_bar_disciplina_ranking(nome, p){
 	
-	loadData();
+	//loadData();
 	
 	disciplina = nome;
 	questao_avaliada = p; //livia: guarda o identificador da questao escolhida
