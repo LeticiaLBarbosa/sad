@@ -8,19 +8,18 @@ var dados_ranking = [];
 var disciplina = 'EDA';
 var quesito = 'Q2';
 
-//plot_bar_disciplina_ranking('EDA', 'Q2');
 
 
-function loadData(){
-
-    d3.csv("data_teste_2.csv",function(data){
+d3.csv("data_teste_2.csv",function(data){
         dados_ranking = data;
-    });
-    
-    plot_bar_disciplina_ranking('EDA', 'Q2');
-    
-    
-}
+//livia: tentando chamar script sem o link
+	var nome = "EDA"; //livia: aqui vem a leitura do cookie
+	var p = "Q1"; //livia: aqui vem a leitura do cookie
+
+	plot_bar_disciplina_ranking(nome, p);
+
+});
+
 
 //livia: a funcao getRanking foi removida pois nao era usada
 
