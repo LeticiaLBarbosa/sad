@@ -179,7 +179,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 name="Ranking"
                                 width="100%"
                                 height="15%"
-                                src="radar.html"
+                                src="../ranking/index.html"
                                 <!-- frameborder="yes" -->
                                 >
                                 </iframe>    ';
