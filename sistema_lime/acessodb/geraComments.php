@@ -33,9 +33,9 @@ while ( $row3 = mysql_fetch_array ( $res3 ) ) {
 	}
 }
 
-echo "<p align="justify">";
+echo '<p align="justify">';
 echo $stringComentarios;
-echo "</p>"
+echo "</p>";
 
 ?>
 
