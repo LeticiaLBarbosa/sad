@@ -16,14 +16,9 @@ d3.csv("data_teste_2.csv",function(data){
 
 });
 
-
-//livia: a funcao getRanking foi removida pois nao era usada
-
 function plot_bar_disciplina_ranking(nome, p){
-	
-	var disciplina = nome;
-	var questao_avaliada = p; //livia: guarda o identificador da questao escolhida
-	
+disciplina = nome;
+questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var h1 = 60;
     var margin = {top: 30, right: 120, bottom: 40, left: 60},
             width = 950 - margin.left - margin.right,
@@ -32,8 +27,8 @@ function plot_bar_disciplina_ranking(nome, p){
     var svg = d3.select("#infos");
     
     svg = d3.select("#infos").append("svg")
-        .attr("width", 600)
-        .attr("height", 400);	
+        .attr("width", 800)
+        .attr("height", 600);	
     
     var val_per = dados_ranking.filter(function(d){ return d.questao == questao_avaliada});
 
@@ -51,7 +46,7 @@ function plot_bar_disciplina_ranking(nome, p){
             .text("Esta eh a unica disciplina avaliada na questao " + questao_avaliada); //
     }else{
         plot_ranges_ranking(svg, line_per, h1);
-        plot_bars_ranking(svg, line_per, h1);          
+        plot_bars_ranking(svg, line_per, h1);            
         plot_disciplinas_ranking(svg, val_per, "blue",line_per[0], line_per[1],h1);
 
     };
