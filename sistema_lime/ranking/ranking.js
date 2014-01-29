@@ -8,6 +8,7 @@ var dados_ranking = [];
 
 d3.csv("data_teste_2.csv",function(data){
     dados_ranking = data;
+
 	var nome = "EDA"; //livia: aqui vem a leitura do cookie
 	var p = "Q1"; //livia: aqui vem a leitura do cookie
 
@@ -24,15 +25,15 @@ function plot_bar_disciplina_ranking(nome, p){
 	var questao_avaliada = p; //livia: guarda o identificador da questao escolhida
 	
     var h1 = 60;
-    var margin = {top: 30, right: 20, bottom: 40, left: 20},
+    var margin = {top: 30, right: 120, bottom: 40, left: 60},
             width = 950 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
     d3.select("#infos").select("svg").remove();
     var svg = d3.select("#infos");
     
     svg = d3.select("#infos").append("svg")
-        .attr("width", 800)
-        .attr("height", 600);	
+        .attr("width", 600)
+        .attr("height", 400);	
     
     var val_per = dados_ranking.filter(function(d){ return d.questao == questao_avaliada});
 
