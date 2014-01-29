@@ -52,7 +52,8 @@
         width="49%"
         height="88%"
         src="radar.html"
-        <!-- frameborder="yes" -->
+        scrolling="no"
+        frameborder="0"
         >
         </iframe>        
 
