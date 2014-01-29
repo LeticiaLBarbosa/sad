@@ -179,7 +179,7 @@ for ($i = 0; $i < $range + 1; $i++) {
 			echo '<iframe
 									name="Ranking"
 									width="100%"
-									height="20%"
+									height="23%"
 									src="../ranking/index.html"
 									scrolling="no"
 									frameborder="0"
@@ -195,8 +195,8 @@ for ($i = 0; $i < $range + 1; $i++) {
         echo "<b>Comentário",  ": </b><br>";
         echo '<iframe
                                 name="iframe1"
-                                width="600"
-                                height="200"
+                                width="100%"
+                                height="30%"
                                 src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
                                 frameborder="yes"
                                 scrolling="yes">
