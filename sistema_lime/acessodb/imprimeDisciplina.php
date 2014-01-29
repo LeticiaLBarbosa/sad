@@ -49,8 +49,8 @@
                 
     <iframe
         name="Radar"
-        width="630"
-        height="600"
+        width="50%"
+        height="95%"
         src="radar.html"
         <!-- frameborder="yes" -->
         >
@@ -59,8 +59,8 @@
 
         <iframe
         name="Quesito"
-        width="650"
-        height="600"
+        width="50%"
+        height="95%"
         src="menuQuesitos.php"
         
         <!-- frameborder="yes" -->
