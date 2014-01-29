@@ -180,15 +180,15 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         
                         if ($i == $quesito) {
                            
-                              //echo '<iframe
-                               // name="Ranking"
-                                //width="100%"
-                               // height="20%"
-                                //src="../ranking/index.html"
-                                //>
-                                //</iframe>    ';
+                              echo '<iframe
+                                name="Ranking"
+                                width="100%"
+                                height="20%"
+                                src="../ranking/index.html"
+                                >
+                                </iframe> ';
                         
-                              echo  '<script type="text/javascript" src="../ranking/ranking.js"></script>';
+                           
                                 echo "<br>";
                                 //echo "<br>";
                                 echo "<br>";
