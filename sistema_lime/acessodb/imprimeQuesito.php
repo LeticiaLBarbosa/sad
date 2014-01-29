@@ -185,6 +185,7 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 width="100%"
                                 height="20%"
                                 src="../ranking/index.html"
+                                scrolling="no""
                                 >
                                 </iframe> ';
                         
