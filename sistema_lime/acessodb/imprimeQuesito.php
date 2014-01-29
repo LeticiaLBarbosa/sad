@@ -1,8 +1,8 @@
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-   <script type="text/javascript" src="../ranking/d3.v3.js"></script>
-   <script type="text/javascript" src="../ranking/ranking.js"></script>
+   
 </head>
 
 <body>
@@ -187,7 +187,8 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 width="100%"
                                 height="20%"
                                 src="../ranking/index.html"
-                                scrolling="no""
+                                scrolling="no"
+                                frameborder="0"
                                 >
                                 </iframe> ';
                         
