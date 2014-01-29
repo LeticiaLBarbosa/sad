@@ -50,7 +50,7 @@
     <iframe
         name="Radar"
         width="49%"
-        height="92%"
+        height="88%"
         src="radar.html"
         <!-- frameborder="yes" -->
         >
@@ -60,7 +60,7 @@
         <iframe
         name="Quesito"
         width="49%"
-        height="92%"
+        height="88%"
         src="menuQuesitos.php"
         
         <!-- frameborder="yes" -->
