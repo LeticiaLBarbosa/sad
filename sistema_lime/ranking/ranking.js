@@ -21,8 +21,8 @@ disciplina = nome;
 questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var h1 = 60;
     var margin = {top: 30, right: 120, bottom: 40, left: 60},
-            width = 950 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+            width = 750 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
     d3.select("#infos").select("svg").remove();
     var svg = d3.select("#infos");
     
@@ -39,7 +39,7 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
         // Imprime mensagem
         svg.append("text")
             .attr("y", h1-30)
-            .attr("x", 550)
+            .attr("x", 350)
             .attr("text-anchor", "center")
             .attr("font-size", "12px")
             .attr("font-weight", "bold")
@@ -59,7 +59,7 @@ function plot_ranges_ranking(svg, dados, y0){
     
     var x1 = d3.scale.linear()
           .domain([parseFloat(valor1), parseFloat(valor2)])
-          .range([120, 750]);    
+          .range([120, 550]);    
 
     var xAxis = d3.svg.axis()
             .scale(x1)
@@ -123,14 +123,14 @@ function plot_bars_ranking(svg, dados,y0){
     
     var x1 = d3.scale.linear()
           .domain([dados[0].x, dados[1].x])
-          .range([120, 750]);
+          .range([120, 550]);
     
     addLine_ranking(svg,x1(dados[0].x),x1(dados[1].x),y0,y0,"#E0E0E0");
 }
 
 
 function convert(nota,min,max){
-    return (((nota- min)/(max-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
+    return (((nota- min)/(max-min))*(550-120)) + 120; //livia: algum tipo de normalizacao?????
 }
 
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
