@@ -24,7 +24,7 @@ function plot_bar_disciplina_ranking(nome, p){
 	var questao_avaliada = p; //livia: guarda o identificador da questao escolhida
 	
     var h1 = 60;
-    var margin = {top: 30, right: 120, bottom: 40, left: 20},
+    var margin = {top: 30, right: 20, bottom: 40, left: 20},
             width = 950 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
     d3.select("#infos").select("svg").remove();
