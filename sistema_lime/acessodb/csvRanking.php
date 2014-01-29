@@ -1,7 +1,5 @@
 <?php
 
-$fileCSV = fopen("ranking.csv","w",0);
-
 $row = 1;
 $handle = fopen ("data.csv","r");
 $matriz = array();
@@ -19,33 +17,26 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 }
 fclose ($handle);
 
-/*for ($i = 0; $i < count($matriz)-2; $i++) {
+for ($i = 0; $i < count($matriz)-2; $i++) {
 
 	for ($j = 0; $j < count($matriz[$i]); $j++){
 
 		if ($j == 13) {
-			echo $matriz[$i][$j];
-		
-		} else {
 			echo $matriz[$i][$j].",";
 		}
 	} 
 	
 	echo "<br>";
 }
-*/
 
+echo "<br><br>";
 
 for ($i = 1; $i < count($matriz)-2; $i++) {
 	for ($j = 1; $j < count($matriz[$i]); $j++) {
 		
-	//	echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
-	
-	fwrite($fileCSV, ($matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."\n";));
+		echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
 	}  
 }
-fclose($fileCSV);
-
 
 function arrayQuesito($quesito, $nota, $matriz) {
 
@@ -68,5 +59,4 @@ function arrayQuesito($quesito, $nota, $matriz) {
 }
 }
 
-echo arrayQuesito(1,3.17,$matriz);
 ?>
