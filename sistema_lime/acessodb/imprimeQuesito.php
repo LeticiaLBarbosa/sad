@@ -97,7 +97,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         echo "<br>";
         
         echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
-        
+                       
         echo '<script type="text/javascript" src="../ranking/ranking.js"></script>';
         
     }
@@ -140,17 +140,17 @@ for ($i = 0; $i < $range + 1; $i++) {
     $indiceTituloRespostas = 0;
     
     if ($i == $quesito) {
-        
+    
         echo "<p>";
-        
+    
         echo "<br>";
         echo "<br>";
         
-        
+    
         
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
-            echo "Média do DSC: ", "<b>", $arrayMediasQuesito[$i], "</b>", " || ", "Sua Média", ": ", "<b>", media($ValorRespostas), "</b>";
+            echo "Média do DSC: ", "<b>", $arrayMediasQuesito[$i], "</b>", " || ", "Sua Média",  ": ", "<b>", media($ValorRespostas), "</b>";
         }
         
         echo "<br>";
@@ -174,9 +174,9 @@ for ($i = 0; $i < $range + 1; $i++) {
         
         echo "<br>";
         
-        if ($quesito != 13) {
-            
-            echo '<iframe
+        if($quesito != 13){
+        
+			echo '<iframe
 									name="Ranking"
 									width="100%"
 									height="20%"
@@ -190,9 +190,9 @@ for ($i = 0; $i < $range + 1; $i++) {
         echo "<br>";
         echo "<br>";
         
+    
         
-        
-        echo "<b>Comentário", ": </b><br>";
+        echo "<b>Comentário",  ": </b><br>";
         echo '<iframe
                                 name="iframe1"
                                 width="600"
@@ -210,7 +210,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         
         echo "</p>";
     }
-    
+        
     $indiceResposta = $indiceResposta + 2;
     $QqidQuestao    = $QqidQuestao + 1;
     
@@ -225,7 +225,12 @@ if ($i == $quesito) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
+    
     echo "<b> 15 - ", utf8_encode($row1[0]), "</b>";
+    
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
     
     $valor = 0;
