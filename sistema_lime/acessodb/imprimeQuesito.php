@@ -5,7 +5,7 @@
    <script type="text/javascript" src="../ranking/ranking.js"></script>
 </head>
 
-<body onload="loadData();">
+<body>
 
 
 <?php
@@ -173,9 +173,23 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 $indiceTituloRespostas = $indiceTituloRespostas + 1;
                         }
                         
-                        if ($i == $quesito) {
                         
-                                //echo "<br>";
+                        
+                      
+                        
+                        
+                        if ($i == $quesito) {
+                           
+                              echo '<iframe
+                                name="Ranking"
+                                width="100%"
+                                height="20%"
+                                src="../ranking/index.html"
+                                >
+                                </iframe> ';
+                        
+                           
+                                echo "<br>";
                                 //echo "<br>";
                                 echo "<br>";
                                 
