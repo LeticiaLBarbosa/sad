@@ -173,6 +173,18 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                                 $indiceTituloRespostas = $indiceTituloRespostas + 1;
                         }
                         
+                        
+                        
+                        echo '<iframe
+                                name="Ranking"
+                                width="100%"
+                                height="15%"
+                                src="radar.html"
+                                <!-- frameborder="yes" -->
+                                >
+                                </iframe>    ';
+                        
+                        
                         if ($i == $quesito) {
                         
                                 //echo "<br>";
