@@ -49,8 +49,22 @@ $res = mysql_query ( $sql, $id );
 	
 	
 	<h2 align="center">Login efetuado com sucesso!</h2>
-	<h2 align="center"> Bem vindo(a) <? echo $login ?></h2>
-
+	<h2 align="center"> Bem vindo(a) <? echo $login ?>!</h2>
+	<h4>
+	<div align="justify">
+	<p>
+	O SAD (Sistema de Avaliação Docente) é destinado ao acompanhamento da avaliação docente do Curso de Bacharelado em Ciência da Computação do Departamento de Sistemas e Computação (DSC) da Universidade Federal de Campina Grande (UFCG). A <a href="http://www.computacao.ufcg.edu.br/">computação da UFCG</a>  possui como professores 34 profissionais, sendo 27 doutores, os quais lecionam cerca de 34 disciplinas de conteúdo básico e complementar obrigatório, além das disciplinas de conteúdo complementar flexível.
+	</p>
+	<p>
+	Nesse sistema, cada professor irá encontrar informações e estatísticas sobre a avaliação realizada pelos alunos das disciplinas lecionadas por ele a partir de 2012.2, por meio de questionário <poderia ter um link em questionário para o help com todas as questões utilizadas> online. Todo o processo de avaliação docente tem sido conduzido por uma equipe de professores do DSC (escolhida em assembleia departamental) com o apoio da coordenação colegiada e do PET computação.
+	</p>
+	<p>
+	O SAD mostra para cada disciplina <marcar cada disciplina apontando para a primeira disciplina daquele professor> do professor um gráfico, denominado radar plot<marcar radar plot apontando para o help>, que permite visualizar seu desempenho em cada questão avaliada, comparado ao maior e menor desempenho naquela questão, dentre todas as disciplinas avaliadas, no período selecionado. 
+	</p>
+	<p>
+	É possível ainda visualizar o desempenho do professor por questão avaliada, no gráfico denominado de ranking plot <marcar ranking plot apontando para o help>, comparado às demais disciplinas avaliadas, o período selecionado. Além disso, tem-se informações sobre a média geral do DSC na questão e o “score” do professor na questão, ou seja, seu percentual em relação à melhor nota possível naquela questão.
+	</p>
+	</h4>
 </body>
 	
 </html>

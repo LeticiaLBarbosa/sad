@@ -6,7 +6,7 @@
 <body>
 
 <br>
-<div align="right">
+<div align="justify">
 <p>
 Este gráfico, chamado de Radar Plot, é muito usado para representar observações multivariadas que envolvem diversas variáveis, onde cada "estrela" (formada pela ligação entre os pontos que determinam os valores das variáveis do gráfico para cada observação) representa uma observação.
 </p>
