@@ -1,6 +1,6 @@
 <?php
 
-$file = fopen ( "data.csv", "r" );
+$fileCSV = fopen("ranking.csv","w",0);
 
 $row = 1;
 $handle = fopen ("data.csv","r");
@@ -39,9 +39,13 @@ fclose ($handle);
 for ($i = 1; $i < count($matriz)-2; $i++) {
 	for ($j = 1; $j < count($matriz[$i]); $j++) {
 		
-		echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
+	//	echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
+	
+	fwrite($fileCSV, ($matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."\n";));
 	}  
 }
+fclose($fileCSV);
+
 
 function arrayQuesito($quesito, $nota, $matriz) {
 
