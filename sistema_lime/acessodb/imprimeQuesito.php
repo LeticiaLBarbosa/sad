@@ -180,6 +180,8 @@ echo "<a href=imprimeQuesito.php?quesito=$i>$quesito</a> &nbsp; &nbsp;" ;
                         
                         if ($i == $quesito) {
                            
+                              echo "<br>";
+                           
                               echo '<iframe
                                 name="Ranking"
                                 width="100%"
