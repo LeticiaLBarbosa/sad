@@ -27,8 +27,8 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var svg = d3.select("#infos");
     
     svg = d3.select("#infos").append("svg")
-        .attr("width", 800)
-        .attr("height", 600);	
+        .attr("width", 600)
+        .attr("height", 400);	
     
     var val_per = dados_ranking.filter(function(d){ return d.questao == questao_avaliada});
 
