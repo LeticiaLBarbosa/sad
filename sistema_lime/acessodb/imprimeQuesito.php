@@ -92,13 +92,11 @@ for ($i = 0; $i < $range + 1; $i++) {
     $tituloQ = utf8_encode($row1[0]);
     
     if ($i == $quesito) {
-        echo "<br>";
+        
         echo "<br>";
         echo "<br>";
         
         echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
-                       
-        echo '<script type="text/javascript" src="../ranking/ranking.js"></script>';
         
     }
     
@@ -164,7 +162,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         if ($i == $quesito) {
             echo $valores[$tituloQ][$indiceArray];
             echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas[0], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
-            echo "<br>";
+        
         }
         array_shift($TituloRespostas);
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
@@ -172,7 +170,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     
     if ($i == $quesito) {
         
-        echo "<br>";
+        
         
         if($quesito != 13){
         
