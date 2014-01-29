@@ -41,7 +41,7 @@ for ($i = 1; $i < count($matriz)-2; $i++) {
 		
 	//	echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
 	
-	fwrite($fileCSV, ($matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."\n";));
+	fwrite($fileCSV, ($matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."\n"));
 	}  
 }
 fclose($fileCSV);
