@@ -5,14 +5,9 @@ var dados_ranking = [];
 //var disciplina = getCookie('disciplina_id');
 //var quesito = getCookie('quesito');
 
-var disciplina = 'EDA';
-var quesito = 'Q2';
-
-
 
 d3.csv("data_teste_2.csv",function(data){
-        dados_ranking = data;
-//livia: tentando chamar script sem o link
+    dados_ranking = data;
 	var nome = "EDA"; //livia: aqui vem a leitura do cookie
 	var p = "Q1"; //livia: aqui vem a leitura do cookie
 
@@ -29,7 +24,7 @@ function plot_bar_disciplina_ranking(nome, p){
 	var questao_avaliada = p; //livia: guarda o identificador da questao escolhida
 	
     var h1 = 60;
-    var margin = {top: 30, right: 120, bottom: 40, left: 60},
+    var margin = {top: 30, right: 120, bottom: 40, left: 20},
             width = 950 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
     d3.select("#infos").select("svg").remove();
