@@ -171,7 +171,9 @@ for ($i = 0; $i < $range + 1; $i++) {
     }
     
     if ($i == $quesito) {
-        
+
+		echo "<br>"
+		echo "<b>Ranking do seu score nesse quesito </b>:"
         echo "<br>";
         
         if($quesito != 13){
