@@ -33,6 +33,7 @@ $res = mysql_query ( $sql, $id );
 		<ul>
 			<li><a href="sessao.php">Inicio</a></li>
 			<li><a href="menuDisciplinas.php">Disciplinas</a></li>
+			<li><a href="help.php">Ajuda</a></li>
 			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 

@@ -178,15 +178,15 @@ for ($i = 0; $i < $range + 1; $i++) {
         
         if($quesito != 13){
         
-			echo '<iframe
-									name="Ranking"
-									width="100%"
-									height="23%"
-									src="../ranking/index.html"
-									scrolling="no"
-									frameborder="0"
-									>
-									</iframe> ';
+                        echo '<iframe
+                                                                        name="Ranking"
+                                                                        width="100%"
+                                                                        height="23%"
+                                                                        src="../ranking/index.html"
+                                                                        scrolling="no"
+                                                                        frameborder="0"
+                                                                        >
+                                                                        </iframe> ';
         }
         
         echo "<br>";
