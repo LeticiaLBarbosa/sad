@@ -32,11 +32,8 @@ verificaLogin();
 <body>
 	
 	<div id="cssmenu">
-		
 		<ul>
-			
 			<?php				
-				
 				
 				while ( $row = mysql_fetch_array ( $res ) ) {
 					
@@ -44,18 +41,12 @@ verificaLogin();
 					$disciplina_id = $row ["disciplina_id"];
 				
 					header("Location: imprimeDisciplina.php?disciplina_id=$disciplina_id");
-					
-				//	echo "<li><a href=imprimeDisciplina.php?disciplina_id=$disciplina_id>$disciplina</a></li>";
 				}
-				
-				
 				
 			?>
 
 		</ul>
-
 	</div>
-	
 
 </body>
 	

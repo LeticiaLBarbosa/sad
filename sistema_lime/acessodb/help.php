@@ -1,3 +1,11 @@
+<?php
+
+include "verifica_login.php";
+
+verificaLogin();
+
+?>
+
 <html>
 <head>
 	<link href="../menu_assets/styles3.css" rel="stylesheet" type="text/css">
