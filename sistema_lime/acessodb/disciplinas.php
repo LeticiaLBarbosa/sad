@@ -37,13 +37,16 @@ verificaLogin();
 		<ul>
 			<?php				
 				
+				$disciplina_id = "";
+				
 				while ( $row = mysql_fetch_array ( $res ) ) {
 					
 					$disciplina = utf8_encode ( $row ["surveyls_title"] );
 					$disciplina_id = $row ["disciplina_id"];
-				
-					header("Location: imprimeDisciplina.php?disciplina_id=$disciplina_id");
+								
 				}
+				
+				header("Location: imprimeDisciplina.php?disciplina_id=$disciplina_id");
 				
 			?>
 
