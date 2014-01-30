@@ -1,4 +1,6 @@
 <?php
+	// Confere se a senha e o login passados pelo formulario de login sao os mesmos do bando de dados
+	
 	session_start();
 	
 	include "config.php"; //inclui o arquivo de configura��es

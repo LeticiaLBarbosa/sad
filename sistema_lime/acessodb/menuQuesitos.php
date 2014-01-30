@@ -1,5 +1,7 @@
 <?php
 
+// Pagina inicial do frame que mostra os quesitos
+
 include "verifica_login.php";
 
 verificaLogin();

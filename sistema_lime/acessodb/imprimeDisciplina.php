@@ -1,5 +1,7 @@
 <?php
 
+// Pagina que mostra os frames do Radar e da Disciplina
+
 include "verifica_login.php";
 
 verificaLogin();

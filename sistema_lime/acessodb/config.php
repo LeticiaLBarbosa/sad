@@ -1,4 +1,7 @@
 <?php
+
+	// Arquivo contendo as configuracoes necessarias para acessar o banco de dados
+
 	$host		=	'localhost'; //endereço do seu servidor MySQL
 	$database	=	'meu_banco_db'; //o database que conterá sua tabela, muitas vezes seu próprio login
 	$tabela		=	'professores'; //o nome de sua tabela

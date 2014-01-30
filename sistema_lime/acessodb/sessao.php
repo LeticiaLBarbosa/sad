@@ -2,6 +2,8 @@
 
 <?php
 
+// Pagina inicial do nosso sistema apos o login
+
 include "verifica_login.php";
 
 verificaLogin();

@@ -1,5 +1,7 @@
 <?php
 
+// Pagina que mostra um determinado quesito da disciplina
+
 include "verifica_login.php";
 
 verificaLogin();

@@ -1,5 +1,7 @@
 <?php
 
+// Usado para verificar se o usuario esta logado no sistema, no cabecalho de cada pagina
+
 function verificaLogin(){
 	
 	session_start();

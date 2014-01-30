@@ -1,5 +1,7 @@
 <?php
 
+// Contem as funcoes usadas para gerar o arquivo csv contendo as notas das disciplinas em cada quesito. E usado pelo arquivo geraCSVcomScore.php
+
 function mediasPorQuesito($disciplina_id) {
     include "config.php";
     

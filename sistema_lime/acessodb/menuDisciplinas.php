@@ -1,5 +1,7 @@
 <?php
 
+// Pagina usada ao clicar em "Disciplinas" no menu principal
+
 include "verifica_login.php";
 
 verificaLogin();

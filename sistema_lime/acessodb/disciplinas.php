@@ -1,5 +1,7 @@
 <?php
 
+// Pagina usada para selecionar a primeira disciplina do professor
+
 include "verifica_login.php";
 
 verificaLogin();

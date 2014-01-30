@@ -1,5 +1,7 @@
 <?php
 
+// Codigo usado para gerar a pagina dos comentarios
+
 include "verifica_login.php";
 
 verificaLogin();
