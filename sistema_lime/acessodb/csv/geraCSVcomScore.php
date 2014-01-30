@@ -1,5 +1,7 @@
 <?php
 
+// Esse arquivo vai gerar o arquivo csv contendo os scores de cada disciplina por quesito avaliado, usando o csvFunction.php
+
 include 'config.php';
 include 'csvFunction.php';
 
