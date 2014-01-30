@@ -1,3 +1,11 @@
+<?php
+
+include "verifica_login.php";
+
+verificaLogin();
+
+?>
+
 <html>
 <title>Informacoes Disciplina</title>
 <head>
