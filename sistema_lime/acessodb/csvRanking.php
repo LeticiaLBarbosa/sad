@@ -67,4 +67,6 @@ function arrayQuesito($quesito, $nota, $matriz)
     }
 }
 
+echo "passou";
+
 ?>
