@@ -2,8 +2,7 @@
 
 // Arquivo usado pra gerar o csv do ranking
 $fileCSV = fopen("ranking.csv", "w", 0);
-
-echo "passou 1";
+fwrite($fileCSV,"disciplina,media,questao,posicao\n");
 
 $row        = 1;
 $handle     = fopen("data.csv", "r");
