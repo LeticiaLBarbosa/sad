@@ -10,8 +10,8 @@
 div.topic {
     display: none; 
     margin-bottom: 1em;
-    padding: .25em;
-    border-color: black;
+    <!-- padding: .25em; -->
+    border-color: black thin solid;
     background-color: #FFFFFF;
     width: 35em;
 }
@@ -120,7 +120,7 @@ hideShow.prototype.toggleRegion = function() {
 				$(this).focus();
 
 				// update the button label
-				thisObj.$id.find('span').html('Hide');
+				thisObj.$id.find('span').html('Esconder');
 
 			}
 			else { // region is expanded
@@ -129,7 +129,7 @@ hideShow.prototype.toggleRegion = function() {
 				$(this).attr('aria-expanded', 'false');
 
 				// update the button label
-				thisObj.$id.find('span').html('Show');
+				thisObj.$id.find('span').html('Mostrar');
 			}
 		});
 
