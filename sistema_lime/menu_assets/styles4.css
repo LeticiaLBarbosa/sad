@@ -1,0 +1,20 @@
+div.topic { 
+    display: none; 
+    margin-bottom: 1em; 
+    padding: .25em; 
+    border: black thin solid; 
+    background-color: #1E90FF; 
+    width: 40em; 
+} 
+
+p.button { 
+    margin: .25em; 
+    padding: .25em;   
+} 
+
+h2 { 
+  margin: 0; 
+  padding: 0; 
+  margin-top: 1em;   
+   
+} 

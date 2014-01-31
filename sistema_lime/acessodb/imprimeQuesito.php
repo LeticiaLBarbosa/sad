@@ -10,8 +10,28 @@ verificaLogin();
 
 <html>
 <head>
-
+<link href="../menu_assets/styles4.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<script type="text/javascript" src="scriptButton.js"> 
+  
+  function changeSourceCodeView(node_link, sc_id  ) {
+   
+     var node_sc = document.getElementById( sc_id );
+	 
+	 if( node_sc ) 
+	   if( node_sc.style.display == "none" ) {
+	      node_sc.style.display = "block";
+		  node_link.innerHTML = node_link.innerHTML.replace(/Show/, "Hide");
+	   } else {
+	      node_sc.style.display = "none";	 
+		  node_link.innerHTML = node_link.innerHTML.replace(/Hide/, "Show");
+	   } // endif
+     else 
+	   alert("Id not found");
+  }
+  
+  </script>
    
 </head>
 
@@ -203,7 +223,8 @@ for ($i = 0; $i < $range + 1; $i++) {
         
     
         
-        echo "<b>Comentário",  ": </b><br>";
+		
+        /* echo "<b>Comentário",  ": </b><br>";
         echo '<iframe
                                 name="iframe1"
                                 width="100%"
@@ -212,6 +233,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                                 frameborder="yes"
                                 scrolling="yes">
                                 </iframe>';
+		*/
         
         echo "<br>";
         echo "<br>";
@@ -280,6 +302,14 @@ if ($i == $quesito) {
 //}
 
 ?>
+	<p class="button">
+		<a id="button1" href="#" role="button" aria-controls="t1"><span>Show</span> Topic 1</a>
+	</p>
+
+	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
+    Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
+	</div>
+
 
 </body>
 
