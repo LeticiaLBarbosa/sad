@@ -1,39 +1,87 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 
-  // bind a click handler to the buttons 
-  $('#button1, #button2, #button3, #button4').click(function(e) { 
+   var hs1 = new hideShow('button1');
+   var hs2 = new hideShow('button2');
+   var hs3 = new hideShow('button3');
+   var hs4 = new hideShow('button4');
+  
+}); // end ready()
 
-    // find the region the button controls 
-    var $region = $('#' + $(this).attr('aria-controls')); 
-     
-    // toggle the region 
-    $region.slideToggle(100, function() { 
+//
+// function hideShow() is the constructor for a hideShow widget. it accepts the html ID of
+// an element to attach to.
+//
+// @param(id string) id is the html ID of the element to attach to
+//
+// @return N/A
+//
+function hideShow(id) {
 
-      if ($region.attr('aria-expanded') == 'false') { // region is collapsed 
+   this.$id = $('#' + id);
+   this.$region = $('#' + this.$id.attr('aria-controls'));
 
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'true'); 
+   this.keys = {
+               enter: 13,
+               space: 32
+               };
 
-        // move focus to the region 
-        $region.focus(); 
+   this.toggleSpeed = 100;
 
-        // update the button label 
-        $(this).find('span').html('Hide'); 
+   // bind handlers
+   this.bindHandlers();
 
-      } 
-      else { // region is expanded 
+} // end hidShow() constructor
 
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'false'); 
+//
+// Function bindHandlers() is a member function to bind event handlers to the hideShow region
+//
+// return N/A
+//
+hideShow.prototype.bindHandlers = function() {
 
-        // update the button label 
-        $(this).find('span').html('Show'); 
-      } 
-    }); 
+   var thisObj = this;
 
-    e.stopPropagation(); 
-    return false; 
-  }); 
-   
-}); // end ready() 
-  </script>
+   this.$id.click(function(e) {
+
+      thisObj.toggleRegion();
+
+      e.stopPropagation();
+      return false;
+   });
+}
+
+//
+// Function toggleRegion() is a member function to toggle the display of the hideShow region
+//
+// return N/A
+//
+hideShow.prototype.toggleRegion = function() {
+
+      var thisObj = this;
+
+		// toggle the region
+		this.$region.slideToggle(this.toggleSpeed, function() {
+
+			if ($(this).attr('aria-expanded') == 'false') { // region is collapsed
+
+				// update the aria-expanded attribute of the region
+				$(this).attr('aria-expanded', 'true');
+
+				// move focus to the region
+				$(this).focus();
+
+				// update the button label
+				thisObj.$id.find('span').html('Esconder');
+
+			}
+			else { // region is expanded
+
+				// update the aria-expanded attribute of the region
+				$(this).attr('aria-expanded', 'false');
+
+				// update the button label
+				thisObj.$id.find('span').html('Mostrar');
+			}
+		});
+
+} // end toggleRegion()

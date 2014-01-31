@@ -16,7 +16,9 @@ verificaLogin();
 
 <script type="text/javascript" src="http://www.oaa-accessibility.org/media/examples/js/jquery-1.4.2.min.js"></script>
 
-<script type="text/javascript">
+<script type="text/javascript" src="scriptButton.js"></script>
+
+<!--<script type="text/javascript">
 
 $(document).ready(function() {
 
@@ -108,7 +110,7 @@ hideShow.prototype.toggleRegion = function() {
 
 
 </script>
-
+-->
    
 </head>
 
