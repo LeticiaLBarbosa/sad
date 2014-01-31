@@ -258,6 +258,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
             echo "Média do DSC: ", "<b>", $arrayMediasQuesito[$i], "</b>", " || ", "Sua Média",  ": ", "<b>", media($ValorRespostas), "</b>";
+       	    echo "Score: ";
         }
         
         echo "<br>";
