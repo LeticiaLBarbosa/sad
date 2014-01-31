@@ -333,6 +333,21 @@ function score($respostas)
 }
 
 
+function stringScore($respostas)
+{
+    
+    $peso = 4;
+    $melhor = array_sum($respostas)*$peso;
+    
+    for ($i = 0; $i < 5; $i++) {
+        
+        $respostas[$i] = $respostas[$i] * ($peso);
+        $peso--;
+    }
+ 
+      return array_sum($respostas)."/".$melhor;
+}
+
 ?>
 
 
