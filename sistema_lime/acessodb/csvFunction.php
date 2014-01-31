@@ -21,18 +21,18 @@ function mediasPorQuesito($disciplina_id) {
     $indiceArrayTituloRespostas          = 0;
     $indiceArrayTituloRespostasImpressao = 0;
     
-    // Criando a v�~C¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada quest�~C£o
+    // Criando a v�~C¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada quest�~C£o
     $sql         = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid ";
     $res         = mysql_query($sql, $id);
     $row         = mysql_fetch_array($res);
     $QqidQuestao = $row["qid"];
     
-    // Consulta para exibir as quest�~Cµes
+    // Consulta para exibir as quest�~Cµes
     $sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
     $res1 = mysql_query($sql1, $id);
     
     // Laco referente as perguntas de cada disciplina
-    // Codigo abaixo Pega todas as quest�~Cµes
+    // Codigo abaixo Pega todas as quest�~Cµes
     
     for ($i = 0; $i < 13; $i++) {
         
@@ -125,18 +125,18 @@ function mediasPorQuesitoArray($disciplina_id) {
     $indiceArrayTituloRespostas          = 0;
     $indiceArrayTituloRespostasImpressao = 0;
     
-    // Criando a v�~C¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada quest�~C£o
+    // Criando a v�~C¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada quest�~C£o
     $sql         = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid ";
     $res         = mysql_query($sql, $id);
     $row         = mysql_fetch_array($res);
     $QqidQuestao = $row["qid"];
     
-    // Consulta para exibir as quest�~Cµes
+    // Consulta para exibir as quest�~Cµes
     $sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
     $res1 = mysql_query($sql1, $id);
     
     // Laco referente as perguntas de cada disciplina
-    // Codigo abaixo Pega todas as quest�~Cµes
+    // Codigo abaixo Pega todas as quest�~Cµes
     
     for ($i = 0; $i < 13; $i++) {
         
@@ -200,6 +200,7 @@ function mediasPorQuesitoArray($disciplina_id) {
         $lacoResposta   = $lacoResposta + 1;
         $indiceResposta = $indiceResposta + 2;
         $QqidQuestao    = $QqidQuestao + 1;
+  
         $indiceQuestao  = $indiceQuestao + 1;
     }
     
@@ -314,6 +315,21 @@ function media($respostas)
     }
     
     return round((array_sum($respostas) / $totalRespostas), 2);
+}
+
+function score($respostas)
+{
+    
+    $peso = 4;
+    $melhor = array_sum($respostas)*$peso;
+    
+    for ($i = 0; $i < 5; $i++) {
+        
+        $respostas[$i] = $respostas[$i] * ($peso);
+        $peso--;
+    }
+ 
+      return round((array_sum($respostas) / $melhor)*100, 2);
 }
 
 
