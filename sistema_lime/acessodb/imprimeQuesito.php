@@ -91,7 +91,7 @@ hideShow.prototype.toggleRegion = function() {
 				$(this).focus();
 
 				// update the button label
-				thisObj.$id.find('span').html('Hide');
+				thisObj.$id.find('span').html('Esconder');
 
 			}
 			else { // region is expanded
@@ -100,7 +100,7 @@ hideShow.prototype.toggleRegion = function() {
 				$(this).attr('aria-expanded', 'false');
 
 				// update the button label
-				thisObj.$id.find('span').html('Show');
+				thisObj.$id.find('span').html('Mostrar');
 			}
 		});
 
@@ -379,7 +379,7 @@ if ($i == $quesito) {
 ?>
 
 <p class="button">
-    <button id="button1" class="buttonControl" aria-controls="t1"><span>Show</span> Topic 1</button>
+    <button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
 </p>
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
