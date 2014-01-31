@@ -10,8 +10,105 @@ verificaLogin();
 
 <html>
 <head>
-<link href="../menu_assets/styles4.css" rel="stylesheet" type="text/css">
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<link href="../menu_assets/styles4.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="http://www.oaa-accessibility.org/media/examples/js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+   var hs1 = new hideShow('button1');
+   var hs2 = new hideShow('button2');
+   var hs3 = new hideShow('button3');
+   var hs4 = new hideShow('button4');
+  
+}); // end ready()
+
+//
+// function hideShow() is the constructor for a hideShow widget. it accepts the html ID of
+// an element to attach to.
+//
+// @param(id string) id is the html ID of the element to attach to
+//
+// @return N/A
+//
+function hideShow(id) {
+
+   this.$id = $('#' + id);
+   this.$region = $('#' + this.$id.attr('aria-controls'));
+
+   this.keys = {
+               enter: 13,
+               space: 32
+               };
+
+   this.toggleSpeed = 100;
+
+   // bind handlers
+   this.bindHandlers();
+
+} // end hidShow() constructor
+
+//
+// Function bindHandlers() is a member function to bind event handlers to the hideShow region
+//
+// return N/A
+//
+hideShow.prototype.bindHandlers = function() {
+
+   var thisObj = this;
+
+   this.$id.click(function(e) {
+
+      thisObj.toggleRegion();
+
+      e.stopPropagation();
+      return false;
+   });
+}
+
+//
+// Function toggleRegion() is a member function to toggle the display of the hideShow region
+//
+// return N/A
+//
+hideShow.prototype.toggleRegion = function() {
+
+      var thisObj = this;
+
+		// toggle the region
+		this.$region.slideToggle(this.toggleSpeed, function() {
+
+			if ($(this).attr('aria-expanded') == 'false') { // region is collapsed
+
+				// update the aria-expanded attribute of the region
+				$(this).attr('aria-expanded', 'true');
+
+				// move focus to the region
+				$(this).focus();
+
+				// update the button label
+				thisObj.$id.find('span').html('Hide');
+
+			}
+			else { // region is expanded
+
+				// update the aria-expanded attribute of the region
+				$(this).attr('aria-expanded', 'false');
+
+				// update the button label
+				thisObj.$id.find('span').html('Show');
+			}
+		});
+
+} // end toggleRegion()
+
+
+</script>
+
    
 </head>
 
@@ -202,9 +299,8 @@ for ($i = 0; $i < $range + 1; $i++) {
         echo "<br>";
         
     
-        
-		
-        /* echo "<b>Comentário",  ": </b><br>";
+        /*
+        echo "<b>Comentário",  ": </b><br>";
         echo '<iframe
                                 name="iframe1"
                                 width="100%"
@@ -278,59 +374,17 @@ if ($i == $quesito) {
     }
     
 }
-//}
 
 ?>
-	<p class="button">
-		<a id="button1" href="#" role="button" aria-controls="t1"><span>Show</span> Topic 1</a>
-	</p>
 
-	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
+<p class="button">
+    <button id="button1" class="buttonControl" aria-controls="t1"><span>Show</span> Topic 1</button>
+</p>
+
+<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
     Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
-	</div>
-	<script type="text/javascript">
+</div>
 
-$(document).ready(function() { 
-
-  // bind a click handler to the buttons 
-  $('#button1, #button2, #button3, #button4').click(function(e) { 
-
-    // find the region the button controls 
-    var $region = $('#' + $(this).attr('aria-controls')); 
-     
-    // toggle the region 
-    $region.slideToggle(100, function() { 
-
-      if ($region.attr('aria-expanded') == 'false') { // region is collapsed 
-
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'true'); 
-
-        // move focus to the region 
-        $region.focus(); 
-
-        // update the button label 
-        $(this).find('span').html('Hide'); 
-
-      } 
-      else { // region is expanded 
-
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'false'); 
-
-        // update the button label 
-        $(this).find('span').html('Show'); 
-      } 
-    }); 
-
-    e.stopPropagation(); 
-    return false; 
-  }); 
-   
-}); // end ready() 
-  </script>
-
-	
 </body>
 
 </html>

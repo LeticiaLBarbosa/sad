@@ -1,20 +1,33 @@
-div.topic { 
+div.topic {
     display: none; 
-    margin-bottom: 1em; 
-    padding: .25em; 
-    border: black thin solid; 
-    background-color: #1E90FF; 
-    width: 40em; 
-} 
+    margin-bottom: 1em;
+    padding: .25em;
+    border: black thin solid;
+    background-color: #EEEEFF;
+    width: 40em;
+}
 
-p.button { 
-    margin: .25em; 
+p.button {
+    margin: .25em;
     padding: .25em;   
-} 
+}
 
-h2 { 
-  margin: 0; 
-  padding: 0; 
-  margin-top: 1em;   
-   
-} 
+h2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;  
+  
+}
+
+a.buttonControl {
+  color: #004400;
+  text-decoration: none;
+  border-bottom: 1px solid #004400;
+}
+
+a.buttonControl:hover,
+a.buttonControl:active,
+a.buttonControl:focus {
+  color: #880000;
+  border-bottom: 2px solid #880000;
+}
