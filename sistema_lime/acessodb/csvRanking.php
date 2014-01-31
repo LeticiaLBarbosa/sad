@@ -1,6 +1,7 @@
 <?php
 
 // Arquivo usado pra gerar o csv do ranking
+$fileCSV = ("ranking.csv","w");
 
 $row        = 1;
 $handle     = fopen("data.csv", "r");
