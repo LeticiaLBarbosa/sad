@@ -1,0 +1,423 @@
+
+
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <title>ARIA Example: Hide/Show Example 1: Region follows Hide/Show Button</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <script src="../js/constants.js" type="text/javascript"></script>
+    <script src="../js/jquery.js" type="text/javascript"></script>
+
+    <style type="text/css">
+div.topic {
+    display: none; 
+    margin-bottom: 1em;
+    padding: .25em;
+    border: black thin solid;
+    background-color: #EEEEFF;
+    width: 40em;
+}
+
+p.button {
+    margin: .25em;
+    padding: .25em;   
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;  
+  
+}
+
+  </style>
+
+  
+  <style type="text/css">
+  
+    div.codebox {
+      background-color: #E0E0E0;
+      color: black;
+      font-family: monospace;
+      padding: .5em;
+      margin: .5em;
+      border: black medium solid;
+    }
+	
+	h2.nav {
+	  position: absolute;
+	  left: -200em;
+	  top: -20em;
+	}
+	
+	ul.nav {
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	ul.nav li {
+	  display: inline;
+	  list-style: none;
+	  padding-right: 1em;
+	}
+  
+  </style>
+
+  <script type="text/javascript">
+  
+  function changeSourceCodeView(node_link, sc_id  ) {
+   
+     var node_sc = document.getElementById( sc_id );
+	 
+	 if( node_sc ) 
+	   if( node_sc.style.display == "none" ) {
+	      node_sc.style.display = "block";
+		  node_link.innerHTML = node_link.innerHTML.replace(/Show/, "Hide");
+	   } else {
+	      node_sc.style.display = "none";	 
+		  node_link.innerHTML = node_link.innerHTML.replace(/Hide/, "Show");
+	   } // endif
+     else 
+	   alert("Id not found");
+  }
+  
+  </script>
+
+
+</head>
+  
+<body>
+
+<h2 class="nav">Hide/Show Navigation Menu</h2>
+<ul class="nav">
+  <li><a href="index.php">Overview</a></li>
+  <li><a href="hideshow1.php">Example 1</a></li>
+  <li><a href="hideshow2.php">Example 2</a></li>
+</ul>  
+  <h1>Hide/Show Example 1: Region follows Hide/Show Button</h1>
+<h2 id="t1-label">Topic 1</h2>
+
+<p class="button">
+    <a id="button1" href="#" role="button" aria-controls="t1"><span>Show</span> Topic 1</a>
+</p>
+
+<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
+    Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
+</div>
+
+<h2 id="t2-label">Topic 2</h2>
+
+<p class="button">
+    <a id="button2" href="#" role="button" aria-controls="t2"><span>Show</span> Topic 2</a>
+</p>
+
+<div id="t2" class="topic" role="region" aria-labelledby="m2-label" tabindex="-1" aria-expanded="false">
+       Topic 2 is all about being Topic 2 and may or may not have anything to do with other topics.
+</div>
+
+<h2 id="t3-label">Topic 3</h2>
+
+<p class="button">
+    <a id="button3" href="#" role="button" aria-controls="t3"><span>Show</span> Topic 3</a>
+</p>
+
+<div id="t3" class="topic" role="region" aria-labelledby="m3-label" tabindex="-1" aria-expanded="false">
+       Topic 3 is all about being Topic 3 and may or may not have anything to do with other topics.
+</div>
+
+<h2 id="t4-label">Topic 4</h2>
+
+<p class="button">
+    <a id="button4" href="#" role="button" aria-controls="t4"><span>Show</span> Topic 4</a>
+</p>
+
+<div id="t4" class="topic" role="region" aria-labelledby="m4-label" tabindex="-1" aria-expanded="false">
+       Topic 3 is all about being Topic 3 and may or may not have anything to do with other topics.
+</div>
+<h2>Keyboard Shortcuts</h2>
+<ul>
+    <li>Tab: Move to link</li>
+    <li>Return: Show message and move focus to the message</li>
+</ul>
+
+<h2>ARIA Roles and Properties</h2>
+<ul><li>
+    Roles:
+	<ul>
+      <li>Region</li>
+      <li>Button</li>
+	</ul>
+	</li>
+<li>    States and properties: 
+       <ul>
+           <li><code>aria-controls</code></li>
+           <li><code>aria-lebelledby</code></li>
+           <li><code>aria-expanded</code></li>
+       </ul>
+    </li>
+</ul>
+
+  <h2>HTML Source Code</h2>
+  <p><a id="lsc" href="#lsc" onclick="changeSourceCodeView(this, 'sc')">Show HTML Source Code: hideshow1.inc</a></p>
+  <div id="sc" class="codebox" style="display: none">
+&lt;h2 id="t1-label"&gt;Topic 1&lt;/h2&gt;
+<br/>
+
+<br/>
+&lt;p class="button"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&lt;a id="button1" href="#" role="button" aria-controls="t1"&gt;&lt;span&gt;Show&lt;/span&gt; Topic 1&lt;/a&gt;
+<br/>
+&lt;/p&gt;
+<br/>
+
+<br/>
+&lt;div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false"&gt;
+<br/>
+&#160;&#160;&#160;&#160;Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
+<br/>
+&lt;/div&gt;
+<br/>
+
+<br/>
+&lt;h2 id="t2-label"&gt;Topic 2&lt;/h2&gt;
+<br/>
+
+<br/>
+&lt;p class="button"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&lt;a id="button2" href="#" role="button" aria-controls="t2"&gt;&lt;span&gt;Show&lt;/span&gt; Topic 2&lt;/a&gt;
+<br/>
+&lt;/p&gt;
+<br/>
+
+<br/>
+&lt;div id="t2" class="topic" role="region" aria-labelledby="m2-label" tabindex="-1" aria-expanded="false"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160; Topic 2 is all about being Topic 2 and may or may not have anything to do with other topics.
+<br/>
+&lt;/div&gt;
+<br/>
+
+<br/>
+&lt;h2 id="t3-label"&gt;Topic 3&lt;/h2&gt;
+<br/>
+
+<br/>
+&lt;p class="button"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&lt;a id="button3" href="#" role="button" aria-controls="t3"&gt;&lt;span&gt;Show&lt;/span&gt; Topic 3&lt;/a&gt;
+<br/>
+&lt;/p&gt;
+<br/>
+
+<br/>
+&lt;div id="t3" class="topic" role="region" aria-labelledby="m3-label" tabindex="-1" aria-expanded="false"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160; Topic 3 is all about being Topic 3 and may or may not have anything to do with other topics.
+<br/>
+&lt;/div&gt;
+<br/>
+
+<br/>
+&lt;h2 id="t4-label"&gt;Topic 4&lt;/h2&gt;
+<br/>
+
+<br/>
+&lt;p class="button"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&lt;a id="button4" href="#" role="button" aria-controls="t4"&gt;&lt;span&gt;Show&lt;/span&gt; Topic 4&lt;/a&gt;
+<br/>
+&lt;/p&gt;
+<br/>
+
+<br/>
+&lt;div id="t4" class="topic" role="region" aria-labelledby="m4-label" tabindex="-1" aria-expanded="false"&gt;
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160; Topic 3 is all about being Topic 3 and may or may not have anything to do with other topics.
+<br/>
+&lt;/div&gt;
+<br/>
+  </div>
+  <h2>Javascript Source Code</h2>
+  <p><a id="lsc1" href="#lsc1" onclick="changeSourceCodeView(this, 'sc1')">Show Javascript Source Code: hideshow1.js</a></p>
+  <div id="sc1" class="codebox" style="display: none">
+&#160;&#160;&lt;script type="text/javascript"&gt;<br/>
+$(document).ready(function() {
+<br/>
+
+<br/>
+&#160;&#160;// bind a click handler to the buttons
+<br/>
+&#160;&#160;$('#button1, #button2, #button3, #button4').click(function(e) {
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;// find the region the button controls
+<br/>
+&#160;&#160;&#160;&#160;var $region = $('#' + $(this).attr('aria-controls'));
+<br/>
+&#160;&#160;&#160;&#160;
+<br/>
+&#160;&#160;&#160;&#160;// toggle the region
+<br/>
+&#160;&#160;&#160;&#160;$region.slideToggle(100, function() {
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;if ($region.attr('aria-expanded') == 'false') { // region is collapsed
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// update the aria-expanded attribute of the region
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$region.attr('aria-expanded', 'true');
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// move focus to the region
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$region.focus();
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// update the button label
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$(this).find('span').html('Hide');
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;}
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;else { // region is expanded
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// update the aria-expanded attribute of the region
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$region.attr('aria-expanded', 'false');
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// update the button label
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;$(this).find('span').html('Show');
+<br/>
+&#160;&#160;&#160;&#160;&#160;&#160;}
+<br/>
+&#160;&#160;&#160;&#160;});
+<br/>
+
+<br/>
+&#160;&#160;&#160;&#160;e.stopPropagation();
+<br/>
+&#160;&#160;&#160;&#160;return false;
+<br/>
+&#160;&#160;});
+<br/>
+&#160;&#160;
+<br/>
+}); // end ready()
+<br/>
+&#160;&#160;&lt;/script&gt;<br/>
+  </div>
+  <h2>CSS Source Code</h2>
+  <p><a id="lsc2" href="#lsc2" onclick="changeSourceCodeView(this, 'sc2')">Show CSS Source Code: hideshow1.css</a></p>
+  <div id="sc2" class="codebox" style="display: none">
+&#160;&#160;&lt;style type="text/css"&gt;<br/>
+div.topic {
+<br/>
+&#160;&#160;&#160;&#160;display: none; 
+<br/>
+&#160;&#160;&#160;&#160;margin-bottom: 1em;
+<br/>
+&#160;&#160;&#160;&#160;padding: .25em;
+<br/>
+&#160;&#160;&#160;&#160;border: black thin solid;
+<br/>
+&#160;&#160;&#160;&#160;background-color: #EEEEFF;
+<br/>
+&#160;&#160;&#160;&#160;width: 40em;
+<br/>
+}
+<br/>
+
+<br/>
+p.button {
+<br/>
+&#160;&#160;&#160;&#160;margin: .25em;
+<br/>
+&#160;&#160;&#160;&#160;padding: .25em;&#160;&#160; 
+<br/>
+}
+<br/>
+
+<br/>
+h2 {
+<br/>
+&#160;&#160;margin: 0;
+<br/>
+&#160;&#160;padding: 0;
+<br/>
+&#160;&#160;margin-top: 1em;&#160;&#160;
+<br/>
+&#160;&#160;
+<br/>
+}
+<br/>
+
+<br/>
+&#160;&#160;&lt;/style&gt;<br/>
+  </div>
+  <script type="text/javascript">
+$(document).ready(function() {
+
+	// bind a click handler to the buttons
+	$('#button1, #button2, #button3, #button4').click(function(e) {
+
+		// find the region the button controls
+		var $region = $('#' + $(this).attr('aria-controls'));
+		
+		// toggle the region
+		$region.slideToggle(100, function() {
+
+			if ($region.attr('aria-expanded') == 'false') { // region is collapsed
+
+				// update the aria-expanded attribute of the region
+				$region.attr('aria-expanded', 'true');
+
+				// move focus to the region
+				$region.focus();
+
+				// update the button label
+				$(this).find('span').html('Hide');
+
+			}
+			else { // region is expanded
+
+				// update the aria-expanded attribute of the region
+				$region.attr('aria-expanded', 'false');
+
+				// update the button label
+				$(this).find('span').html('Show');
+			}
+		});
+
+		e.stopPropagation();
+		return false;
+	});
+  
+}); // end ready()
+  </script>
+
+  
+  
+<p><a target="report" href="http://validator.w3.org/check?uri=referer">W3C Validation of HTML5</a></p>
+
+</body>
+</html>
+
+
