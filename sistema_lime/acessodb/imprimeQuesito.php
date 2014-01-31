@@ -12,48 +12,6 @@ verificaLogin();
 <head>
 <link href="../menu_assets/styles4.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-
-<script type="text/javascript">
-
-$(document).ready(function() { 
-
-  // bind a click handler to the buttons 
-  $('#button1, #button2, #button3, #button4').click(function(e) { 
-
-    // find the region the button controls 
-    var $region = $('#' + $(this).attr('aria-controls')); 
-     
-    // toggle the region 
-    $region.slideToggle(100, function() { 
-
-      if ($region.attr('aria-expanded') == 'false') { // region is collapsed 
-
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'true'); 
-
-        // move focus to the region 
-        $region.focus(); 
-
-        // update the button label 
-        $(this).find('span').html('Hide'); 
-
-      } 
-      else { // region is expanded 
-
-        // update the aria-expanded attribute of the region 
-        $region.attr('aria-expanded', 'false'); 
-
-        // update the button label 
-        $(this).find('span').html('Show'); 
-      } 
-    }); 
-
-    e.stopPropagation(); 
-    return false; 
-  }); 
-   
-}); // end ready() 
-  </script>
    
 </head>
 
@@ -255,13 +213,12 @@ for ($i = 0; $i < $range + 1; $i++) {
                                 frameborder="yes"
                                 scrolling="yes">
                                 </iframe>';
-		*/
         
         echo "<br>";
         echo "<br>";
         echo "<br>";
         echo "<br>";
-        
+        */
         
         echo "</p>";
     }
@@ -331,8 +288,49 @@ if ($i == $quesito) {
 	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
     Topic 1 is all about being Topic 1 and may or may not have anything to do with other topics.
 	</div>
+	<script type="text/javascript">
 
+$(document).ready(function() { 
 
+  // bind a click handler to the buttons 
+  $('#button1, #button2, #button3, #button4').click(function(e) { 
+
+    // find the region the button controls 
+    var $region = $('#' + $(this).attr('aria-controls')); 
+     
+    // toggle the region 
+    $region.slideToggle(100, function() { 
+
+      if ($region.attr('aria-expanded') == 'false') { // region is collapsed 
+
+        // update the aria-expanded attribute of the region 
+        $region.attr('aria-expanded', 'true'); 
+
+        // move focus to the region 
+        $region.focus(); 
+
+        // update the button label 
+        $(this).find('span').html('Hide'); 
+
+      } 
+      else { // region is expanded 
+
+        // update the aria-expanded attribute of the region 
+        $region.attr('aria-expanded', 'false'); 
+
+        // update the button label 
+        $(this).find('span').html('Show'); 
+      } 
+    }); 
+
+    e.stopPropagation(); 
+    return false; 
+  }); 
+   
+}); // end ready() 
+  </script>
+
+	
 </body>
 
 </html>
