@@ -73,7 +73,8 @@ $res = mysql_query($sql, $id);
         width="49%"
         height="88%"
         src="menuQuesitos.php"
-        >
+        frameborder="0"
+		>
           </iframe> 
 
 
