@@ -6,7 +6,7 @@ var dados_ranking = [];
 //var quesito = getCookie('quesito');
 
 
-d3.csv("data_teste_2.csv",function(data){
+d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
 	var nome = "EDA"; //livia: aqui vem a leitura do cookie
