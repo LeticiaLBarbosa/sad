@@ -19,7 +19,7 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 }
 
 fclose($handle);
-
+/*
 for ($i = 0; $i < count($matriz) - 2; $i++) {
     
     for ($j = 0; $j < count($matriz[$i]); $j++) {
@@ -31,7 +31,7 @@ for ($i = 0; $i < count($matriz) - 2; $i++) {
     
     echo "<br>";
 }
-
+*/
 echo "<br><br>";
 
 for ($i = 1; $i < count($matriz) - 2; $i++) {
