@@ -191,36 +191,17 @@ for ($i = 0; $i < $range + 1; $i++) {
 		echo "<b>Ranking do seu score nesse quesito </b>:";
                 
         if($quesito != 13){
-        
-                        echo '<iframe
-                                                                        name="Ranking"
-                                                                        width="100%"
-                                                                        height="23%"
-                                                                        src="../ranking/index.html"
-                                                                        scrolling="no"
-                                                                        frameborder="0"
-                                                                        >
-                                                                        </iframe> ';
+            echo '<iframe
+                name="Ranking"
+                width="100%"
+                height="23%"
+                src="../ranking/index.html"
+                scrolling="no"
+                frameborder="0"
+                >
+                </iframe> ';
         }
-        
-    
-        /*
-        echo "<b>Comentário",  ": </b><br>";
-        echo '<iframe
-                                name="iframe1"
-                                width="100%"
-                                height="30%"
-                                src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-                                frameborder="yes"
-                                scrolling="yes">
-                                </iframe>';
-        
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        */
-        
+                
         echo "</p>";
     }
         
@@ -288,24 +269,16 @@ if ($i == $quesito) {
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
 	<?php
-	
-		//	echo "<b>Comentário",  ": </b><br>";
-	        echo '<iframe
-	                                name="iframe1"
-	                                width="100%"
-	                                height="30%"
-	                                src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-	                                frameborder="yes"
-	                                scrolling="yes">
-	                                </iframe>';
-	        
-	        echo "<br>";
-	        echo "<br>";
-	        echo "<br>";
-	        echo "<br>";
+	    echo '<iframe
+			name="iframe1"
+	        width="100%"
+	        height="30%"
+	        src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+	        frameborder="yes"
+	        scrolling="yes">
+	    </iframe>';
 	
 	?>
-	
 	
 </div>
 
