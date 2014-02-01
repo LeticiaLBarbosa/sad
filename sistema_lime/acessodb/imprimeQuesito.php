@@ -203,9 +203,6 @@ for ($i = 0; $i < $range + 1; $i++) {
                                                                         </iframe> ';
         }
         
-        echo "<br>";
-        echo "<br>";
-        
     
         /*
         echo "<b>Comentário",  ": </b><br>";
@@ -290,26 +287,7 @@ if ($i == $quesito) {
 </p>
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
-<?php
-
-//        function imprimeComentarios($quesito){
-
-include "config.php";
-
-// Iniciando conexao ao BD e gerando variaveis essenciais
-$id  = mysql_connect($host, $login_db, $senha_db);
-$con = mysql_select_db($database, $id);
-
-
-$quesito = $_GET['quesito'];
-
-setcookie('quesito', $quesito);
-
-$disciplina_id = $_COOKIE['disciplina_id'];
-include geraComments.php?questao=' . $quesito . '&disciplina_id=' . $disciplina_id . ';
-
-?>
-
+	Aqui vem os comentarios .-.
 </div>
 
 </body>
