@@ -61,7 +61,7 @@ $res = mysql_query($sql, $id);
         name="Radar"
         width="49%"
         height="88%"
-        src="radar.php"
+        src="radar.html"
         scrolling="no"
         frameborder="0"
         >
