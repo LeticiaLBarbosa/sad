@@ -306,7 +306,7 @@ $quesito = $_GET['quesito'];
 setcookie('quesito', $quesito);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
-   echo geraComments.php?questao=' . $quesito . '&disciplina_id=' . $disciplina_id . ';
+include geraComments.php?questao=' . $quesito . '&disciplina_id=' . $disciplina_id . ';
 
 ?>
 
