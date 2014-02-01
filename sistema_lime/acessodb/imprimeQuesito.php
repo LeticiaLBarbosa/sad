@@ -14,8 +14,8 @@ verificaLogin();
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 	<link href="../menu_assets/styles4.css" rel="stylesheet" type="text/css">
 
-<script type="text/javascript" src="http://www.oaa-accessibility.org/media/examples/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="scriptButton.js"></script>9
+	<script type="text/javascript" src="http://www.oaa-accessibility.org/media/examples/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="scriptButton.js"></script>
    
 </head>
 
@@ -287,7 +287,26 @@ if ($i == $quesito) {
 </p>
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
-	Aqui vem os comentarios .-.
+	<?php
+	
+		//	echo "<b>Comentário",  ": </b><br>";
+	        echo '<iframe
+	                                name="iframe1"
+	                                width="100%"
+	                                height="30%"
+	                                src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+	                                frameborder="yes"
+	                                scrolling="yes">
+	                                </iframe>';
+	        
+	        echo "<br>";
+	        echo "<br>";
+	        echo "<br>";
+	        echo "<br>";
+	
+	?>
+	
+	
 </div>
 
 </body>
