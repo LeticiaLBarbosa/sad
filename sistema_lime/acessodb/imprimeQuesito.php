@@ -55,6 +55,8 @@ setcookie('quesito', $quesito);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
 
+echo $disciplina_id;
+
 
 // setcookie('disciplina_id',$disciplina_id);
 
