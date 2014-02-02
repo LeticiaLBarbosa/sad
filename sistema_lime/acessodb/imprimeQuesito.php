@@ -178,7 +178,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
     }
     
-    if ($i == $quesito && $i < 13) {
+    if ($i == $quesito && $quesito < 13) {
 
 		echo "<br>";
 		echo "<b>Ranking do seu score nesse quesito </b>:";
@@ -257,7 +257,7 @@ if ($i == $quesito) {
 
 <?php
 
-if($i == $quesito && $i < 13){
+if($i == $quesito && $quesito < 13){
 
 	echo 
 	'<p class="button">
