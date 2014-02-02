@@ -1,5 +1,6 @@
 <?php
-
+	// Página que da logout no usuario
+	
 	session_start();
 	
 	session_unset();

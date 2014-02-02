@@ -1,5 +1,6 @@
 <?php
-
+	// Pagina que explica grande parte do modulo professor
+	
 include "../acessodb/verifica_login.php";
 
 verificaLogin();
