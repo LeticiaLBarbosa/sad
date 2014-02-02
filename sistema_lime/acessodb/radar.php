@@ -27,7 +27,7 @@
     $res = mysql_query($sql, $id);
     
     while ($row = mysql_fetch_array($res)) {
-				$disciplina    = $row["surveyls_title"];
+				$disciplina    = utf8_encode($row["surveyls_title"]);
 				$disciplina_id = $row["disciplina_id"];
 				
 				if ($disciplina_id == $disciplina_idAtual){
