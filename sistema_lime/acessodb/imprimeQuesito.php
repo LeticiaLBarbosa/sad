@@ -262,18 +262,22 @@ if ($i == $quesito) {
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
 	<?php
-	    echo '<iframe
-			name="iframe1"
-	        width="100%"
-	        height="30%"
-	        src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-	        frameborder="yes"
-	        scrolling="yes">
-	    </iframe>';
+		if($i != 13){
+			echo '<iframe
+				name="iframe1"
+				width="100%"
+				height="30%"
+				src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+				frameborder="yes"
+				scrolling="yes">
+			</iframe>';
+		}
 	
 	?>
 	
 </div>
+
+
 
 </body>
 
