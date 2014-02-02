@@ -37,9 +37,6 @@ for ($i = 0; $i < 15; $i++) {
 
 <?php
 
-//        function imprimeQuesito($quesito){
-
-
 include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
@@ -54,8 +51,6 @@ $quesito = $_GET['quesito'];
 setcookie('quesito', $quesito);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
-
-// setcookie('disciplina_id',$disciplina_id);
 
 $indiceResposta = 5;
 $lacoResposta   = 0;
@@ -107,8 +102,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     if ($i == $quesito) {
         echo "<br>";
         echo "<br>";
-        echo "<br>";
-        
+
         echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
                        
         echo '<script type="text/javascript" src="../ranking/ranking.js"></script>';
