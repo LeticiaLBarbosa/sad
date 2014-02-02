@@ -45,6 +45,7 @@ menu {
   color: #cccccc;
 }
 #cssmenu li > a:hover,
+#cssmenu li > a.here,
 #cssmenu ul li:hover > a {
   background: #2580a2 url('hover.png') bottom center no-repeat;
   color: #FFFFFF;
@@ -89,6 +90,7 @@ menu {
   text-align: left;
 }
 #cssmenu li ul a:hover,
+#cssmenu li ul a.here,
 #cssmenu li ul li:hover > a {
   background: #2580a2 url('hover_sub.png') center left no-repeat;
   border: 0px;
