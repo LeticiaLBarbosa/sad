@@ -178,12 +178,12 @@ for ($i = 0; $i < $range + 1; $i++) {
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
     }
     
-    if ($i == $quesito) {
+    if ($i == $quesito && $quesito < 13) {
 
 		echo "<br>";
 		echo "<b>Ranking do seu score nesse quesito </b>:";
                 
-        if($quesito != 13){
+        
             echo '<iframe
                 name="Ranking"
                 width="100%"
@@ -193,7 +193,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                 frameborder="0"
                 >
                 </iframe> ';
-        }
+        
                 
         echo "</p>";
     }
@@ -209,8 +209,6 @@ if ($i == $quesito) {
     
     $row1 = mysql_fetch_array($res1);
     
-    echo "<br>";
-    echo "<br>";
     echo "<br>";
     
     echo "<b> 15 - ", utf8_encode($row1[0]), "</b>";
@@ -256,24 +254,34 @@ if ($i == $quesito) {
 
 ?>
 
-<p class="button">
-    <button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
-</p>
 
-<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
-	<?php
-	    echo '<iframe
-			name="iframe1"
-	        width="100%"
-	        height="30%"
-	        src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-	        frameborder="yes"
-	        scrolling="yes">
-	    </iframe>';
-	
-	?>
-	
-</div>
+<?php
+
+if($i == $quesito && $quesito < 13){
+
+	echo 
+	'<p class="button">
+		<button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
+	</p>
+
+	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">'
+	;
+		
+
+				echo '<iframe
+					name="iframe1"
+					width="100%"
+					height="30%"
+				src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+				frameborder="yes"
+				scrolling="yes">
+			</iframe>';
+
+		
+	echo '</div>';
+
+}
+?>
 
 </body>
 
