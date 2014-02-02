@@ -210,8 +210,6 @@ if ($i == $quesito) {
     $row1 = mysql_fetch_array($res1);
     
     echo "<br>";
-    echo "<br>";
-    echo "<br>";
     
     echo "<b> 15 - ", utf8_encode($row1[0]), "</b>";
     
@@ -256,28 +254,31 @@ if ($i == $quesito) {
 
 ?>
 
-<p class="button">
+
+<?php
+
+echo 
+'<p class="button">
     <button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
 </p>
 
-<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
-	<?php
-		if($i == $quesito && $i < 13){
+<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">'
+;
+	
+if($i == $quesito && $i < 13){
 			echo '<iframe
 				name="iframe1"
 				width="100%"
 				height="30%"
-				src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-				frameborder="yes"
-				scrolling="yes">
-			</iframe>';
-		}
+			src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+			frameborder="yes"
+			scrolling="yes">
+		</iframe>';
+}
 	
-	?>
-	
-</div>
+echo '</div>';
 
-
+?>
 
 </body>
 
