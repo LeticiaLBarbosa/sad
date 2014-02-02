@@ -178,12 +178,12 @@ for ($i = 0; $i < $range + 1; $i++) {
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
     }
     
-    if ($i == $quesito) {
+    if ($i == $quesito && $i < 13) {
 
 		echo "<br>";
 		echo "<b>Ranking do seu score nesse quesito </b>:";
                 
-        if($quesito != 13){
+        
             echo '<iframe
                 name="Ranking"
                 width="100%"
@@ -193,7 +193,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                 frameborder="0"
                 >
                 </iframe> ';
-        }
+        
                 
         echo "</p>";
     }
@@ -262,7 +262,7 @@ if ($i == $quesito) {
 
 <div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">
 	<?php
-		if($i != 13){
+		if($i == $quesito && $i < 13){
 			echo '<iframe
 				name="iframe1"
 				width="100%"
