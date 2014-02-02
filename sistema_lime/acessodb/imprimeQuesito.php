@@ -257,27 +257,30 @@ if ($i == $quesito) {
 
 <?php
 
-echo 
-'<p class="button">
-    <button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
-</p>
-
-<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">'
-;
-	
 if($i == $quesito && $i < 13){
-			echo '<iframe
-				name="iframe1"
-				width="100%"
-				height="30%"
-			src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-			frameborder="yes"
-			scrolling="yes">
-		</iframe>';
-}
-	
-echo '</div>';
 
+	echo 
+	'<p class="button">
+		<button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
+	</p>
+
+	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">'
+	;
+		
+
+				echo '<iframe
+					name="iframe1"
+					width="100%"
+					height="30%"
+				src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
+				frameborder="yes"
+				scrolling="yes">
+			</iframe>';
+
+		
+	echo '</div>';
+
+}
 ?>
 
 </body>
