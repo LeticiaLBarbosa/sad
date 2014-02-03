@@ -48,9 +48,13 @@ $con = mysql_select_db($database, $id);
 
 $quesito = $_GET['quesito'];
 
-setcookie('quesito', $quesito);
+$q = (int) $quesito;
+$q +=1;
+
+setcookie('quesito', "Q".$q);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
+
 
 $indiceResposta = 5;
 $lacoResposta   = 0;
