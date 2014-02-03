@@ -37,6 +37,8 @@ for ($i = 0; $i < 15; $i++) {
 
 <?php
 
+session_start();
+
 include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
