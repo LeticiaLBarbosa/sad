@@ -53,7 +53,7 @@ $q +=1;
 
 
 setcookie('quesito', "Q".$q);
-echo $_COOKIE['quesito'];
+,
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
