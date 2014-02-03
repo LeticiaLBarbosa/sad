@@ -18,17 +18,30 @@ d3.csv("ranking.csv",function(data){
 
 });
 
-function getCookie(cname)
-{
-var name = cname + "=";
-var ca = document.cookie.split(';');
-for(var i=0; i<ca.length; i++) 
-  {
-  var c = ca[i].trim();
-  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-  }
-return "";
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1)
+	  {
+	  c_start = c_value.indexOf(c_name + "=");
+	  }
+	if (c_start == -1)
+	  {
+	  c_value = null;
+	  }
+	else
+	  {
+	  c_start = c_value.indexOf("=", c_start) + 1;
+	  var c_end = c_value.indexOf(";", c_start);
+	  if (c_end == -1)
+	  {
+	c_end = c_value.length;
+	}
+	c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
 }
+
 
 function plot_bar_disciplina_ranking(nome, p){
 disciplina = nome;
@@ -57,7 +70,7 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
             .attr("text-anchor", "center")
             .attr("font-size", "12px")
             .attr("font-weight", "bold")
-            .text("qusito "+disciplina+questao_avaliada+"Esta eh a unica disciplina avaliada na questao "+ questao_avaliada); //
+            .text(document.cookie+"qusito "+disciplina+questao_avaliada+"Esta eh a unica disciplina avaliada na questao "+ questao_avaliada); //
     }else{
         plot_ranges_ranking(svg, line_per, h1);
         plot_bars_ranking(svg, line_per, h1);            
