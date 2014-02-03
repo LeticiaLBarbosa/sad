@@ -57,7 +57,7 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
             .attr("text-anchor", "center")
             .attr("font-size", "12px")
             .attr("font-weight", "bold")
-            .text(p+"Esta eh a unica disciplina avaliada na questao "+ questao_avaliada); //
+            .text("qusito "p+"Esta eh a unica disciplina avaliada na questao "+ questao_avaliada); //
     }else{
         plot_ranges_ranking(svg, line_per, h1);
         plot_bars_ranking(svg, line_per, h1);            
