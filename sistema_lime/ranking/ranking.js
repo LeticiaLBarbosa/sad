@@ -18,34 +18,11 @@ d3.csv("ranking.csv",function(data){
 
 });
 
-function getCookie(c_name){
-	var c_value = document.cookie;
-	var c_start = c_value.indexOf(" " + c_name + "=");
-	if (c_start == -1)
-	  {
-	  c_start = c_value.indexOf(c_name + "=");
-	  }
-	if (c_start == -1)
-	  {
-	  c_value = null;
-	  }
-	else
-	  {
-	  c_start = c_value.indexOf("=", c_start) + 1;
-	  var c_end = c_value.indexOf(";", c_start);
-	  if (c_end == -1)
-	  {
-	c_end = c_value.length;
-	}
-	c_value = unescape(c_value.substring(c_start,c_end));
-	}
-	return c_value;
-}
 
 
 function plot_bar_disciplina_ranking(nome, p){
-disciplina = nome;
-questao_avaliada = p; //livia: guarda o identificador da questao escolhida
+	var disciplina = nome;
+    var questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var h1 = 60;
     var margin = {top: 30, right: 120, bottom: 40, left: 40},
             width = 750 - margin.left - margin.right,
@@ -242,4 +219,28 @@ console.log(dados);
                     .on("click", function(d) {console.log(d.disciplina + "  " + d.media);});
 
 
+}
+
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1)
+	  {
+	  c_start = c_value.indexOf(c_name + "=");
+	  }
+	if (c_start == -1)
+	  {
+	  c_value = null;
+	  }
+	else
+	  {
+	  c_start = c_value.indexOf("=", c_start) + 1;
+	  var c_end = c_value.indexOf(";", c_start);
+	  if (c_end == -1)
+	  {
+	c_end = c_value.length;
+	}
+	c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
 }
