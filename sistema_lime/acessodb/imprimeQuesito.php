@@ -51,8 +51,9 @@ $quesito = $_GET['quesito'];
 $q = (int) $quesito;
 $q +=1;
 
-setcookie('quesito', "Q".$q);
 
+setcookie('quesito', "Q".$q);
+echo $_COOKIE['quesito'];
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
