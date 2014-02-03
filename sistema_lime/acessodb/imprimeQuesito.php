@@ -190,7 +190,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="../ranking/index.php"
+                src="index.php"
                 scrolling="no"
                 frameborder="0"
                 >
