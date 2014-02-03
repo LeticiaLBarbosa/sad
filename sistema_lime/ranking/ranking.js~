@@ -1,30 +1,61 @@
 var duration = 1000;
 var dados_ranking = [];
 
+// Ainda falta gerar o CSV correto;	
+//var disciplina = getCookie('disciplina_id');
+//var quesito = getCookie('quesito');
 
 
-function loadData(){
 
-    d3.csv("data_teste_2.csv",function(data){
-        dados_ranking = data;
-    });
+
+d3.csv("ranking.csv",function(data){
+    dados_ranking = data;
+
+	var nome = getCookie('diciplina_id'); //livia: aqui vem a leitura do cookie
+	var p = getCookie('quesito'); //livia: aqui vem a leitura do cookie
+
+	plot_bar_disciplina_ranking(nome, p);
+
+});
+
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1)
+	  {
+	  c_start = c_value.indexOf(c_name + "=");
+	  }
+	if (c_start == -1)
+	  {
+	  c_value = null;
+	  }
+	else
+	  {
+	  c_start = c_value.indexOf("=", c_start) + 1;
+	  var c_end = c_value.indexOf(";", c_start);
+	  if (c_end == -1)
+	  {
+	c_end = c_value.length;
+	}
+	c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
 }
 
-//livia: a funcao getRanking foi removida pois nao era usada
 
 function plot_bar_disciplina_ranking(nome, p){
 disciplina = nome;
 questao_avaliada = p; //livia: guarda o identificador da questao escolhida
     var h1 = 60;
-    var margin = {top: 30, right: 120, bottom: 40, left: 60},
-            width = 950 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+    var margin = {top: 30, right: 120, bottom: 40, left: 40},
+            width = 750 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
     d3.select("#infos").select("svg").remove();
     var svg = d3.select("#infos");
     
     svg = d3.select("#infos").append("svg")
-        .attr("width", 800)
-        .attr("height", 600);	
+        .attr("width", 600)
+        .attr("height", 400);	
     
     var val_per = dados_ranking.filter(function(d){ return d.questao == questao_avaliada});
 
@@ -35,14 +66,14 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
         // Imprime mensagem
         svg.append("text")
             .attr("y", h1-30)
-            .attr("x", 550)
+            .attr("x", 350)
             .attr("text-anchor", "center")
             .attr("font-size", "12px")
             .attr("font-weight", "bold")
-            .text("Esta eh a unica disciplina avaliada na questao " + questao_avaliada); //
+            .text(disciplina+questao_avaliada+document.cookie+"qusito "+"Esta eh a unica disciplina avaliada na questao "+ questao_avaliada); //
     }else{
         plot_ranges_ranking(svg, line_per, h1);
-        plot_bars_ranking(svg, line_per, h1);          
+        plot_bars_ranking(svg, line_per, h1);            
         plot_disciplinas_ranking(svg, val_per, "blue",line_per[0], line_per[1],h1);
 
     };
@@ -55,7 +86,7 @@ function plot_ranges_ranking(svg, dados, y0){
     
     var x1 = d3.scale.linear()
           .domain([parseFloat(valor1), parseFloat(valor2)])
-          .range([120, 750]);    
+          .range([120, 550]);    
 
     var xAxis = d3.svg.axis()
             .scale(x1)
@@ -119,14 +150,14 @@ function plot_bars_ranking(svg, dados,y0){
     
     var x1 = d3.scale.linear()
           .domain([dados[0].x, dados[1].x])
-          .range([120, 750]);
+          .range([120, 550]);
     
     addLine_ranking(svg,x1(dados[0].x),x1(dados[1].x),y0,y0,"#E0E0E0");
 }
 
 
 function convert(nota,min,max){
-    return (((nota- min)/(max-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
+    return (((nota- min)/(max-min))*(550-120)) + 120; //livia: algum tipo de normalizacao?????
 }
 
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
