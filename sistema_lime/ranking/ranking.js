@@ -11,7 +11,7 @@ var dados_ranking = [];
 d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
-	var nome = getCookie('diciplina_id'); //livia: aqui vem a leitura do cookie
+	var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	var p = getCookie('quesito'); //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
@@ -70,7 +70,7 @@ questao_avaliada = p; //livia: guarda o identificador da questao escolhida
             .attr("text-anchor", "center")
             .attr("font-size", "12px")
             .attr("font-weight", "bold")
-            .text(questao_avaliada+ "Esta eh a unica disciplina avaliada na questao "); //
+            .text(disciplina+ "Esta eh a unica disciplina avaliada na questao "); //
     }else{
         plot_ranges_ranking(svg, line_per, h1);
         plot_bars_ranking(svg, line_per, h1);            
