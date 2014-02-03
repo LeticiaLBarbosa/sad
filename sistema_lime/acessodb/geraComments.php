@@ -9,7 +9,7 @@ verificaLogin();
 ?>
 
 <html>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </html>
 <?php
 
@@ -39,8 +39,8 @@ while ($row3 = mysql_fetch_array($res3)) {
         $count++;
         
         
-        $c = utf8_encode("Comentário");
-        $stringComentarios .= "<b>" . $count . utf8_encode("º - ") . $c . ":" . "</b> <br>" . utf8_encode($row3[$indiceComentario]) . "<br>";
+        $c = "Comentário";
+        $stringComentarios .= "<b>" . $count . "º - " . $c . ":" . "</b> <br>" . $row3[$indiceComentario] . "<br>";
     }
 }
 
