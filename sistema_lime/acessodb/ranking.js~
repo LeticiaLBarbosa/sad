@@ -8,13 +8,13 @@ var dados_ranking = [];
 
 
 
-d3.csv("data_teste_2.csv",function(data){
+d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
 	var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	var p = getCookie('quesito'); //livia: aqui vem a leitura do cookie
 
-	plot_bar_disciplina_ranking("EDA", "Q2");
+	plot_bar_disciplina_ranking(nome, p);
 
 });
 
