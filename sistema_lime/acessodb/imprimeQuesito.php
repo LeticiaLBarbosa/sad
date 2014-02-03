@@ -37,7 +37,7 @@ for ($i = 0; $i < 15; $i++) {
 
 <?php
 
-session_start();
+
 
 include "config.php";
 include "geraMediaPorQuesito.php";
@@ -190,7 +190,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="../ranking/index.html"
+                src="../ranking/index.php"
                 scrolling="no"
                 frameborder="0"
                 >
