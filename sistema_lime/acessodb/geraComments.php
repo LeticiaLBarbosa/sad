@@ -21,7 +21,7 @@ $questao = $_GET['questao'];
 $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
 
-$disciplina_id = $_GET['disciplina_id'];
+$disciplina_id = $_COOKIE['disciplina_id'];
 
 $indiceComentario = 6 + 2 * $questao;
 
@@ -39,8 +39,8 @@ while ($row3 = mysql_fetch_array($res3)) {
         $count++;
         
         
-        $c = utf8_encode("Comentário");
-        $stringComentarios .= "<b>" . $count . utf8_encode("º - ") . $c . ":" . "</b> <br>" . utf8_encode($row3[$indiceComentario]) . "<br>";
+        $c = utf8_encode("Comentï¿½rio");
+        $stringComentarios .= "<b>" . $count . utf8_encode("ï¿½ - ") . $c . ":" . "</b> <br>" . utf8_encode($row3[$indiceComentario]) . "<br>";
     }
 }
 
