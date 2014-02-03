@@ -40,7 +40,7 @@ while ($row3 = mysql_fetch_array($res3)) {
         
         
         $c = "Comentário";
-        $stringComentarios .= "<b>" . $count . "º - " . $c . ":" . "</b> <br>" . $row3[$indiceComentario] . "<br>";
+        $stringComentarios .= "<b>" . $count . "º - " . $c . ":" . "</b> <br>" . utf8_encode($row3[$indiceComentario]) . "<br>";
     }
 }
 
