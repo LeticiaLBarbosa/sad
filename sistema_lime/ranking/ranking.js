@@ -6,15 +6,29 @@ var dados_ranking = [];
 //var quesito = getCookie('quesito');
 
 
+
+
 d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
-	var nome = "EDA"; //livia: aqui vem a leitura do cookie
-	var p = "Q1"; //livia: aqui vem a leitura do cookie
+	var nome = getCookie('diciplina_id'); //livia: aqui vem a leitura do cookie
+	var p = getCookie('quesito'); //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
 
 });
+
+function getCookie(cname)
+{
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i=0; i<ca.length; i++) 
+  {
+  var c = ca[i].trim();
+  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+return "";
+}
 
 function plot_bar_disciplina_ranking(nome, p){
 disciplina = nome;
