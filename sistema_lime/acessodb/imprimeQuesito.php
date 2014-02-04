@@ -159,7 +159,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
-            echo "Porcentagem de Aprovação: ","<b>",score($ValorRespostas),"%</b>"," || Score: " ,"<b>",round(score($ValorRespostas)/100,2),"</b> || Média do DSC: ", "<b>", $arrayMediasQuesito[$i], "</b>", " || ", "Sua Média",  ": ", "<b>", media($ValorRespostas), "</b>";
+            echo "Score: " ,"<b>",round(score($ValorRespostas)/100,2),"</b>";
        	    
         }
         
