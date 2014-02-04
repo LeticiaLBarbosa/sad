@@ -1,6 +1,6 @@
 <?php
 
-// Pagina que mostra os frames do Radar e da Disciplina
+// Pagina que mostra os frames do Radar e da Disciplina selecionada
 
 include "verifica_login.php";
 
@@ -9,10 +9,10 @@ verificaLogin();
 ?>
 
 <html>
-<title>Informacoes Disciplina</title>
+	<title>Informacoes Disciplina</title>
 <head>
-<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 
 <?php
