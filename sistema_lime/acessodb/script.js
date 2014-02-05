@@ -1,8 +1,8 @@
 // Livia: esse � o arquivo que vai mudar para ler os dados do .csv
 
 // Tamanho do radar
-var w = 400, 
-	h = 400;
+var w = 300, 
+	h = 300;
 
 var colorscale = d3.scale.category10();
 var disciplina = getCookie('disciplina_id');
@@ -98,7 +98,7 @@ var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", w+300)
-	.attr("height", h)
+	.attr("height", h+200)
 
 //Create the title for the legend
 var text = svg.append("text")
