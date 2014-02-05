@@ -161,8 +161,7 @@ for ($i = 0; $i < $range + 1; $i++) {
             
         }
         
-        echo "<br>";
-        echo "<br>";
+        
         
     }
     
@@ -180,8 +179,11 @@ for ($i = 0; $i < $range + 1; $i++) {
     
     if ($i == $quesito && $quesito < 13) {
 		
-		 $arrayMediasQuesito = geraMediasQuesitos();
-         echo '<a target="_top" href="help.php" >Pontuação</a>',": ","<b>",stringScore($ValorRespostas),"</b>";
+		echo "<br>";
+        echo "<br>";
+		
+		$arrayMediasQuesito = geraMediasQuesitos();
+        echo '<a target="_top" href="help.php" >Pontuação</a>',": ","<b>",stringScore($ValorRespostas),"</b>";
        	   
 
 		echo "<br>";
