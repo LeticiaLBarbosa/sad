@@ -345,7 +345,7 @@ function stringScore($respostas)
         $peso--;
     }
  
-      return array_sum($respostas);
+      return array_sum($respostas)."/".$melhor;
 }
 
 ?>
