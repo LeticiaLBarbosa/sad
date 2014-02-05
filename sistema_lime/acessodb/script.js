@@ -105,7 +105,7 @@ var text = svg.append("text")
 	.attr("class", "title")
 	.attr('transform', 'translate(90,0)') 
 	.attr("x", w - 20) //localizacao do titulo da legenda
-	.attr("y", 400) // altura do titulo?
+	.attr("y", 300) // altura do titulo?
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
 	.text("Resultados do semestre:");
