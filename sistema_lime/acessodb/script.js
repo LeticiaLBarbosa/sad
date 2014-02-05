@@ -105,7 +105,7 @@ var text = svg.append("text")
 	.attr("class", "title")
 	.attr('transform', 'translate(90,0)') 
 	.attr("x", w - 20) //localizacao do titulo da legenda
-	.attr("y", 350) // altura do titulo?
+	.attr("y", 10) // altura do titulo?
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
 	.text("Resultados do semestre:");
@@ -115,7 +115,7 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 200)
 	.attr("width", 200)
-	.attr('transform', 'translate(5,380)') // localiza��o da legenda 
+	.attr('transform', 'translate(160,20)') // localiza��o da legenda 
 	;
 	//Create colour squares
 	legend.selectAll('rect')
