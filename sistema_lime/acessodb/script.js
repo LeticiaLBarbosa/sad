@@ -115,7 +115,7 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 200)
 	.attr("width", 200)
-	.attr('transform', 'translate(50,310)') // localiza��o da legenda 
+	.attr('transform', 'translate(20,350)') // localiza��o da legenda 
 	;
 	//Create colour squares
 	legend.selectAll('rect')
