@@ -159,7 +159,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
-            echo "Score: " ,"<b>",stringScore($ValorRespostas),"</b>";
+            echo "<a href='help.php'>'Pontuação: '</a>","<b>",stringScore($ValorRespostas),"</b>";
        	    
         }
         
@@ -183,7 +183,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     if ($i == $quesito && $quesito < 13) {
 
 		echo "<br>";
-		echo "<b>Ranking do seu score nesse quesito </b>:";
+		echo "<b>Ranking do sua pontuação nesse quesito </b>:";
                 
         
             echo '<iframe
