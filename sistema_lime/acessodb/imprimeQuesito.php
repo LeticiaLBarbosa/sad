@@ -159,7 +159,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
-            echo "Score: " ,"<b>",round(score($ValorRespostas)/100,2),"</b>";
+            echo "Score: " ,"<b>",stringScore($ValorRespostas),"</b>";
        	    
         }
         
