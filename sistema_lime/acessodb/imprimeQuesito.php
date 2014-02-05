@@ -159,7 +159,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     
         if ($i < 13) {
             $arrayMediasQuesito = geraMediasQuesitos();
-            echo '<a target="_top" href="help.php" >Pontuação</a>"',": ","<b>",stringScore($ValorRespostas),"</b>';
+            echo '<a target="_top" href="help.php" >Pontuação</a>"',": ","<b>",stringScore($ValorRespostas),"</b>";
        	    
         }
         
