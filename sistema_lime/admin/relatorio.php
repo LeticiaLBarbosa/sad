@@ -1,7 +1,7 @@
 <?php
 // Pagina usada ao clicar em "Ajuda" no menu principal
 
-include "verifica_login.php";
+include "../acessodb/verifica_login.php";
 
 verificaLogin();
 
