@@ -92,7 +92,7 @@ for($i = 0; $i < 13; $i++){
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="../acessodb/index.php"
+                src="index.php"
                 scrolling="no"
                 frameborder="0"
                 >
