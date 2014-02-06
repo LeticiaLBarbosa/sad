@@ -1,5 +1,8 @@
 <?php
 
+include "csvFunction.php";
+
+
 // Arquivo usado pra gerar o csv do ranking
 $fileCSV = fopen("ranking.csv", "w", 0);
 fwrite($fileCSV,"disciplina,media,questao,posicao\n");
@@ -21,65 +24,34 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 }
 
 fclose($handle);
-/*
-for ($i = 0; $i < count($matriz) - 2; $i++) {
-    
-    for ($j = 0; $j < count($matriz[$i]); $j++) {
-        
-        if ($j == 13) {
-            echo $matriz[$i][$j] . ",";
-        }
-    }
-    
-    echo "<br>";
-}
-*/
-echo "<br><br>";
 
 for ($i = 1; $i < count($matriz) - 2; $i++) {
     for ($j = 1; $j < count($matriz[$i]); $j++) {
         
         
-        //	echo $matriz[$i][0].",".$matriz[$i][$j].",".$matriz[0][$j].",".arrayQuesito($j,$matriz[$i][$j],$matriz)."<br>";
         
-        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . arrayQuesito($j, $matriz[$i][$j], $matriz) . "\n"));
+        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnNota($j, $matriz[$i][$j], $matriz) . "\n"));
         
     }
 }
 
-function disciplinas() {
-    
-    $fileCSV = fopen("ranking.csv", "w", 0);
-fwrite($fileCSV,"disciplina,media,questao,posicao\n");
 
-$row        = 1;
-$handle     = fopen("data.csv", "r");
-$matriz     = array();
-$disciplina = array();
-$index      = 0;
-while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-    $num = count($data);
-    $row++;
-    for ($i = 0; $i < $num; $i++) {
-        $disciplina[$i] = $data[$i];
-    }
-    
-    $matriz[$index] = $disciplina;
-    $index++;
+function arrayColunaDaMatriz($matriz, $coluna){
+	
+	$arrayColuna = array();
+
+	for($i = 1; $i < count($matriz) - 2; $i++) {
+		
+		$arrayColuna[$i] = $matriz[$i][$coluna];
+	
+	} 
+		
+	return $arrayColuna;
+
 }
 
-fclose($handle);
-    
-    $result = array();
-    for ($i = 1; $i < count($matriz) - 2; $i++) {
-        
-        $result[$i] = $matriz[$i][0];
-    }
-    
-    return $result;
-}
 
-function arrayQuesito($quesito, $nota, $matriz)
+function returnNota($quesito, $nota, $matriz)
 {
     
     $notas = array();
