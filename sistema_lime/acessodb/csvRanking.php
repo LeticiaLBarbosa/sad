@@ -2,7 +2,6 @@
 
 include "csvFunction.php";
 
-
 // Arquivo usado pra gerar o csv do ranking
 $fileCSV = fopen("ranking.csv", "w", 0);
 fwrite($fileCSV,"disciplina,media,questao,posicao\n");
@@ -30,13 +29,13 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
         
         
         
-        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnNota($j, $matriz[$i][$j], $matriz) . "\n"));
+        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
         
     }
 }
 
 
-function arrayColunaDaMatriz($matriz, $coluna){
+function arrayColunaDaMatriz($matriz, $coluna) {
 	
 	$arrayColuna = array();
 
@@ -51,7 +50,7 @@ function arrayColunaDaMatriz($matriz, $coluna){
 }
 
 
-function returnNota($quesito, $nota, $matriz)
+function returnPosicao($quesito, $nota, $matriz)
 {
     
     $notas = array();
