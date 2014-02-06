@@ -1,5 +1,5 @@
 <?php
-// Pagina que gera os relatorios do admin - Emergencial
+// Pagina usada ao clicar em "Ajuda" no menu principal
 
 include "verifica_login.php";
 
@@ -11,7 +11,7 @@ verificaLogin();
 <head>
 	<link href="../menu_assets/styles2.css" rel="stylesheet" type="text/css">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-	<title> Relatórios - SAD </title>
+	<title> Help - SAD </title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@ verificaLogin();
 <div id="cssmenu">
 		<ul>
 			<li><a href="sessao2.php">Inicio</a></li>
-			<li><a href="Relatorio.php"  class="here">Relatorios</a></li>
+			<li><a href="relatorio.php"  class="here">Relatorio</a></li>
 			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 
@@ -34,7 +34,7 @@ verificaLogin();
 
 <body>
 
-<h3><p>Relatórios</p></h3>
+<h3><p>Text Help</p></h3>
 
 </body>
 </html>
