@@ -81,18 +81,28 @@ $disciplinas = array();
 
 //for($i = 0; $i < count($disciplinas); $i++) {
 	
-setcookie('disciplina_id',$disciplina[0]);
+
+
+
+setcookie('disciplina_id',$disciplinas[1]);
 //	echo "<a href=../acessodb/imprimeDisciplinaAdmin.php?disciplina_id=$disciplinas[$i]>$disciplinas[$i]</a>","<br>";
 //	break;
 //}
 
-for($i = 0; $i < 13; $i++){
-	setcookie('quesito', "Q".$i);
+
+
+
+
+///setcookie('quesito', 'Q1');
+
+
+for($i = 1; $i < 14; $i++){
+	//setcookie('quesito', "Q".$i);
 	echo '<iframe
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="index.php"
+                src="index.php?quesito='.$i.'"
                 scrolling="no"
                 frameborder="0"
                 >
