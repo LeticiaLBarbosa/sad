@@ -87,6 +87,7 @@ setcookie('disciplina_id',$disciplina[0]);
 //}
 
 for($i = 0; $i < 13; $i++){
+	setcookie('quesito', "Q".$i);
 	echo '<iframe
                 name="Ranking"
                 width="100%"
