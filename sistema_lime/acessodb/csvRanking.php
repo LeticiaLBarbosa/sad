@@ -3,7 +3,7 @@
 include "csvFunction.php";
 
 // Arquivo usado pra gerar o csv do ranking
-$fileCSV = fopen("ranking.csv", "w", 0);
+$fileCSV = fopen("../admin/ranking.csv", "w", 0);
 fwrite($fileCSV,"disciplina,media,questao,posicao\n");
 
 $row        = 1;
@@ -33,7 +33,19 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
         
     }
 }
-
+	//Gravando desvio padrão 
+	
+	for ($i = 1; $i < count($matriz[$i]);$i++) {
+		
+        
+        fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
+        fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
+ 
+		
+	}
+	
+	fclose($fileCSV);
+	
 
 function arrayColunaDaMatriz($matriz, $coluna) {
 	
