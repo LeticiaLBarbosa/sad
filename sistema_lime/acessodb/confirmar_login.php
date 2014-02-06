@@ -15,19 +15,23 @@
 	$contagem = mysql_num_rows($confirmacao); //traz o resultado da pesquisa acima
 
 	if ( $contagem == 1 ) {
+		$_SESSION['login'] = $login;
+		$_SESSION['senha'] = $senha;
 		
-	  $_SESSION['login'] = $login;
-	  $_SESSION['senha'] = $senha;
-	  	
 	  //setcookie('login', $login); //grava o cookie com o login
 	  //setcookie('senha', $senha);
 	  //setcookie ("senha", $senha); //grava o cookie com a senha
-	  echo "Usu�rio logado." , $login; //se a senha digitada est� correta, mostra a mensagem
 	  
-	  header("Location: sessao.php");
-	  exit(2);   
-	  
-	  } else {
-	 	 echo "Login ou senha inv�lidos. <a href=javascript:history.go(-1)>Clique aqui para voltar.</a>"; //se a senha est� incorreta mostra essa mensagem
-	  }
+		echo "Usuario logado." , $login; //se a senha digitada est� correta, mostra a mensagem
+		if ( $login == "admin"){
+			header("Location: sessao2.php");
+			exit(2);
+		}
+		else{
+			header("Location: sessao.php");
+			exit(2);   
+		}
+	} else {
+		echo "Login ou senha invalidos. <a href=javascript:history.go(-1)>Clique aqui para voltar.</a>"; //se a senha esta incorreta mostra essa mensagem
+	}
 ?>
