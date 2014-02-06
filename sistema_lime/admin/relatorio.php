@@ -36,5 +36,61 @@ verificaLogin();
 
 <h3><p>Relatório</p></h3>
 
+<?php
+
+session_start();
+
+$disciplina_id = $_GET['disciplina_id'];
+
+setcookie('disciplina_id', $disciplina_id);
+
+
+include "config.php";
+
+$id    = mysql_connect($host, $login_db, $senha_db);
+$con   = mysql_select_db($database, $id);
+$login = $_SESSION['login'];
+
+$sql = "SELECT p.nome, l.surveyls_title, d.disciplina_id  FROM sad_professor_disciplina as d, professores p, lime_surveys_languagesettings as l WHERE p.login = d.login and l.surveyls_survey_id         = d.disciplina_id and d.login = '$login'";
+$res = mysql_query($sql, $id);
+
+
+$row        = 1;
+$handle     = fopen("../acessodb/data.csv", "r");
+$matriz     = array();
+$disciplina = array();
+$index      = 0;
+while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+    $num = count($data);
+    $row++;
+    for ($i = 0; $i < $num; $i++) {
+        $disciplina[$i] = $data[$i];
+    }
+    
+    $matriz[$index] = $disciplina;
+    $index++;
+
+}
+
+$disciplinas = array();
+ for ($i = 1; $i < count($matriz) - 2; $i++) {
+        
+        $disciplinas[$i] = $matriz[$i][0];
+  }
+    
+
+for($i = 0; $i < count($disciplinas); $i++) {
+
+
+echo "<a href=../acessodb/imprimeDisciplinaAdmin.php?disciplina_id=$disciplinas[$i]>$disciplinas[$i]</a>","<br>";
+
+} 
+?>
+
+
+
+<h3>passou</h3>
+
+
 </body>
 </html>
