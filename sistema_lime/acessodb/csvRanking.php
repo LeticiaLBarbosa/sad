@@ -47,6 +47,17 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
     }
 }
 
+function disciplinas() {
+    
+    $result = array();
+    for ($i = 1; $i < count($matriz) - 2; $i++) {
+        
+        $result[$i] = $matriz[$i][0];
+    }
+    
+    return $result;
+}
+
 function arrayQuesito($quesito, $nota, $matriz)
 {
     
@@ -68,7 +79,5 @@ function arrayQuesito($quesito, $nota, $matriz)
         
     }
 }
-
-echo "passou";
 
 ?>
