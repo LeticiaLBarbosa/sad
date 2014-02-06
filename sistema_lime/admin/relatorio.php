@@ -96,7 +96,7 @@ for($i = 0; $i < 13; $i++){
                 scrolling="no"
                 frameborder="0"
                 >
-                </iframe> ', "<br>";
+                </iframe> ';
                 
 	
 }
