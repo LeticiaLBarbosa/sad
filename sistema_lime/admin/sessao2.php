@@ -42,7 +42,7 @@ $res = mysql_query ( $sql, $id );
 	<div id="cssmenu">
 		<ul>
 			<li><a href="sessao2.php" class="here">Inicio</a></li>
-			<li><a href="#">Relatorios</a></li>
+			<li><a href="relatorio.php">Relatorios</a></li>
 			<li><a href="../usuario/logout.php">Sair</a></li>
 		</ul>
 
