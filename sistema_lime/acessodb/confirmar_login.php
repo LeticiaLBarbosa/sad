@@ -24,7 +24,7 @@
 	  
 		echo "Usuario logado." , $login; //se a senha digitada est� correta, mostra a mensagem
 		if ( $login == "admin"){
-			header("Location: sessao2.php");
+			header("Location: ../admin/sessao2.php");
 			exit(2);
 		}
 		else{
