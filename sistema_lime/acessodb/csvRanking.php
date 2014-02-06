@@ -49,6 +49,27 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 
 function disciplinas() {
     
+    $fileCSV = fopen("ranking.csv", "w", 0);
+fwrite($fileCSV,"disciplina,media,questao,posicao\n");
+
+$row        = 1;
+$handle     = fopen("data.csv", "r");
+$matriz     = array();
+$disciplina = array();
+$index      = 0;
+while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+    $num = count($data);
+    $row++;
+    for ($i = 0; $i < $num; $i++) {
+        $disciplina[$i] = $data[$i];
+    }
+    
+    $matriz[$index] = $disciplina;
+    $index++;
+}
+
+fclose($handle);
+    
     $result = array();
     for ($i = 1; $i < count($matriz) - 2; $i++) {
         
