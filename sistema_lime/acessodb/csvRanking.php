@@ -35,7 +35,7 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 }
 	//Gravando desvio padrão 
 	
-	for ($i = 1; $i < count($matriz[$i]);$i++) {
+	for ($i = 0; $i < 15;$i++) {
 		
         
         fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
