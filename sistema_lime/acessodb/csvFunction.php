@@ -348,6 +348,28 @@ function stringScore($respostas)
       return array_sum($respostas)."/".$melhor;
 }
 
+function desvioPadrao($respostas) {
+	
+	$somaDasDiferencas = 0;		
+	$media = media($respostas);
+		
+	foreach ($repostas as &$valor){
+		
+		$somaDasDiferencas += quadrado($media - $valor); 
+	}
+
+	return round(sqrt($somaDasDiferencas/count($respostas)), 2);
+	
+}
+
+function quadrado($number) {
+
+	return $number*$nuber;
+}
+
+
+
+
 ?>
 
 
