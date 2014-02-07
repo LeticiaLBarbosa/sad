@@ -266,6 +266,8 @@ echo "<br>";
 echo "<br>";
 }
 ?>
+
+</script>
   
 </body>
 
