@@ -83,7 +83,7 @@ for($i = 1; $i < 14; $i++){
             name="Ranking"
             width="100%"
                 height="85%"
-                src="index.php'."Q".$i. '"
+                src="index.php?quesito='."Q".$i. '"
                 scrolling="no"
                 frameborder="0"
                 >
