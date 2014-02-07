@@ -194,7 +194,7 @@ for ($i = 0; $i < $range + 1; $i++) {
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="index.php"
+                src="geraRanking.php"
                 scrolling="no"
                 frameborder="0"
                 >
