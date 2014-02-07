@@ -37,6 +37,11 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 	
 	for ($i = 0; $i < 15;$i++) {
 		
+		
+	
+        echo (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
+        echo (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
+ 	
         
         fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
         fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
