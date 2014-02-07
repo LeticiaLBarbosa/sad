@@ -59,7 +59,7 @@ setcookie('quesito', "Q".$q);
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
-$indiceResposta = 6;
+$indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 $lacoResposta   = 0;
 $valores        = array();
 
@@ -98,7 +98,9 @@ for ($i = 0; $i < $range + 1; $i++) {
     $valorA5 = 0;
     
     $tabela = "lime_survey_" . $disciplina_id;
+    
     $sql2   = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid and q.qid = $QqidQuestao";
+    
     $res2   = mysql_query($sql2, $id);
     $sql3   = "SELECT * FROM $tabela";
     $res3   = mysql_query($sql3, $id);
@@ -203,7 +205,13 @@ for ($i = 0; $i < $range + 1; $i++) {
         
         
         
-        	echo 
+        	
+        
+                
+        echo "</p>";
+    }
+        
+    echo 
 	'<p class="button">
 		<button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
 	</p>
@@ -225,9 +233,6 @@ for ($i = 0; $i < $range + 1; $i++) {
 	echo '</div>';
 
         
-                
-        echo "</p>";
-    }
         
     $indiceResposta = $indiceResposta + 2;
     $QqidQuestao    = $QqidQuestao + 1;
