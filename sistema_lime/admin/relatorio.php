@@ -93,7 +93,7 @@ setcookie('disciplina_id',$disciplinas[1]);
 
 
 
-///setcookie('quesito', 'Q1');
+setcookie('quesito', 'Q1');
 
 
 for($i = 1; $i < 14; $i++){
@@ -102,7 +102,7 @@ for($i = 1; $i < 14; $i++){
                 name="Ranking"
                 width="100%"
                 height="23%"
-                src="index.php?quesito=2"
+                src="index.php"
                 scrolling="no"
                 frameborder="0"
                 >

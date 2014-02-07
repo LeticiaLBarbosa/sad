@@ -15,7 +15,7 @@
 session_start();
 
 
-setcookie('quesito',$_GET['quesito']);
+//setcookie('quesito',$_GET['quesito']);
 ?>
 
 
