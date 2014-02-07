@@ -59,7 +59,7 @@ setcookie('quesito', "Q".$q);
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
-$indiceResposta = 5;
+$indiceResposta = 6;
 $lacoResposta   = 0;
 $valores        = array();
 

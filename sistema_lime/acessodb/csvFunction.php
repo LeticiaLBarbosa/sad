@@ -12,7 +12,7 @@ function mediasPorQuesito($disciplina_id) {
     $linhaMontada = $disciplina_id . ",";
     
     $medias         = array();
-    $indiceResposta = 5;
+    $indiceResposta = 6;
     $lacoResposta   = 0;
     $valores        = array();
     
