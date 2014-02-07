@@ -73,7 +73,7 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 	$disciplinas[$i] = $matriz[$i][0];
 }
 
-setcookie('disciplina_id',$disciplinas[1]);
+//setcookie('disciplina_id',$disciplinas[1]);
 
 
 for($i = 1; $i < 14; $i++){
