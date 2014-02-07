@@ -75,25 +75,22 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 
 setcookie('disciplina_id',$disciplinas[1]);
 
-//setcookie('quesito', 'Q1');
 
+for($i = 1; $i < 14; $i++){
+	//setcookie('quesito', );
 
-//for($i = 1; $i < 14; $i++){
-	//setcookie('quesito', "Q".$i);
-
-echo '<iframe
+	echo '<iframe
             name="Ranking"
             width="100%"
                 height="85%"
-                src="index.php"
+                src="index.php'."Q".$i. '"
                 scrolling="no"
                 frameborder="0"
                 >
                 </iframe> ';
                 
 	
-//}
-
+}
 
 ?>
 
