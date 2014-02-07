@@ -24,8 +24,8 @@ d3.csv("ranking.csv",function(data){
 
 	//var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	var nome = 'desvioPositivo';
-	var p = "<?php echo "Q". $_GET['quesito']; 
-	//echo "Q1";?>"; //livia: aqui vem a leitura do cookie
+	var p = "<?php //echo "Q". $_GET['quesito']; 
+	echo "Q1";?>"; //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
 
@@ -228,6 +228,25 @@ console.log(dados);
                        .on("mouseout", function(d){mouseout(d.media, d.disciplina);}) 
                     .on("mousemove", function(d){mousemove(d.media, d.disciplina);})
                     .on("click", function(d) {console.log(d.disciplina + "  " + d.media);});
+                    
+                    
+    // Adiciona a linha correspondente a media do aluno escolhido
+    svg.append("line")
+            .attr("x1", function(d){ return convert(inf[0].media,min.x,max.x);}) // X inicial da linha
+            .attr("x2", function(d){ return convert(inf[0].media,min.x,max.x);}) // X final da linha 
+            .attr("y1",y0-12) // Y inicial da linha
+            .attr("y2",y0+12) // Y final da linha
+            .attr("class","linha_disciplina")
+            .transition().duration(duration)  // Transicao
+            .style("stroke","red") // Cor da linha
+            .attr("stroke-width",5)    // Largura da linha
+            .attr("text",function(d){return d.disciplina;});
+    
+    svg.selectAll("line").on("mouseover", function(d){mouseover();}) 
+                       .on("mouseout", function(d){mouseout(d.media, d.disciplina);}) 
+                    .on("mousemove", function(d){mousemove(d.media, d.disciplina);})
+                    .on("click", function(d) {console.log(d.disciplina + "  " + d.media);});
+
 
 
 }
