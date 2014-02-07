@@ -24,7 +24,7 @@ d3.csv("ranking.csv",function(data){
 
 	var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 
-	var p = "<?php echo $_GET['quesito']; ?>"; //livia: aqui vem a leitura do cookie
+	var p = "<?php echo "Q".$_GET['quesito']; ?>"; //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
 
