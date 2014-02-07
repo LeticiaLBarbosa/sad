@@ -10,17 +10,7 @@
 
 <body>
 
-<?php
-
-session_start();
-
-
-for ($i = 1; $i < 14; $i++ ){
-		
-?>
 <div id="infos" class="plot-info2" style="text-align:left; font-size : 14px;">
-		
-		
 		
 </div>
 
@@ -32,12 +22,24 @@ var dados_ranking = [];
 d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
+	
+
+<?php
+
+session_start();
+
+
+for ($i = 1; $i < 14; $i++ ){
+		
+?>
 	var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	var p = <?php echo $i; ?>; //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
 
 });
+
+
 
 
 <?php
