@@ -22,7 +22,7 @@ for ($i = 1; $i < 14; $i++ ){
 		
 		
 		
-	</div>
+</div>
 
 <script type="text/javascript">
 
@@ -42,9 +42,6 @@ d3.csv("ranking.csv",function(data){
 
 <?php
 
-echo "<br>";
-
-echo "<br>";
 }
 
 ?>

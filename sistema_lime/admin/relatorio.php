@@ -40,11 +40,6 @@ verificaLogin();
 
 session_start();
 
-$disciplina_id = $_GET['disciplina_id'];
-
-setcookie('disciplina_id', $disciplina_id);
-
-
 include "config.php";
 
 $id    = mysql_connect($host, $login_db, $senha_db);
@@ -60,6 +55,7 @@ $handle     = fopen("../acessodb/data.csv", "r");
 $matriz     = array();
 $disciplina = array();
 $index      = 0;
+
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     $num = count($data);
     $row++;
@@ -73,25 +69,11 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 }
 
 $disciplinas = array();
- for ($i = 1; $i < count($matriz) - 2; $i++) {
-        
-        $disciplinas[$i] = $matriz[$i][0];
-  }
-    
-
-//for($i = 0; $i < count($disciplinas); $i++) {
-	
-
-
+for ($i = 1; $i < count($matriz) - 2; $i++) {
+	$disciplinas[$i] = $matriz[$i][0];
+}
 
 setcookie('disciplina_id',$disciplinas[1]);
-//	echo "<a href=../acessodb/imprimeDisciplinaAdmin.php?disciplina_id=$disciplinas[$i]>$disciplinas[$i]</a>","<br>";
-//	break;
-//}
-
-
-
-
 
 //setcookie('quesito', 'Q1');
 
@@ -99,9 +81,9 @@ setcookie('disciplina_id',$disciplinas[1]);
 //for($i = 1; $i < 14; $i++){
 	//setcookie('quesito', "Q".$i);
 
-	echo '<iframe
-                name="Ranking"
-                width="100%"
+echo '<iframe
+            name="Ranking"
+            width="100%"
                 height="85%"
                 src="index.php"
                 scrolling="no"
