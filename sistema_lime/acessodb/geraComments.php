@@ -23,7 +23,7 @@ $con = mysql_select_db($database, $id);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
 
-$indiceComentario = 6 + 2 * $questao;
+$indiceComentario = 7 + 2 * $questao;
 
 $tabela = "lime_survey_" . $disciplina_id;
 
