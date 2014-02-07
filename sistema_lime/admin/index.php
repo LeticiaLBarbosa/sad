@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Exemplo Ranking</title>
   <script type="text/javascript" src="d3.v3.js"></script>
-  <script type="text/javascript" src="ranking.js"></script>
+  
 </head>
 
 <body>
