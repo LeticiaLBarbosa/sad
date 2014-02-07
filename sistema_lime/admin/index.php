@@ -148,9 +148,11 @@ function convert(nota,min,max){
 }
 
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
-console.log(dados);
+	console.log(dados);
     var inf = dados.filter(function(d) {return d.disciplina == disciplina});
+    var inf2 = dados.filter(function(d) {return d.disciplina == "desvioNegativo"});
     console.log(inf);
+    console.log(inf2);
     
     function mousemove(nota, disciplina) { 
         svg.append("text")
@@ -231,8 +233,8 @@ console.log(dados);
                     
     // Adiciona a linha correspondente a media do aluno escolhido
     svg.append("line")
-            .attr("x1", function(d){ return convert(inf[0].media,min.x,max.x);}) // X inicial da linha
-            .attr("x2", function(d){ return convert(inf[0].media,min.x,max.x);}) // X final da linha 
+            .attr("x1", function(d){ return convert(inf2[0].media,min.x,max.x);}) // X inicial da linha
+            .attr("x2", function(d){ return convert(inf2[0].media,min.x,max.x);}) // X final da linha 
             .attr("y1",y0-12) // Y inicial da linha
             .attr("y2",y0+12) // Y final da linha
             .attr("class","linha_disciplina")
