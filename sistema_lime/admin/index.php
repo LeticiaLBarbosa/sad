@@ -5,8 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Exemplo Ranking</title>
   <script type="text/javascript" src="d3.v3.js"></script>
-  
-</head>
+ </head>
 
 <body>
 
@@ -24,8 +23,8 @@ d3.csv("ranking.csv",function(data){
 
 	//var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	var nome = 'desvioPositivo';
-	var p = "<?php //echo "Q". $_GET['quesito']; 
-	echo "Q1";?>"; //livia: aqui vem a leitura do cookie
+	var p = "<?php echo "Q". $_GET['quesito']; 
+	//echo "Q1";?>"; //livia: aqui vem a leitura do cookie
 
 	plot_bar_disciplina_ranking(nome, p);
 
