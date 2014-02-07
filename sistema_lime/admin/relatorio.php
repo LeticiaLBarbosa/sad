@@ -82,10 +82,10 @@ for($i = 1; $i < 14; $i++){
 	echo '<iframe
             name="Ranking"
             width="100%"
-                height="10%"
+                height="23%"
                 src="index.php?quesito='.$i.'"
                 scrolling="no"
-                frameborder="0"
+                frameborder="1"
                 >
                 </iframe> ';
                 
