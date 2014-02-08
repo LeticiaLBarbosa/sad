@@ -1,7 +1,6 @@
 <?php
 
 $TituloRespostas = array();
-echo "hm";
 $Respostas = array();
 
 $TituloRespostas[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
@@ -50,6 +49,68 @@ $Respostas[4][1] = "Alto";
 $Respostas[4][2] = "Médio";
 $Respostas[4][3] = "Regular, com certa insegurança";
 $Respostas[4][4] = "Fraco, com total insegurança";
+$Respostas[5][0] = "Ideal";
+$Respostas[5][1] = "Apropriado";
+$Respostas[5][2] = "Indiferente";
+$Respostas[5][3] = "Inapropriado em alguns aspectos";
+$Respostas[5][4] = "Completamente inapropriado";
+$Respostas[6][0] = "80-100%";
+$Respostas[6][1] = "60-80%";
+$Respostas[6][2] = "40-60%";
+$Respostas[6][3] = "20-40%";
+$Respostas[6][4] = "0-20%";
+$Respostas[7][0] = "Ótima"
+$Respostas[7][1] = "Boa";
+$Respostas[7][2] = "Média";
+$Respostas[7][3] = "Abaixo da média";
+$Respostas[7][4] = "Péssima";
+$Respostas[8][0] = "Ótima";
+$Respostas[8][1] = "Boa";
+$Respostas[8][2] = "Média";
+$Respostas[8][3] = "Abaixo da média";
+$Respostas[8][4] = "Péssima";
+$Respostas[9][0] = "Não precisou, não houve faltas";
+$Respostas[9][1] = "Sempre houve reposição das faltas";
+$Respostas[9][2] = "Houve substituição";
+$Respostas[9][3] = "Parcialmente";
+$Respostas[9][4] = "Não houve reposição das aulas perdidas";
+$Respostas[10][0] = "Bem equilibrada, ilustrando a teoria com exemplos e exercícios";
+$Respostas[10][1] = "Equilibrada";
+$Respostas[10][2] = "Equilibrada, mas usou poucos exemplos e exercícios";
+$Respostas[10][3] = "Predominância de teoria";
+$Respostas[10][4] = "Apenas teoria, praticamente sem exemplos e exercícios";
+$Respostas[11][0] = "Muito fácil";
+$Respostas[11][1] = "Fácil";
+$Respostas[11][2] = "Regular";
+$Respostas[11][3] = "Ruim";
+$Respostas[11][4] = "Péssima";
+$Respostas[12][0] = "Sempre";
+$Respostas[12][1] = "Nem sempre";
+$Respostas[12][2] = "Neutro";
+$Respostas[12][3] = "Quase nunca";
+$Respostas[12][4] = "Nunca";
+$Respostas[13][0] = "Muito boa";
+$Respostas[13][1] = "Boa";
+$Respostas[13][2] = "Regular";
+$Respostas[13][3] = "Ruim";
+$Respostas[13][4] = "Péssima";
+$Respostas[14][0] = "Climatização";
+$Respostas[14][1] = "Recursos didáticos (quadro, datashow, etc.)";
+$Respostas[14][2] = "Mobiliário (cadeiras, mesas, etc.)";
+$Respostas[14][3] = "Limpeza";
+$Respostas[14][4] = "Ambiente (sala)";
 
-echo $Respostas[4][4];
+
+for ($i = 0; $i < 15; $i ++){
+	for ($j = 0; $j < 5; $j ++){
+		echo $Respostas[$i][$j];
+		echo "<br>";
+	}
+}
+}
+
+
+
+
+
 ?>
