@@ -279,6 +279,24 @@ function geraMelhor() {
     
     $piores = array();
     $matriz = getMatriz();
+    echo count($matriz);
+    for ($i = 0; $i < count($matriz); $i++) {
+    	
+    	$pior = 4;
+    	
+    	for ($j = 0; $j < count($matriz[$i]); $j++) {
+   	  		echo $matriz[$i][$j],",";	
+   		//if($matriz[$j][$i] <= $pior) {
+   			
+   			//$pior = $matriz[$j][$i];
+ 
+   	//	}
+    	}
+    	
+    	echo "<br>";
+    	
+    	$piores[$i-1] = $pior;
+    }
     
     for ($i = 0; $i < count($matriz[0]); $i++) {
     	
