@@ -154,21 +154,16 @@ for ($i = 0; $i < $range + 1; $i++) {
     
     $tituloQ = utf8_encode($row1[0]);
 	echo $tituloQ;
-}
 
-
-
-
-
-
-
-if ($i == $quesito) {
-    echo "<br>";
-    echo "<br>";
-    echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
+	if ($i == $quesito) {
+		echo "<br>";
+		echo "<br>";
+		echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
 	
     }
+}
 
+echo "passouuu";
 for ($k = 0; $k < 15; $k ++){
 	for ($j = 0; $j < 5; $j ++){
 		echo $Respostas[$k][$j];
