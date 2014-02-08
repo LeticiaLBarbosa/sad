@@ -2,7 +2,7 @@
 
 $TituloRespostas = array();
 echo "hm";
-$Respostas = array[][];
+$Respostas = array();
 
 $TituloRespostas[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
 $TituloRespostas[1] = "O programa da disciplina está de acordo com a ementa da mesma?";
