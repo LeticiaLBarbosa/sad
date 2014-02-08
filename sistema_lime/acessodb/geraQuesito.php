@@ -1,4 +1,5 @@
 <?php
+echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
 
 $TituloRespostas = array();
 $Respostas = array();
@@ -106,13 +107,12 @@ echo $Respostas[7][2];
 
 echo "<br>";
 echo "<br>";
-/*
+
 for ($k = 0; $k < 15; $k ++){
 	for ($j = 0; $j < 5; $j ++){
 		echo $Respostas[$k][$j];
 		echo "<br>";
 	}
 }
-*/
 echo "fim";
 ?>
