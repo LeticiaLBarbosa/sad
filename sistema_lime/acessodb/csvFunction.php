@@ -296,7 +296,7 @@ function geraMelhor() {
     	$melhores[$i-1] = $melhor;
     }
      
-     $result = "MelhoresR"	
+     $result = "MelhoresR";	
 	
     for ($i = 0; $i < count($melhores); $i++) {
 
@@ -354,7 +354,7 @@ function geraPior()
     return $linhaPior;
   */
   
- /*     $piores = array();
+      $piores = array();
     $matriz = getMatriz();
 
     for ($i = 0; $i < count($matriz[0]); $i++) {
@@ -373,7 +373,7 @@ function geraPior()
     	$piores[$i-1] = $pior;
     }
      
-     $result = "PioresR"	
+     $result = "PioresR";	
 	
     for ($i = 0; $i < count($piores); $i++) {
 
@@ -383,7 +383,7 @@ function geraPior()
 return $result;
     
 
-*/
+
 }
 
 function media($respostas)
