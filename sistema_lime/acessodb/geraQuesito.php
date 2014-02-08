@@ -24,7 +24,7 @@ for ($i = 0; $i < 15; $i ++){
 	echo $TituloRespostas[$i];
 	echo "<br>";
 }
-
+/*
 $Respostas[0][0] = "Totalmente";
 $Respostas[0][1] = "Parcialmente, mas o professor ministrou o conteúdo que faltava"; 
 $Respostas[0][2] = "Parcialmente";
@@ -108,5 +108,6 @@ for ($k = 0; $k < 15; $k ++){
 		echo "<br>";
 	}
 }
+*/
 echo "fim";
 ?>
