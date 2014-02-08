@@ -11,10 +11,11 @@ function geraLinhaCSV($disciplina_id) {
     for ($i = 0; $i < 13; $i++) {
         
         $scores = scorePorQuesito($disciplina_id);
+        
         if ($i == 12) {
-            $linhaMontada .= $mediaAux;
+            $linhaMontada .= $scores[$i];
         } else {
-            $linhaMontada .= $mediaAux . ",";
+            $linhaMontada .= $scores[$i] . ",";
         }
         
     }
