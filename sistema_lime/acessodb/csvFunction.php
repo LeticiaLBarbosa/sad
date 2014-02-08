@@ -293,7 +293,7 @@ function geraMelhor() {
    	//	}
     	}
     	
-    	echo "<br";
+    	echo "<br>";
     	
     	$piores[$i-1] = $pior;
     }
