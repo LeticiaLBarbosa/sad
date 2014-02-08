@@ -280,10 +280,11 @@ function geraMelhor() {
     $melhores = array();
     $matriz = getMatriz();
     	
-    	$melhor = 0;
-    	
+    
     for ($i = 0; $i < count($matriz[0]); $i++) {
 
+	$melhor = 0;
+    	
     	for ($j = 1; $j < count($matriz)-2; $j++) {
    		
    		if($matriz[$j][$i] >= $melhor) {
@@ -354,12 +355,12 @@ function geraPior()
     return $linhaPior;
   */
   
-      $piores = array();
+     $piores = array();
     $matriz = getMatriz();
-    	$pior = 4;
+
     for ($i = 0; $i < count($matriz[0]); $i++) {
     	
-
+    	$pior = 4;
     	
     	for ($j = 1; $j < count($matriz)-2; $j++) {
    		
