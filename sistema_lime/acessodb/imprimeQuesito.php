@@ -205,13 +205,7 @@ for ($i = 0; $i < $range + 1; $i++) {
         
         
         
-        	
-        
-                
-        echo "</p>";
-    }
-        
-    echo 
+        	 echo 
 	'<p class="button">
 		<button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
 	</p>
@@ -231,6 +225,12 @@ for ($i = 0; $i < $range + 1; $i++) {
 
 		
 	echo '</div>';
+        
+                
+        echo "</p>";
+    }
+        
+   
 
         
         
