@@ -382,7 +382,7 @@ function geraPior()
 	
 return $result;
     
-}
+
 
 }
 
@@ -452,6 +452,7 @@ function quadrado($number) {
 }
 
 geraMelhor();
+geraPior();
 
 
 ?>
