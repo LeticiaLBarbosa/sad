@@ -279,7 +279,6 @@ function geraMelhor() {
     
     $piores = array();
     $matriz = getMatriz();
-    echo count($matriz);
 
     for ($i = 0; $i < count($matriz[0]); $i++) {
     	
@@ -292,7 +291,6 @@ function geraMelhor() {
    			$pior = $matriz[$j][$i];
 
    		}
-   		echo $matriz[0][$i];
     	}
     	
     	$piores[$i-1] = $pior;
@@ -300,7 +298,7 @@ function geraMelhor() {
 
     for ($i = 0; $i < count($piores); $i++) {
 
-	echo $piores[$i];
+	echo $piores[$i],",";
 }
     
 }
