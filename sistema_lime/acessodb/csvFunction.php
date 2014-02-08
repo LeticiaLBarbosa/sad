@@ -354,7 +354,7 @@ function geraPior()
     return $linhaPior;
   */
   
-      $piores = array();
+ /*     $piores = array();
     $matriz = getMatriz();
 
     for ($i = 0; $i < count($matriz[0]); $i++) {
@@ -383,7 +383,7 @@ function geraPior()
 return $result;
     
 
-
+*/
 }
 
 function media($respostas)
@@ -452,9 +452,7 @@ function quadrado($number) {
 }
 
 geraMelhor();
-geraPior();
-
-
+echo "passou";
 ?>
 
 
