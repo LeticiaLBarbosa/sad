@@ -1,10 +1,35 @@
 <?php
 echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
 
-$TituloRespostas = array();
-$Respostas = array();
-echo "passou";
+// Iniciando conexao ao BD e gerando variaveis essenciais
+$id  = mysql_connect($host, $login_db, $senha_db);
+$con = mysql_select_db($database, $id);
 
+
+$quesito = 1;
+
+$q = (int) $quesito;
+$q +=1;
+
+$disciplina_id = 54288;
+
+$Respostas = array();
+
+
+$indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
+$lacoResposta   = 0;
+$valores        = array();
+
+$ValorRespostas                      = array();
+
+// Criando a vÃ¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada questÃ£o
+$sql         = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid ";
+$res         = mysql_query($sql, $id);
+$row         = mysql_fetch_array($res);
+$QqidQuestao = $row["qid"];
+
+
+// Adicionando os títulos das questoes
 $TituloRespostas[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
 $TituloRespostas[1] = "O programa da disciplina está de acordo com a ementa da mesma?";
 $TituloRespostas[2] = "A metodologia usada pelo professor (recursos didáticos, atividades dentro e fora de sala de aula) teve qual impacto no aprendizado?";
@@ -21,10 +46,7 @@ $TituloRespostas[12] = "O professor demonstra preocupação com o aprendizado do
 $TituloRespostas[13] = "Como você avalia a infra-estrutura da sala de aula (ou laboratório)?";
 $TituloRespostas[14] = "Quais os tipos de problema mais sérios que você detectou durante esta disciplina (checkboxes, podendo escolher mais de um)?";
 
-for ($i = 0; $i < 15; $i ++){
-	echo $TituloRespostas[$i];
-	echo "<br>";
-}
+// Adicionando as respostas em uma especie de matriz
 
 $Respostas[0][0] = "Totalmente";
 $Respostas[0][1] = "Parcialmente, mas o professor ministrou o conteúdo que faltava"; 
@@ -101,12 +123,51 @@ $Respostas[14][1] = "Recursos didáticos (quadro, datashow, etc.)";
 $Respostas[14][2] = "Mobiliário (cadeiras, mesas, etc.)";
 $Respostas[14][3] = "Limpeza";
 $Respostas[14][4] = "Ambiente (sala)";
-echo "<br>";
-echo "<br>";
-echo $Respostas[7][2];
 
-echo "<br>";
-echo "<br>";
+
+// Array de medias
+// Laco referente as perguntas de cada disciplina
+// Codigo abaixo Pega todas as questÃµes
+
+$range = $quesito;
+
+if ($range == 14) {
+    $range = 13;
+}
+
+for ($i = 0; $i < $range + 1; $i++) {
+    
+    $valorA1 = 0;
+    $valorA2 = 0;
+    $valorA3 = 0;
+    $valorA4 = 0;
+    $valorA5 = 0;
+    
+    $tabela = "lime_survey_" . $disciplina_id;
+    
+    $sql2   = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid and q.qid = $QqidQuestao";
+    
+    $res2   = mysql_query($sql2, $id);
+    $sql3   = "SELECT * FROM $tabela";
+    $res3   = mysql_query($sql3, $id);
+    $row1   = mysql_fetch_array($res1);
+    
+    $tituloQ = utf8_encode($row1[0]);
+	echo $tituloQ;
+}
+
+
+
+
+
+
+
+if ($i == $quesito) {
+    echo "<br>";
+    echo "<br>";
+    echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
+	
+    }
 
 for ($k = 0; $k < 15; $k ++){
 	for ($j = 0; $j < 5; $j ++){
