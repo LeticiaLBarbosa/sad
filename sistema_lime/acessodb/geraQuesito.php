@@ -19,12 +19,12 @@ $TituloRespostas[13] = "Como você avalia a infra-estrutura da sala de aula (ou 
 $TituloRespostas[14] = "Quais os tipos de problema mais sérios que você detectou durante esta disciplina (checkboxes, podendo escolher mais de um)?";
 
 for ($i = 0; $i < 15; $i ++){
-	echo $i;
+	echo $TituloRespostas[$i];
 	echo "<br>";
-	echo $TitutoRespostas[$i];
 }
-echo $TituloRespostas[0];
 echo "passou";
+echo $TituloRespostas[0];
+
 
 
 
