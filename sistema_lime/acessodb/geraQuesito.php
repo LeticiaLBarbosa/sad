@@ -22,8 +22,7 @@ for ($i = 0; $i < 15; $i ++){
 	echo $TituloRespostas[$i];
 	echo "<br>";
 }
-echo "passou";
-echo $TituloRespostas[0];
+
 
 
 
