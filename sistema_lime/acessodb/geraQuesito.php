@@ -55,9 +55,9 @@ $Respostas[5][1] = "Apropriado";
 $Respostas[5][2] = "Indiferente";
 $Respostas[5][3] = "Inapropriado em alguns aspectos";
 $Respostas[5][4] = "Completamente inapropriado";
-echo $Respostas[5][2];
+echo "<br>";
+echo "<br>";
 
-/*
 $Respostas[6][0] = "80-100%";
 $Respostas[6][1] = "60-80%";
 $Respostas[6][2] = "40-60%";
@@ -78,6 +78,9 @@ $Respostas[9][1] = "Sempre houve reposição das faltas";
 $Respostas[9][2] = "Houve substituição";
 $Respostas[9][3] = "Parcialmente";
 $Respostas[9][4] = "Não houve reposição das aulas perdidas";
+echo $Respostas[9][4];
+
+/*
 $Respostas[10][0] = "Bem equilibrada, ilustrando a teoria com exemplos e exercícios";
 $Respostas[10][1] = "Equilibrada";
 $Respostas[10][2] = "Equilibrada, mas usou poucos exemplos e exercícios";
