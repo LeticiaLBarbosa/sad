@@ -296,7 +296,7 @@ function geraMelhor() {
     	$melhores[$i-1] = $melhor;
     }
      
-     $result = "MelhoresR,";	
+     $result = "MelhoresR";	
 	
     for ($i = 0; $i < count($melhores); $i++) {
 
@@ -373,7 +373,7 @@ function geraPior()
     	$piores[$i-1] = $pior;
     }
      
-     $result = "PioresR,";	
+     $result = "PioresR";	
 	
     for ($i = 0; $i < count($piores); $i++) {
 
