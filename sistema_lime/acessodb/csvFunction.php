@@ -298,9 +298,9 @@ function geraMelhor() {
      
      $result = "MelhoresR"	
 	
-    for ($i = 0; $i < count($piores); $i++) {
+    for ($i = 0; $i < count($melhores); $i++) {
 
-	$result =. $piores[$i],",";
+	$result =. $melhores[$i],",";
 	}
 	
 return $result;
