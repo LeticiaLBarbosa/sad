@@ -55,6 +55,8 @@ $Respostas[5][1] = "Apropriado";
 $Respostas[5][2] = "Indiferente";
 $Respostas[5][3] = "Inapropriado em alguns aspectos";
 $Respostas[5][4] = "Completamente inapropriado";
+echo $Respostas[5][2];
+/*
 $Respostas[6][0] = "80-100%";
 $Respostas[6][1] = "60-80%";
 $Respostas[6][2] = "40-60%";
@@ -106,7 +108,6 @@ echo $Respostas[7][2];
 
 echo "<br>";
 echo "<br>";
-/*
 
 for ($k = 0; $k < 15; $k ++){
 	for ($j = 0; $j < 5; $j ++){
