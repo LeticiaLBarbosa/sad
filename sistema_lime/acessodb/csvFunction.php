@@ -296,14 +296,14 @@ function geraMelhor() {
     	$melhores[$i-1] = $melhor;
     }
      
-     $result = "MelhoresR";	
+     $result = "MelhoresR,";	
 	
     for ($i = 0; $i < count($melhores); $i++) {
 
-	$result .= $melhores[$i].",";
+	$result .= ",".$melhores[$i];
 	}
 	
-return $result;
+	return $result;
     
 }
 
@@ -373,11 +373,11 @@ function geraPior()
     	$piores[$i-1] = $pior;
     }
      
-     $result = "PioresR";	
+     $result = "PioresR,";	
 	
     for ($i = 0; $i < count($piores); $i++) {
 
-	$result .= $piores[$i].",";
+	$result .= ",".$piores[$i];
 	}
 	
 return $result;
@@ -451,7 +451,7 @@ function quadrado($number) {
 	return $number*$nuber;
 }
 
-geraMelhor();
+echo geraMelhor();
 echo "passou";
 ?>
 
