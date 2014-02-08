@@ -277,36 +277,40 @@ function geraMelhor() {
     return $linhaMelhor;
     */
     
-    $piores = array();
+    $melhores = array();
     $matriz = getMatriz();
 
     for ($i = 0; $i < count($matriz[0]); $i++) {
     	
-    	$pior = 4;
+    	$melhor = 0;
     	
     	for ($j = 1; $j < count($matriz)-2; $j++) {
    		
-   		if($matriz[$j][$i] <= $pior) {
+   		if($matriz[$j][$i] >= $melhor) {
    			
-   			$pior = $matriz[$j][$i];
+   			$melhor = $matriz[$j][$i];
 
    		}
     	}
     	
-    	$piores[$i-1] = $pior;
+    	$melhores[$i-1] = $melhor;
     }
-
+     
+     $result = "MelhoresR"	
+	
     for ($i = 0; $i < count($piores); $i++) {
 
-	echo $piores[$i],",";
-}
+	$result =. $piores[$i],",";
+	}
+	
+return $result;
     
 }
 
 
 function geraPior()
 {
-    
+/*    
     include "config.php";
     
     $piores = array(); //peso minimo 
@@ -348,7 +352,38 @@ function geraPior()
     }
     
     return $linhaPior;
+  */
+  
+      $piores = array();
+    $matriz = getMatriz();
+
+    for ($i = 0; $i < count($matriz[0]); $i++) {
+    	
+    	$pior = 4;
+    	
+    	for ($j = 1; $j < count($matriz)-2; $j++) {
+   		
+   		if($matriz[$j][$i] <= $pior) {
+   			
+   			$pior = $matriz[$j][$i];
+
+   		}
+    	}
+    	
+    	$piores[$i-1] = $pior;
+    }
+     
+     $result = "PioresR"	
+	
+    for ($i = 0; $i < count($piores); $i++) {
+
+	$result =. $piores[$i],",";
+	}
+	
+return $result;
     
+}
+
 }
 
 function media($respostas)
