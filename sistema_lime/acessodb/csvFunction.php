@@ -289,6 +289,7 @@ function geraMelhor() {
    		if($matriz[$j][$i] <= $pior) {
    			
    			$pior = $matriz[$j][$i];
+   			echo $matriz[$j][$i];
    		}
     	}
     	
