@@ -52,18 +52,4 @@ $Respostas[4][3] = "Regular, com certa insegurança";
 $Respostas[4][4] = "Fraco, com total insegurança";
 
 echo $Respostas[4][4];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
