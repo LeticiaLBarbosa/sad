@@ -2,6 +2,30 @@
 
 // Contem as funcoes usadas para gerar o arquivo csv contendo as notas das disciplinas em cada quesito. E usado pelo arquivo geraCSVcomScore.php
 
+function getMatriz() {
+	
+	$row        = 1;
+	$handle     = fopen("data.csv", "r");
+	$matriz     = array();
+	$disciplina = array();
+	$index      = 0;
+	while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+	    $num = count($data);
+	    $row++;
+	    for ($i = 0; $i < $num; $i++) {
+	        $disciplina[$i] = $data[$i];
+	    }
+	    
+	    $matriz[$index] = $disciplina;
+	    $index++;
+	}
+	
+	fclose($handle);
+	
+	return $matriz;	
+}
+
+
 function mediasPorQuesito($disciplina_id) {
     include "config.php";
     
@@ -210,7 +234,7 @@ function mediasPorQuesitoArray($disciplina_id) {
 
 
 function geraMelhor() {
-    include "config.php";
+    /*include "config.php";
     
     $melhores = array(); //peso minimo 
         
@@ -251,6 +275,30 @@ function geraMelhor() {
     }
     
     return $linhaMelhor;
+    */
+    
+    $piores = array();
+    $matriz = getMatriz();
+    
+    for ($i = 0; $i < count($matriz[0]); $i++) {
+    	
+    	$pior = 4;
+    	
+    	for ($j = 1; $j < count($matriz); $j++) {
+   		
+   		if($matriz[$j][$i] <= $pior) {
+   			
+   			$pior = $matriz[$j][$i];
+   		}
+    	}
+    	
+    	$piores[$i-1] = $pior;
+    }
+
+    for ($i = 0; $i < count($piores); $i++) {
+
+	echo $piores[$i];
+}
     
 }
 
@@ -367,7 +415,7 @@ function quadrado($number) {
 	return $number*$nuber;
 }
 
-
+geraMelhor();
 
 
 ?>
