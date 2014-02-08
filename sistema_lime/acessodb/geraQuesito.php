@@ -2,6 +2,7 @@
 
 $TituloRespostas = array();
 $Respostas = array();
+echo "passou";
 
 $TituloRespostas[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
 $TituloRespostas[1] = "O programa da disciplina está de acordo com a ementa da mesma?";
@@ -101,11 +102,11 @@ $Respostas[14][3] = "Limpeza";
 $Respostas[14][4] = "Ambiente (sala)";
 
 
-for ($i = 0; $i < 15; $i ++){
+for ($k = 0; $k < 15; $k ++){
 	for ($j = 0; $j < 5; $j ++){
-		echo $Respostas[$i][$j];
+		echo $Respostas[$k][$j];
 		echo "<br>";
 	}
 }
-
+echo "fim";
 ?>
