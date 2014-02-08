@@ -1,15 +1,7 @@
 <?php
 
-include "config.php";
-include "geraMediaPorQuesito.php";
-include "csvFunction.php";
-
-// Iniciando conexao ao BD e gerando variaveis essenciais
-$id  = mysql_connect($host, $login_db, $senha_db);
-$con = mysql_select_db($database, $id);
-
-
 $TituloRespostas = array();
+echo "hm";
 $Respostas = array[][];
 
 $TituloRespostas[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
