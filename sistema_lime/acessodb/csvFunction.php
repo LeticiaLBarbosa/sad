@@ -451,8 +451,7 @@ function quadrado($number) {
 	return $number*$nuber;
 }
 
-echo geraMelhor();
-echo "passou";
+
 ?>
 
 
