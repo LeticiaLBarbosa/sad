@@ -246,28 +246,29 @@ if ($i == $quesito) {
     $somaResposta = 0;
     $indiceDoArray = 0;
     $respostas = array();    
-    
+	
+    //Laço que gera a soma dos votos
     while ($row1 = mysql_fetch_array($res1)) {
         $res3 = mysql_query($sql3, $id);
         
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
-                $somaResposta = $somaResposta + 1;
+                $somaResposta ++;
             }
         }
         
         $respostas[$indiceDoArray] = $somaResposta;
         
-        $indiceDoArray  = $indiceDoArray + 1;
-        $indiceResposta = $indiceResposta + 1;
+        $indiceDoArray ++;
+        $indiceResposta ++;
         $somaResposta = 0;
     }
     
       // Laço que imprime as respostas e seus votos    
     for ($i = 0; $i < 5; $i++) {   
-        echo "<br>";
         echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $respostas[$i], " voto(s)";
-    }
+		echo "<br>";
+	}
     
 }
 
