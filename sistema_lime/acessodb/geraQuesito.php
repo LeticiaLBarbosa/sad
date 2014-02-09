@@ -151,24 +151,15 @@ for ($i = 0; $i < $range + 1; $i++) {
     $sql3   = "SELECT * FROM $tabela";
     $res3   = mysql_query($sql3, $id);
     $row1   = mysql_fetch_array($res1);
-    
-    $tituloQ = utf8_encode($row1[0]);
-	echo $tituloQ, " aqui";
+   
 
 	if ($i == $quesito) {
 		echo "<br>";
 		echo "<br>";
-		echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
+		echo "<b>", ($quesito + 1), " - ", $TituloRespostas[$i], "</b>";
 	
     }
 }
 
-echo "passouuu";
-for ($k = 0; $k < 15; $k ++){
-	for ($j = 0; $j < 5; $j ++){
-		echo $Respostas[$k][$j];
-		echo "<br>";
-	}
-}
-echo "fim";
+echo "<br>", "fim";
 ?>
