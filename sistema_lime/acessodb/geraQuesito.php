@@ -234,12 +234,12 @@ for ($i = 0; $i < $range + 1; $i++) {
 }
 
 // Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
-if ($i == $quesito) {
+if ($quesito == 14) {
     
     $row1 = mysql_fetch_array($res1);
     echo "<br>";
     echo "<br>";
-	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
+	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$quesito], "</b>";
     echo "<br>";
     echo "<br>";
 
@@ -264,7 +264,7 @@ if ($i == $quesito) {
         $somaResposta = 0;
     }
     
-      // Laço que imprime as respostas e seus votos    
+    // Laço que imprime as respostas e seus votos    
     for ($i = 0; $i < 5; $i++) {   
         echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $respostas[$i], " voto(s)";
 		echo "<br>";
