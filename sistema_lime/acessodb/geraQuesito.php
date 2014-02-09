@@ -16,7 +16,10 @@ setcookie('quesito', "Q".$q);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
 
+
 // Consulta para exibir as questÃµes
+$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
+$res1 = mysql_query($sql1, $id);
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
@@ -233,40 +236,47 @@ for ($i = 0; $i < $range + 1; $i++) {
 // Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
 if ($i == $quesito) {
     
-    echo "<br>";
-    echo "<br>";
-	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
-    echo "<br>";
-    echo "<br>";
-
-    $tabelaDisciplina = "lime_survey_" . $disciplina_id;
-    $sql3   = "SELECT * FROM $tabelaDisciplina";
-    $res3   = mysql_query($sql3, $id);
-	
-    $somaResposta = 0; // grava a soma das respostas
-    $indiceDoArray = 0; // so pra alternar no array que grava as respostas
+    $row1 = mysql_fetch_array($res1);
     
-    $arrayRespostas = array(); // grava os votos das 5 alternativas
-	$indiceResposta = 34; //alterna de alternativa
-
-	for ($k = 0; $k < 5; $k ++){        
-		// Consulta a tabela de resposta da disciplina
+    echo "<br>";
+    echo "<br>";
+    
+    echo "<b> 15 - ", utf8_encode($row1[0]), "</b>";
+    
+    echo "<br>";
+    echo "<br>";
+    
+    $valor = 0;
+    
+    $indiceDoValor = 0; // so pra alternar
+    
+    $valores   = array();
+    $enunciado = array();
+    
+    
+    while ($row1 = mysql_fetch_array($res1)) {
+        $res3 = mysql_query($sql3, $id);
+        
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
-                $somaResposta = $somaResposta + 1;
+                $valor = $valor + 1;
             }
         }
-
-        $arrayRespostas[$indiceDoArray] = $somaResposta;
-        $indiceDoArray  = $indiceDoArray + 1;
+        
+        $valores[$indiceDoValor]   = $valor;
+        $enunciado[$indiceDoValor] = utf8_encode($row1[0]);
+        
+        $indiceDoValor  = $indiceDoValor + 1;
         $indiceResposta = $indiceResposta + 1;
-        $somaResposta = 0;
+        $valor          = 0;
     }
-    // Laço que imprime as respostas e seus votos
-    for ($j = 0; $j < 5; $j ++){
-		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$i], " voto(s)";
-		echo "<br>";
-	}
+    
+    
+    for ($i = 0; $i < 5; $i++) {
+        
+        echo "<br>";
+        echo "<b>A" . ($i + 1) . ") </b>" . $enunciado[$i], " = ", $valores[$i], " voto(s)";
+    }
     
 }
 
