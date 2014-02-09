@@ -17,7 +17,7 @@ setcookie('quesito', "Q".$q);
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 
-$indiceResposta = 6 + ($questao - 1)*2; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
+$indiceResposta = 6 ; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
 $TituloQuestoes = array();
 $TituloRespostas = array();
@@ -183,7 +183,8 @@ for ($i = 0; $i < $range + 1; $i++) {
 			echo "<br>";
 			$indiceTituloRespostas = $indiceTituloRespostas + 1;
 		}
-	}	
+	}
+	$indiceQuestao = $indiceQuestao + 2;
 }
 
 ?>
