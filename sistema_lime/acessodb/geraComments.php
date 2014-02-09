@@ -48,7 +48,7 @@ while ($row3 = mysql_fetch_array($res3)) {
 
 if ($count == 0){
 	echo '<h4><align="center">';
-	echo "NÃO HOUVE COMENTARIOS!";
+	echo "Não houve comentários!";
 	echo "</h4>";
 	echo "<br>";
 }
