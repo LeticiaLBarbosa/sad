@@ -2,14 +2,12 @@
 echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
 
 include "config.php";
-include "geraMediaPorQuesito.php";
-include "csvFunction.php";
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
 
-
+// Pega qual quesito esta sendo impresso
 $quesito = $_GET['quesito'];
 
 $q = (int) $quesito;
@@ -17,7 +15,6 @@ $q += 1;
 setcookie('quesito', "Q".$q);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
-
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
@@ -128,7 +125,7 @@ $TituloRespostas[14][4] = "Ambiente (sala)";
 
 echo "<br>";
 echo "<br>";
-echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
+echo "<b>", ($q), " - ", $TituloQuestoes[$i], "</b>";
 
 	
 $valorA1 = 0;

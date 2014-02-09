@@ -24,6 +24,7 @@ verificaLogin();
 
 <?php
 
+//Laço que imprime a lista de questoes para abrir
 
 for ($i = 0; $i < 15; $i++) {
     
@@ -37,16 +38,11 @@ for ($i = 0; $i < 15; $i++) {
 
 <?php
 
-
-
 include "config.php";
-echo "1";
 include "geraMediaPorQuesito.php";
-echo "2";
 include "csvFunction.php";
-echo "3";
 include "geraQuesito.php"
-echo "4";
+
 /*
     if ($i == $quesito && $quesito < 13) {
 		
