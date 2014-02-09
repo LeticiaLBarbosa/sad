@@ -159,6 +159,33 @@ for ($i = 0; $i < $range + 1; $i++) {
 		echo "<b>", ($quesito + 1), " - ", $TituloRespostas[$i], "</b>";
 	
     }
+	while ($row3 = mysql_fetch_array($res3)) {
+        
+        if ($row3[$indiceResposta] == "A1") {
+            $valorA1 += 1;
+        }
+        if ($row3[$indiceResposta] == "A2") {
+            $valorA2 += 1;
+        }
+        if ($row3[$indiceResposta] == "A3") {
+            $valorA3 += 1;
+        }
+        if ($row3[$indiceResposta] == "A4") {
+            $valorA4 += 1;
+        }
+        if ($row3[$indiceResposta] == "A5") {
+            $valorA5 += 1;
+        }
+    }
+    
+    $ValorRespostas[0]     = $valorA1;
+    $ValorRespostas[1]     = $valorA2;
+    $ValorRespostas[2]     = $valorA3;
+    $ValorRespostas[3]     = $valorA4;
+    $ValorRespostas[4]     = $valorA5;
+	
+	echo $ValorRespostas[0];
+
 }
 
 echo "<br>", "fim";
