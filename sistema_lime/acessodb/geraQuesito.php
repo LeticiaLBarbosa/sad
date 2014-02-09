@@ -7,10 +7,6 @@ include "config.php";
 $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
 
-// Consulta para exibir as questÃµes
-$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
-$res1 = mysql_query($sql1, $id);
-
 // Pega a questao que esta sendo acessada
 $quesito = $_GET['quesito'];
 
@@ -20,6 +16,9 @@ setcookie('quesito', "Q".$q);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
 
+// Consulta para exibir as questÃµes
+$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
+$res1 = mysql_query($sql1, $id);
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
