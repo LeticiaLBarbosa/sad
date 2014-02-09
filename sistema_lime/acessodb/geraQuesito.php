@@ -2,10 +2,16 @@
 echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
 
 include "config.php";
+include "geraMediaPorQuesito.php";
+include "csvFunction.php";
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
+
+// Consulta para exibir as questÃµes
+$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
+$res1 = mysql_query($sql1, $id);
 
 // Pega a questao que esta sendo acessada
 $quesito = $_GET['quesito'];
@@ -238,8 +244,10 @@ if ($i == $quesito) {
     echo "<br>";
     echo "<br>";
 
-    $row1 = mysql_fetch_array($res1);
-    
+    $tabelaDisciplina = "lime_survey_" . $disciplina_id;
+    $sql3   = "SELECT * FROM $tabelaDisciplina";
+	$row1 = mysql_fetch_array($res1);
+	
     $somaResposta = 0; // grava a soma das respostas
     $indiceDoArray = 0; // so pra alternar no array que grava as respostas
     
