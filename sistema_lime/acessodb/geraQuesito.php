@@ -240,11 +240,10 @@ if ($i == $quesito) {
     
     echo "<br>";
     echo "<br>";
-    
-    echo "<b> 15 - ", utf8_encode($row1[0]), "</b>";
-    
+	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
     echo "<br>";
     echo "<br>";
+
     
     $valor = 0;
     
@@ -271,12 +270,12 @@ if ($i == $quesito) {
         $valor          = 0;
     }
     
+      // Laço que imprime as respostas e seus votos
+    for ($j = 0; $j < 5; $j ++){
+		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$i], " voto(s)";
+		echo "<br>";
+	}
     
-    for ($i = 0; $i < 5; $i++) {
-        
-        echo "<br>";
-        echo "<b>A" . ($i + 1) . ") </b>" . $enunciado[$i], " = ", $valores[$i], " voto(s)";
-    }
     
 }
 
