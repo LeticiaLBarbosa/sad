@@ -118,7 +118,7 @@ $TituloRespostas[13][4] = "Péssima";
 $TituloRespostas[14][0] = "Climatização";
 $TituloRespostas[14][1] = "Recursos didáticos (quadro, datashow, etc.)";
 $TituloRespostas[14][2] = "Mobiliário (cadeiras, mesas, etc.)";
-$Respostas[14][3] = "Limpeza";
+$TituloRespostas[14][3] = "Limpeza";
 $TituloRespostas[14][4] = "Ambiente (sala)";
 
 
@@ -179,8 +179,8 @@ for ($i = 0; $i < $range + 1; $i++) {
 	
 	// Laco que imprime as respostas e o valor delas
 	for ($j = 0; $j < 5; $j ++){
-            echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
-            echo "<br>";
+        echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
+        echo "<br>";
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
 	}	
 }
