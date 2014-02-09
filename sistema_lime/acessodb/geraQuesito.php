@@ -248,7 +248,7 @@ if ($i == $quesito) {
     $arrayRespostas = array(); // grava os votos das 5 alternativas
 	$indiceResposta = 34; //alterna de alternativa
 
-	for ($k = 0; $k < 5; $ k ++){
+	for ($k = 0; $k < 5; $k ++){
 		$res3 = mysql_query($sql3, $id);
         
 		// Consulta a tabela de resposta da disciplina
