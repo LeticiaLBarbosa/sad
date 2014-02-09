@@ -153,7 +153,7 @@ for ($i = 0; $i < $range + 1; $i++) {
     $row1   = mysql_fetch_array($res1);
     
     $tituloQ = utf8_encode($row1[0]);
-	echo $tituloQ;
+	echo $tituloQ, " aqui";
 
 	if ($i == $quesito) {
 		echo "<br>";
