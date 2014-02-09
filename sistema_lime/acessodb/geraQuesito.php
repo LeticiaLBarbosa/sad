@@ -19,7 +19,7 @@ $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD
 $TituloQuestoes = array();
 $TituloRespostas = array();
 $ValorRespostas = array();
-indiceTituloRespostas = 0;
+$indiceTituloRespostas = 0;
 
 // Adicionando os títulos das questoes
 $TituloQuestoes[0] = "Os pré-requisitos assumidos pela disciplina foram adequados?";
