@@ -270,11 +270,12 @@ if ($i == $quesito) {
         $valor          = 0;
     }
     
-      // Laço que imprime as respostas e seus votos
-    for ($j = 0; $j < 5; $j ++){
-		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$j], " voto(s)";
-		echo "<br>";
-	}
+      // Laço que imprime as respostas e seus votos    
+    for ($i = 0; $i < 5; $i++) {
+        
+        echo "<br>";
+        echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $valores[$i], " voto(s)";
+    }
     
 }
 
