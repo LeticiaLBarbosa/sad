@@ -130,7 +130,7 @@ if ($range == 14) {
     $range = 13;
 }
 
-// Laço que imprime o título da questão
+// Laço que imprime o titulo da questão ate a questao 14
 for ($i = 0; $i < $range + 1; $i++) {
 
 	if ($i == $quesito) {
@@ -226,6 +226,48 @@ for ($i = 0; $i < $range + 1; $i++) {
 		echo '</div>';
 			
 	}
+	
 }
+
+// Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
+if ($i == $quesito) {
+    
+    echo "<br>";
+    echo "<br>";
+	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
+    echo "<br>";
+    echo "<br>";
+
+    $row1 = mysql_fetch_array($res1);
+    
+    $valor = 0;    
+    $indiceDoValor = 0; // so pra alternar
+    
+    $valores   = array();
+
+    while ($row1 = mysql_fetch_array($res1)) {
+        $res3 = mysql_query($sql3, $id);
+        
+        while ($row3 = mysql_fetch_array($res3)) {
+            if ($row3[$indiceResposta] == "Y") {
+                $valor = $valor + 1;
+            }
+        }
+        
+        $valores[$indiceDoValor] = $valor;
+        
+        $indiceDoValor  = $indiceDoValor + 1;
+        $indiceResposta = $indiceResposta + 1;
+        $valor = 0;
+    }
+    
+    // Laço que imprime as respostas e seus votos
+    for ($j = 0; $j < 5; $j ++){
+		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $valores[$i], " voto(s)";
+		echo "<br>";
+	}
+    
+}
+
 
 ?>
