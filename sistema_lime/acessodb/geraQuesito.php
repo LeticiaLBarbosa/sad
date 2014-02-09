@@ -243,33 +243,30 @@ if ($i == $quesito) {
     echo "<br>";
     echo "<br>";
 
-    
-    $valor = 0;
-    
-    $indiceDoValor = 0; // so pra alternar
-    
-    $valores   = array();    
+    $somaResposta = 0;
+    $indiceDoArray = 0;
+    $respostas = array();    
     
     while ($row1 = mysql_fetch_array($res1)) {
         $res3 = mysql_query($sql3, $id);
         
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
-                $valor = $valor + 1;
+                $somaResposta = $somaResposta + 1;
             }
         }
         
-        $valores[$indiceDoValor]   = $valor;
+        $respostas[$indiceDoArray] = $somaResposta;
         
-        $indiceDoValor  = $indiceDoValor + 1;
+        $indiceDoArray  = $indiceDoArray + 1;
         $indiceResposta = $indiceResposta + 1;
-        $valor          = 0;
+        $somaResposta = 0;
     }
     
       // Laço que imprime as respostas e seus votos    
     for ($i = 0; $i < 5; $i++) {   
         echo "<br>";
-        echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $valores[$i], " voto(s)";
+        echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $respostas[$i], " voto(s)";
     }
     
 }
