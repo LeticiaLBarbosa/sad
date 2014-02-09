@@ -44,65 +44,7 @@ include "csvFunction.php";
 include "geraQuesito.php"
 
 /*
-    if ($i == $quesito && $quesito < 13) {
-		
-		echo "<br>";
-        		
-		$arrayMediasQuesito = geraMediasQuesitos();
-        echo '<a target="_top" href="help.php" >Pontuação</a>',": ","<b>",stringScore($ValorRespostas),"</b>";
-       	
-       	echo "<br>";   
-
-		echo "<br>";
-		echo "<b>Ranking do sua pontuação nesse quesito </b>:";
-                
-        
-            echo '<iframe
-                name="Ranking"
-                width="100%"
-                height="23%"
-                src="geraRanking.php"
-                scrolling="no"
-                frameborder="0"
-                >
-                </iframe> ';
-        
-        
-        
-        
-        	 echo 
-	'<p class="button">
-		<button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button>
-	</p>
-
-	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">'
-	;
-		
-
-				echo '<iframe
-					name="iframe1"
-					width="100%"
-					height="30%"
-				src="geraComments.php?questao=' . $i . '&disciplina_id=' . $disciplina_id . '"
-				frameborder="yes"
-				scrolling="yes">
-			</iframe>';
-
-		
-	echo '</div>';
-        
-                
-        echo "</p>";
-    }
-        
-   
-
-        
-        
-    $indiceResposta = $indiceResposta + 2;
-    $QqidQuestao    = $QqidQuestao + 1;
     
-}
 
 // Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
 

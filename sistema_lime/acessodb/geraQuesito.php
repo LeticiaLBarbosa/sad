@@ -240,30 +240,31 @@ if ($i == $quesito) {
 
     $row1 = mysql_fetch_array($res1);
     
-    $valor = 0;    
-    $indiceDoValor = 0; // so pra alternar
+    $somaResposta = 0; // grava a soma das respostas
+    $indiceDoArray = 0; // so pra alternar no array que grava as respostas
     
-    $valores   = array();
+    $arrayRespostas = array(); // grava os votos das 5 alternativas
+	$indiceResposta = 34; //alterna de alternativa
 
     while ($row1 = mysql_fetch_array($res1)) {
         $res3 = mysql_query($sql3, $id);
         
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
-                $valor = $valor + 1;
+                $somaResposta = $somaResposta + 1;
             }
         }
         
-        $valores[$indiceDoValor] = $valor;
+        $arrayRespostas[$indiceDoArray] = $somaResposta;
         
-        $indiceDoValor  = $indiceDoValor + 1;
+        $indiceDoArray  = $indiceDoArray + 1;
         $indiceResposta = $indiceResposta + 1;
-        $valor = 0;
+        $somaResposta = 0;
     }
     
     // Laço que imprime as respostas e seus votos
     for ($j = 0; $j < 5; $j ++){
-		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $valores[$i], " voto(s)";
+		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$i], " voto(s)";
 		echo "<br>";
 	}
     
