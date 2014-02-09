@@ -241,6 +241,7 @@ if ($i == $quesito) {
 
     $tabelaDisciplina = "lime_survey_" . $disciplina_id;
     $sql3   = "SELECT * FROM $tabelaDisciplina";
+    $res3   = mysql_query($sql3, $id);
 	
     $somaResposta = 0; // grava a soma das respostas
     $indiceDoArray = 0; // so pra alternar no array que grava as respostas
@@ -248,9 +249,7 @@ if ($i == $quesito) {
     $arrayRespostas = array(); // grava os votos das 5 alternativas
 	$indiceResposta = 34; //alterna de alternativa
 
-	for ($k = 0; $k < 5; $k ++){
-		$res3 = mysql_query($sql3, $id);
-        
+	for ($k = 0; $k < 5; $k ++){        
 		// Consulta a tabela de resposta da disciplina
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
