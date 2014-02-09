@@ -23,8 +23,12 @@ $con = mysql_select_db($database, $id);
 
 $disciplina_id = $_COOKIE['disciplina_id'];
 
-$indiceComentario = 7 + 2 * $questao;
-
+if ($questao == 14){
+	$indiceComentario = 39;
+}
+else{
+	$indiceComentario = 7 + 2 * $questao;
+}
 $tabela = "lime_survey_" . $disciplina_id;
 
 $sql3 = "SELECT * FROM $tabela";
@@ -36,16 +40,22 @@ $stringComentarios = "";
 $count = 0;
 while ($row3 = mysql_fetch_array($res3)) {
     if ($row3[$indiceComentario] != "") {
-        $count++;
-        
-        
+        $count ++;
         $c = "Comentário";
         $stringComentarios .= "<b>" . $count . "º - " . $c . ":" . "</b> <br>" . utf8_encode($row3[$indiceComentario]) . "<br>";
     }
 }
 
-echo '<p align="justify">';
-echo $stringComentarios;
-echo "</p>";
-echo "<br>";
+if ($count == 0){
+	echo '<h4><align="center">';
+	echo "NÃO HOUVE COMENTARIOS!";
+	echo "</h4>";
+	echo "<br>";
+}
+else{
+	echo '<p align="justify">';
+	echo $stringComentarios;
+	echo "</p>";
+	echo "<br>";
+}
 ?>
