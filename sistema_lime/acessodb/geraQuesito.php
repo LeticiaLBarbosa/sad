@@ -6,7 +6,7 @@ $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
 
 
-$quesito = 1;
+$quesito = 1; //colcar a parte do cookie
 
 $q = (int) $quesito;
 $q +=1;
@@ -159,6 +159,9 @@ for ($i = 0; $i < $range + 1; $i++) {
 		echo "<b>", ($quesito + 1), " - ", $TituloRespostas[$i], "</b>";
 	
     }
+	
+	// Laco que anda pelas linhas contando a quantidade de respostas
+
 	while ($row3 = mysql_fetch_array($res3)) {
         
         if ($row3[$indiceResposta] == "A1") {
@@ -178,15 +181,24 @@ for ($i = 0; $i < $range + 1; $i++) {
         }
     }
     
-    $ValorRespostas[0]     = $valorA1;
-    $ValorRespostas[1]     = $valorA2;
-    $ValorRespostas[2]     = $valorA3;
-    $ValorRespostas[3]     = $valorA4;
-    $ValorRespostas[4]     = $valorA5;
-	
-	echo $ValorRespostas[0];
+    $ValorRespostas[0] = $valorA1;
+    $ValorRespostas[1] = $valorA2;
+    $ValorRespostas[2] = $valorA3;
+    $ValorRespostas[3] = $valorA4;
+    $ValorRespostas[4] = $valorA5;
 
+	// Laco que imprime as respostas e o valor delas
+	for ($j = 0; $j < 5; $j ++){
+		if ($i == $quesito) {
+            echo $valores[$tituloQ][$indiceArray];
+            echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas[$i][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
+            echo "<br>";
+        }
+        $indiceTituloRespostas = $indiceTituloRespostas + 1;
+	}
 }
+
+
 
 echo "<br>", "fim";
 ?>
