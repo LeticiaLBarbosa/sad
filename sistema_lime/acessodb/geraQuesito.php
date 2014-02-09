@@ -17,8 +17,6 @@ setcookie('quesito', "Q".$q);
 $disciplina_id = $_COOKIE['disciplina_id'];
 
 // Consulta para exibir as questÃµes
-$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
-$res1 = mysql_query($sql1, $id);
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
@@ -243,7 +241,6 @@ if ($i == $quesito) {
 
     $tabelaDisciplina = "lime_survey_" . $disciplina_id;
     $sql3   = "SELECT * FROM $tabelaDisciplina";
-	$row1 = mysql_fetch_array($res1);
 	
     $somaResposta = 0; // grava a soma das respostas
     $indiceDoArray = 0; // so pra alternar no array que grava as respostas
@@ -251,22 +248,21 @@ if ($i == $quesito) {
     $arrayRespostas = array(); // grava os votos das 5 alternativas
 	$indiceResposta = 34; //alterna de alternativa
 
-    while ($row1 = mysql_fetch_array($res1)) {
-        $res3 = mysql_query($sql3, $id);
+	for ($k = 0; $k < 5; $ k ++){
+		$res3 = mysql_query($sql3, $id);
         
+		// Consulta a tabela de resposta da disciplina
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
                 $somaResposta = $somaResposta + 1;
             }
         }
-        
+
         $arrayRespostas[$indiceDoArray] = $somaResposta;
-        
         $indiceDoArray  = $indiceDoArray + 1;
         $indiceResposta = $indiceResposta + 1;
         $somaResposta = 0;
     }
-    
     // Laço que imprime as respostas e seus votos
     for ($j = 0; $j < 5; $j ++){
 		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$i], " voto(s)";
