@@ -2,8 +2,6 @@
 echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
 
 include "config.php";
-include "geraMediaPorQuesito.php";
-include "csvFunction.php";
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id  = mysql_connect($host, $login_db, $senha_db);
