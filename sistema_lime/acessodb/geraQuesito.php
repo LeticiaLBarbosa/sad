@@ -130,12 +130,14 @@ if ($range == 14) {
     $range = 13;
 }
 
+// Laço que imprime o título da questão
 for ($i = 0; $i < $range + 1; $i++) {
 
 	if ($i == $quesito) {
 		echo "<br>";
 		echo "<br>";
 		echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
+		echo "<br>";
 		echo "<br>";
 	
     }
@@ -149,8 +151,8 @@ for ($i = 0; $i < $range + 1; $i++) {
 	$tabelaDisciplina = "lime_survey_" . $disciplina_id;
     $sql3   = "SELECT * FROM $tabelaDisciplina";
     $res3   = mysql_query($sql3, $id);
+	
 	// Laco que anda pelas linhas contando a quantidade de respostas
-
 	while ($row3 = mysql_fetch_array($res3)) {
         
         if ($row3[$indiceResposta] == "A1") {
