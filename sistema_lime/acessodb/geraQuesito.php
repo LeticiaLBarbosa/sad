@@ -1,18 +1,23 @@
 <?php
 echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>';
+
 include "config.php";
+include "geraMediaPorQuesito.php";
+include "csvFunction.php";
 
 // Iniciando conexao ao BD e gerando variaveis essenciais
 $id  = mysql_connect($host, $login_db, $senha_db);
 $con = mysql_select_db($database, $id);
 
 
-$quesito = 0; //colcar a parte do cookie
+$quesito = $_GET['quesito'];
 
 $q = (int) $quesito;
 $q += 1;
+setcookie('quesito', "Q".$q);
 
-$disciplina_id = 57319;
+$disciplina_id = $_COOKIE['disciplina_id'];
+
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
@@ -121,67 +126,54 @@ $TituloRespostas[14][4] = "Ambiente (sala)";
 // Laco referente as perguntas de cada disciplina
 // Codigo abaixo Pega todas as questÃµes
 
-$range = $quesito;
+echo "<br>";
+echo "<br>";
+echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
 
-if ($range == 14) {
-    $range = 13;
-}
+	
+$valorA1 = 0;
+$valorA2 = 0;
+$valorA3 = 0;
+$valorA4 = 0;
+$valorA5 = 0;
+	
+$tabelaDisciplina = "lime_survey_" . $disciplina_id;
+$sql3   = "SELECT * FROM $tabelaDisciplina";
+$res3   = mysql_query($sql3, $id);
 
-for ($i = 0; $i < $range + 1; $i++) {
-
-	if ($i == $quesito) {
-		echo "<br>";
-		echo "<br>";
-		echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
-	
-    }
-	
-	$valorA1 = 0;
-    $valorA2 = 0;
-    $valorA3 = 0;
-    $valorA4 = 0;
-    $valorA5 = 0;
-	
-	$tabelaDisciplina = "lime_survey_" . $disciplina_id;
-    $sql3   = "SELECT * FROM $tabelaDisciplina";
-    $res3   = mysql_query($sql3, $id);
 	// Laco que anda pelas linhas contando a quantidade de respostas
 
-	while ($row3 = mysql_fetch_array($res3)) {
+while ($row3 = mysql_fetch_array($res3)) {
         
-        if ($row3[$indiceResposta] == "A1") {
-            $valorA1 += 1;
-        }
-        if ($row3[$indiceResposta] == "A2") {
-            $valorA2 += 1;
-        }
-        if ($row3[$indiceResposta] == "A3") {
-            $valorA3 += 1;
-        }
-        if ($row3[$indiceResposta] == "A4") {
-            $valorA4 += 1;
-        }
-        if ($row3[$indiceResposta] == "A5") {
-            $valorA5 += 1;
-        }
-    }
-    
-    $ValorRespostas[0] = $valorA1;
-    $ValorRespostas[1] = $valorA2;
-    $ValorRespostas[2] = $valorA3;
-    $ValorRespostas[3] = $valorA4;
-    $ValorRespostas[4] = $valorA5;
-	
-	// Laco que imprime as respostas e o valor delas
-	for ($j = 0; $j < 5; $j ++){
-            echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
-            echo "<br>";
-        $indiceTituloRespostas = $indiceTituloRespostas + 1;
+	if ($row3[$indiceResposta] == "A1") {
+		$valorA1 += 1;
+	}	
+	if ($row3[$indiceResposta] == "A2") {
+		$valorA2 += 1;
 	}
-	
+	if ($row3[$indiceResposta] == "A3") {
+		$valorA3 += 1;
+    }
+    if ($row3[$indiceResposta] == "A4") {
+		$valorA4 += 1;
+    }	
+	if ($row3[$indiceResposta] == "A5") {
+		$valorA5 += 1;
+	}
 }
+    
+$ValorRespostas[0] = $valorA1;
+$ValorRespostas[1] = $valorA2;
+$ValorRespostas[2] = $valorA3;
+$ValorRespostas[3] = $valorA4;
+$ValorRespostas[4] = $valorA5;
+	
+// Laco que imprime as respostas e o valor delas
+for ($j = 0; $j < 5; $j ++){
+	echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
+	echo "<br>";
+	$indiceTituloRespostas = $indiceTituloRespostas + 1;
+}	
 
 
-
-echo "<br>", "fim";
 ?>

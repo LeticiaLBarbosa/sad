@@ -42,143 +42,9 @@ for ($i = 0; $i < 15; $i++) {
 include "config.php";
 include "geraMediaPorQuesito.php";
 include "csvFunction.php";
+include "geraQuesito.php"
 
-// Iniciando conexao ao BD e gerando variaveis essenciais
-$id  = mysql_connect($host, $login_db, $senha_db);
-$con = mysql_select_db($database, $id);
-
-
-$quesito = $_GET['quesito'];
-
-$q = (int) $quesito;
-$q +=1;
-
-
-setcookie('quesito', "Q".$q);
-
-$disciplina_id = $_COOKIE['disciplina_id'];
-
-
-$indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
-$lacoResposta   = 0;
-$valores        = array();
-
-$TituloRespostas                     = array();
-$ValorRespostas                      = array();
-$indiceArrayTituloRespostas          = 0;
-$indiceArrayTituloRespostasImpressao = 0;
-
-// Criando a vÃ¡riavel QqidQuestao que leva a referencia de qid para a consulta sql3 que separa as resposta de cada questÃ£o
-$sql         = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid ";
-$res         = mysql_query($sql, $id);
-$row         = mysql_fetch_array($res);
-$QqidQuestao = $row["qid"];
-
-// Consulta para exibir as questÃµes
-$sql1 = "SELECT question FROM `lime_questions` WHERE sid = $disciplina_id";
-$res1 = mysql_query($sql1, $id);
-
-
-// Array de medias
-// Laco referente as perguntas de cada disciplina
-// Codigo abaixo Pega todas as questÃµes
-
-$range = $quesito;
-
-if ($range == 14) {
-    $range = 13;
-}
-
-for ($i = 0; $i < $range + 1; $i++) {
-    
-    $valorA1 = 0;
-    $valorA2 = 0;
-    $valorA3 = 0;
-    $valorA4 = 0;
-    $valorA5 = 0;
-    
-    $tabela = "lime_survey_" . $disciplina_id;
-    
-    $sql2   = "SELECT q.qid, q.sid, q.question, a.code, a.answer FROM `lime_questions` q, lime_answers a WHERE q.sid = $disciplina_id and q.qid = a.qid and q.qid = $QqidQuestao";
-    
-    $res2   = mysql_query($sql2, $id);
-    $sql3   = "SELECT * FROM $tabela";
-    $res3   = mysql_query($sql3, $id);
-    $row1   = mysql_fetch_array($res1);
-    
-    $tituloQ = utf8_encode($row1[0]);
-    
-    if ($i == $quesito) {
-        echo "<br>";
-        echo "<br>";
-
-        echo "<b>", ($quesito + 1), " - ", $tituloQ, "</b>";
-                       
-        echo '<script type="text/javascript" src="../ranking/ranking.js"></script>';
-        
-    }
-    
-    $valores[$tituloQ] = array();
-    
-    // Laco que pega o titulo de cada resposta e salva no array $TituloRespostas
-    while ($row2 = mysql_fetch_array($res2)) {
-        $TituloRespostas[$indiceArrayTituloRespostas] = utf8_encode($row2["answer"]);
-        $indiceArrayTituloRespostas                   = $indiceArrayTituloRespostas + 1;
-    }
-    
-    $indiceArrayTituloRespostas = 0;
-    
-    // Laco que anda pelas linhas contando a quantidade de respostas
-    while ($row3 = mysql_fetch_array($res3)) {
-        
-        if ($row3[$indiceResposta] == "A1") {
-            $valorA1 += 1;
-        }
-        if ($row3[$indiceResposta] == "A2") {
-            $valorA2 += 1;
-        }
-        if ($row3[$indiceResposta] == "A3") {
-            $valorA3 += 1;
-        }
-        if ($row3[$indiceResposta] == "A4") {
-            $valorA4 += 1;
-        }
-        if ($row3[$indiceResposta] == "A5") {
-            $valorA5 += 1;
-        }
-    }
-    
-    $ValorRespostas[0]     = $valorA1;
-    $ValorRespostas[1]     = $valorA2;
-    $ValorRespostas[2]     = $valorA3;
-    $ValorRespostas[3]     = $valorA4;
-    $ValorRespostas[4]     = $valorA5;
-    $indiceTituloRespostas = 0;
-    
-    if ($i == $quesito) {
-    
-        echo "<p>";
-    
-        if ($i < 13) {
-            
-        }
-        
-        
-        
-    }
-    
-    // Laco que imprime as respostas e o valor delas
-    while ($TituloRespostas[0] != null) {
-        $valores[$tituloQ][$TituloRespostas[0]] = $ValorRespostas[$indiceTituloRespostas];
-        if ($i == $quesito) {
-            echo $valores[$tituloQ][$indiceArray];
-            echo "<b>A", ($indiceTituloRespostas + 1), ") </b>", $TituloRespostas[0], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
-            echo "<br>";
-        }
-        array_shift($TituloRespostas);
-        $indiceTituloRespostas = $indiceTituloRespostas + 1;
-    }
-    
+/*
     if ($i == $quesito && $quesito < 13) {
 		
 		echo "<br>";
@@ -288,7 +154,7 @@ if ($i == $quesito) {
     }
     
 }
-
+*/
 
 ?>
 
