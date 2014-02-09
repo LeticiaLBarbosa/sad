@@ -236,44 +236,42 @@ for ($i = 0; $i < $range + 1; $i++) {
 // Gerando impressao para ultima pergunta e as respostas dela, ja que a logica eh diferente
 if ($i == $quesito) {
     
+    $row1 = mysql_fetch_array($res1);
     echo "<br>";
     echo "<br>";
 	echo "<b>", ($quesito + 1), " - ", $TituloQuestoes[$i], "</b>";
     echo "<br>";
     echo "<br>";
 
-    $tabelaDisciplina = "lime_survey_" . $disciplina_id;
-    $sql3   = "SELECT * FROM $tabelaDisciplina";
-
-    $somaResposta = 0; // grava a soma das respostas
-    $indiceDoArray = 0; // so pra alternar no array que grava as respostas
     
-    $arrayRespostas = array(); // grava os votos das 5 alternativas
-	$indiceResposta = 34; //alterna de alternativa
-
-	for ($k = 0; $k < 5; $k ++){
-		$res3 = mysql_query($sql3, $id);
+    $valor = 0;
+    
+    $indiceDoValor = 0; // so pra alternar
+    
+    $valores   = array();    
+    
+    while ($row1 = mysql_fetch_array($res1)) {
+        $res3 = mysql_query($sql3, $id);
         
-		// Consulta a tabela de resposta da disciplina
         while ($row3 = mysql_fetch_array($res3)) {
             if ($row3[$indiceResposta] == "Y") {
-                $somaResposta = $somaResposta + 1;
+                $valor = $valor + 1;
             }
         }
-
-        $arrayRespostas[$indiceDoArray] = $somaResposta;
-        $indiceDoArray  = $indiceDoArray + 1;
+        
+        $valores[$indiceDoValor]   = $valor;
+        
+        $indiceDoValor  = $indiceDoValor + 1;
         $indiceResposta = $indiceResposta + 1;
-        $somaResposta = 0;
+        $valor          = 0;
     }
-    // Laço que imprime as respostas e seus votos
-    for ($j = 0; $j < 5; $j ++){
-		echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $arrayRespostas[$j], " voto(s)";
-		echo "<br>";
-	}
     
-}
-
+      // Laço que imprime as respostas e seus votos    
+    for ($i = 0; $i < 5; $i++) {   
+        echo "<br>";
+        echo "<b>A" . ($i + 1) . ") </b>" . $TituloRespostas[$quesito][$i], " = ", $valores[$i], " voto(s)";
+    }
+    
 }
 
 
