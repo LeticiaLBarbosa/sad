@@ -256,21 +256,22 @@ if ($quesito == 14) {
 }
 
 		
-		// Iframe com os comentarios
-        
-		echo '<p class="button"><button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button></p>
-			<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">';
+// Iframe com os comentarios
 
-		echo '<iframe
-			name="iframe1"
-			width="100%"
-			height="30%"
-			src="geraComments.php?questao=' . $quesito . '&disciplina_id=' . $disciplina_id . '"
-			frameborder="yes"
-			scrolling="yes">
-			</iframe>';
+echo "<br>";
+echo '<p class="button"><button id="button1" class="buttonControl" aria-controls="t1"><span>Mostrar</span> Comentários</button></p>
+	<div id="t1" class="topic" role="region" aria-labelledby="t1-label" tabindex="-1" aria-expanded="false">';
+	
+echo '<iframe
+	name="iframe1"
+	width="100%"
+	height="30%"
+	src="geraComments.php?questao=' . $quesito . '&disciplina_id=' . $disciplina_id . '"
+	frameborder="yes"
+	scrolling="yes">
+	</iframe>';
 
-		echo '</div>';
-			
+echo '</div>';
+
 
 ?>
