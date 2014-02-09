@@ -170,7 +170,7 @@ $ValorRespostas[4] = $valorA5;
 	
 // Laco que imprime as respostas e o valor delas
 for ($j = 0; $j < 5; $j ++){
-	echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
+	echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$q - 1][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
 	echo "<br>";
 	$indiceTituloRespostas = $indiceTituloRespostas + 1;
 }	
