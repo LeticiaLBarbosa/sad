@@ -12,7 +12,7 @@ $quesito = 0; //colcar a parte do cookie
 $q = (int) $quesito;
 $q += 1;
 
-$disciplina_id = 54288;
+$disciplina_id = 57319;
 
 $indiceResposta = 6; // Representa o indice da resposta, tratando a tabela do BD como uma matriz
 
@@ -174,7 +174,7 @@ for ($i = 0; $i < $range + 1; $i++) {
 	
 	// Laco que imprime as respostas e o valor delas
 	for ($j = 0; $j < 5; $j ++){
-            echo "<b>A", ($j + 1), ") </b>", $TituloQuestoes[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
+            echo "<b>A", ($j + 1), ") </b>", $TituloRespostas[$quesito][$j], " = ", $ValorRespostas[$indiceTituloRespostas], " voto(s)";
             echo "<br>";
         $indiceTituloRespostas = $indiceTituloRespostas + 1;
 	}
