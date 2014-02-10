@@ -258,7 +258,10 @@ function quadrado($number) {
 	return $number*$nuber;
 }
 
-
+function media($array) {
+	
+	return (array_sum($array)/count($array));
+}
 
 
 ?>
