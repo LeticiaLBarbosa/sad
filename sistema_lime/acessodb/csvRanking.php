@@ -36,15 +36,9 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 }
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
-			
-   //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
-     //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
- 	  $coluna = arrayColunaDaMatriz($matrizDisc,$i);
- //	  echo "desvio: ",desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)), "<br>";
- 	 echo desvioPadrao($coluna);
-        
-  //      fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
-    //    fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
+
+        fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
+        fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
  
 		
 	}
