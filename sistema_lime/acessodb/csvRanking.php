@@ -36,6 +36,18 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
         fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
     }
 }
+
+for ($i = 0; $i < count($matrizDisc); $i++) {
+    
+    for ($j = 0; $j < count($matrizDisc[$i]); $j++) {
+        
+	$matrizDisc[$i-1][$j-1] = " " . $matriz[$i][$j];    
+        
+        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
+    }
+    
+    echo "<br>";
+}
 echo "passou";
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
