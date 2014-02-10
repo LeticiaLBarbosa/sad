@@ -41,7 +41,7 @@ for ($i = 0; $i < count($matrizDisc); $i++) {
     
     for ($j = 0; $j < count($matrizDisc[$i]); $j++) {
         
-	echo $matriz[$i][$j]." ";    
+	echo $matrizDisc[$i][$j]." ";    
         
     }
     
