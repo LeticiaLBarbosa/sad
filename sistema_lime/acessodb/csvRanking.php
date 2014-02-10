@@ -24,8 +24,6 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 
 fclose($handle);
 
-echo "passou";
-
 $matrizDisc = array();
 for ($i = 1; $i < count($matriz) - 2; $i++) {
     
@@ -36,13 +34,13 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
         fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
     }
 }
-echo "passou";
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
 			
    //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
      //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
  	  $coluna = arrayColunaDaMatriz($matrizDisc,$i);
+ 	  echo "desvio: ",desvioPadrao(arrayColunaDaMatriz($matriz,$i)), "<br>";
  	  foreach($coluna as &$number){
  		echo $number,",";  	
 	  }
