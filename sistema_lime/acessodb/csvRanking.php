@@ -62,7 +62,7 @@ function arrayColunaDaMatriz($matriz, $coluna) {
 	
 	$arrayColuna = array();
 
-	for($i = 1; $i < count($matriz) - 2; $i++) {
+	for($i = 0; $i < count($matriz); $i++) {
 		
 		$arrayColuna[$i] = $matriz[$i][$coluna];
 	
