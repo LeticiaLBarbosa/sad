@@ -244,7 +244,7 @@ function desvioPadrao($respostas) {
 	$somaDasDiferencas = 0;		
 	$media = media($respostas);
 		
-	foreach ($repostas as &$valor){
+	foreach ($respostas as &$valor){
 		
 		$somaDasDiferencas += quadrado($media - $valor); 
 	}
