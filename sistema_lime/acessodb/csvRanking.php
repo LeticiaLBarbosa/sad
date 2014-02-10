@@ -37,8 +37,8 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
 
-        fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
-        fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
+        fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . "Q".($i+1) . "," . 0 . "\n"));
+        fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))) . "," . "Q".($i+1) . "," . 0 . "\n"));
  
 		
 	}
