@@ -36,23 +36,12 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
         fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
     }
 }
-
-for ($i = 0; $i < count($matrizDisc); $i++) {
-    
-    for ($j = 0; $j < count($matrizDisc[$i]); $j++) {
-        
-	echo $matrizDisc[$i][$j]." ";    
-        
-    }
-    
-    echo "<br>";
-}
 echo "passou";
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
 			
-        echo (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
-        echo (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
+        echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
+        echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
  	
         
         fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
