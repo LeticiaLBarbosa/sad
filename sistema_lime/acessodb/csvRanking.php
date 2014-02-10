@@ -34,12 +34,11 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
 	$matrizDisc[$i-1][$j-1] = $matriz[$i][$j];    
         
         fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
-        echo $matrizDisc[$i-1][$j-1];
     }
 }
 echo "passou";
 
-	for ($i = 0; $i < count($mediaDisc[0]);$i++) {
+	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
 			
         echo (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
         echo (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
