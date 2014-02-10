@@ -41,8 +41,8 @@ echo "passou";
 
 	for ($i = 1; $i < count($media[0]);$i++) {
 		
-        echo (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
-        echo (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
+        echo (media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
+        echo (media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
  	
         
         fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
