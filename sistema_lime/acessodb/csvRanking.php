@@ -40,7 +40,7 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
    //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
      //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
  	  $coluna = arrayColunaDaMatriz($matrizDisc,$i);
- 	  echo "desvio: ",desvioPadrao(arrayColunaDaMatriz($matriz,$i)), "<br>";
+ 	  echo "desvio: ",desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)), "<br>";
  	  foreach($coluna as &$number){
  		echo $number,",";  	
 	  }
