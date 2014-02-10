@@ -255,7 +255,7 @@ function desvioPadrao($respostas) {
 
 function quadrado($number) {
 
-	return $number*$nuber;
+	return $number*$number;
 }
 
 function media($array) {
