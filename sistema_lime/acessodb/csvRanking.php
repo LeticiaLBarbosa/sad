@@ -114,6 +114,5 @@ function returnPosicao($quesito, $nota, $matriz){
     }
 }
 
-echo "passou";
 
 ?>
