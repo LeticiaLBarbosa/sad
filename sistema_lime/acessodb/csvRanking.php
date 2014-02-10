@@ -41,9 +41,8 @@ for ($i = 0; $i < count($matrizDisc); $i++) {
     
     for ($j = 0; $j < count($matrizDisc[$i]); $j++) {
         
-	$matrizDisc[$i-1][$j-1] = " " . $matriz[$i][$j];    
+	echo $matriz[$i][$j]." ";    
         
-        fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
     }
     
     echo "<br>";
