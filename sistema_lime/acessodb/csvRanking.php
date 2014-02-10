@@ -26,53 +26,21 @@ fclose($handle);
 
 echo "passou";
 
-function getMatriz() {
-
-	// Arquivo usado pra gerar o csv do ranking
- 	$fileCSV = fopen("../admin/ranking.csv", "w", 0);
- 	fwrite($fileCSV,"disciplina,media,questao,posicao\n");
-
-
-	$row        = 1;
-	$handle     = fopen("data.csv", "r");
-	$matriz     = array();
-	$disciplina = array();
-	$index      = 0;
-	while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-	    $num = count($data);
-	    $row++;
-	    for ($i = 0; $i < $num; $i++) {
-	        $disciplina[$i] = $data[$i];
-	    }
-	    
-	    $matriz[$index] = $disciplina;
-	    $index++;
-	}
-	
-	fclose($handle);
-	
-	return $matriz;	
-}
-
+$matrizDisc = array();
 for ($i = 1; $i < count($matriz) - 2; $i++) {
+    
     for ($j = 1; $j < count($matriz[$i]); $j++) {
         
-        
+	$matrizDisc[$i-1][$j-1] = $matriz[$i][$j];    
         
         fwrite($fileCSV, ($matriz[$i][0] . "," . $matriz[$i][$j] . "," . $matriz[0][$j] . "," . returnPosicao($j, $matriz[$i][$j], $matriz) . "\n"));
         
     }
 }
-	//Gravando desvio padrão 
-	for ($i = 0; $i < count($media); $i++){
-			
-	}
-	
-	
+echo "passou";
+
 	for ($i = 1; $i < count($media[0]);$i++) {
 		
-		
-	
         echo (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
         echo (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
  	
@@ -120,5 +88,6 @@ function returnPosicao($quesito, $nota, $matriz){
     }
 }
 
+echo "passou";
 
 ?>
