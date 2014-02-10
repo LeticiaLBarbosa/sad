@@ -1,6 +1,5 @@
 <?php
 
-
 include "functions.php";
 
 // Arquivo usado pra gerar o csv do ranking
@@ -24,6 +23,8 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 }
 
 fclose($handle);
+
+echo "passou";
 
 function getMatriz() {
 
