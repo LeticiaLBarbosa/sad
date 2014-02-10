@@ -1,5 +1,6 @@
 <?php
 
+include "csvFunction.php";
 include "functions.php";
 
 // Arquivo usado pra gerar o csv do ranking
