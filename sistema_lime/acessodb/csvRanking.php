@@ -42,8 +42,8 @@ echo "passou";
 			
    //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
      //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
- 	  
- 	  foreach($number as &arrayColunaDaMatriz($matrizDisc,$i)){
+ 	  $coluna = arrayColunaDaMatriz($matrizDisc,$i);
+ 	  foreach($coluna as &$number){
  		echo $number,",";  	
 	  }
  	  echo "<br>";
