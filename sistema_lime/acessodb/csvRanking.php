@@ -40,12 +40,13 @@ echo "passou";
 
 	for ($i = 0; $i < count($matrizDisc[0]);$i++) {
 			
-        echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
-        echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
- 	
+   //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
+     //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
+ 	  echo media(arrayColunaDaMatriz($matriz,$i));
+ 	  echo desvioPadrao(arrayColunaDaMatriz($matriz,$i)));
         
-        fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
-        fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matriz[0][$i] . "," . 0 . "\n"));
+  //      fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
+    //    fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
  
 		
 	}
