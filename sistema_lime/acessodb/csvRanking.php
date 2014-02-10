@@ -43,7 +43,7 @@ echo "passou";
    //     echo "N".(media(arrayColunaDaMatriz($matrizDisc,$i))+desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
      //   echo "P".(media(arrayColunaDaMatriz($matrizDisc,$i))-desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i))),"<br>";
  	  echo media(arrayColunaDaMatriz($matrizDisc,$i));
- 	  echo desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i)));
+ 	  echo desvioPadrao(arrayColunaDaMatriz($matrizDisc,$i));
         
   //      fwrite($fileCSV, ("desvioPositivo" . "," . (media(arrayColunaDaMatriz($matriz,$i))+desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
     //    fwrite($fileCSV, ("desvioNegativo" . "," . (media(arrayColunaDaMatriz($matriz,$i))-desvioPadrao(arrayColunaDaMatriz($matriz,$i))) . "," . $matrizDisc[0][$i] . "," . 0 . "\n"));
