@@ -62,6 +62,8 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
     }
 }
 	//Gravando desvio padrão 
+	unset($media[0]);
+	var_dump($media);
 	
 	for ($i = 0; $i < 15;$i++) {
 		
