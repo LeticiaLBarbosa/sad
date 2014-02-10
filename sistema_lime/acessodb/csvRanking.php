@@ -27,6 +27,11 @@ fclose($handle);
 
 function getMatriz() {
 
+	// Arquivo usado pra gerar o csv do ranking
+ 	$fileCSV = fopen("../admin/ranking.csv", "w", 0);
+ 	fwrite($fileCSV,"disciplina,media,questao,posicao\n");
+
+
 	$row        = 1;
 	$handle     = fopen("data.csv", "r");
 	$matriz     = array();
