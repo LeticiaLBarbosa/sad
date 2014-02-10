@@ -242,7 +242,7 @@ function stringScore($respostas)
 function desvioPadrao($respostas) {
 	
 	$somaDasDiferencas = 0;		
-	$media = calculaScore($respostas);
+	$media = media($respostas);
 		
 	foreach ($repostas as &$valor){
 		
