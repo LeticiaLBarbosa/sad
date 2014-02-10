@@ -1,6 +1,6 @@
 <?php
 
-include "csvFunction.php";
+include "functions.php";
 
 // Arquivo usado pra gerar o csv do ranking
 $fileCSV = fopen("../admin/ranking.csv", "w", 0);
@@ -94,15 +94,13 @@ function arrayColunaDaMatriz($matriz, $coluna) {
 }
 
 
-function returnPosicao($quesito, $nota, $matriz)
-{
+function returnPosicao($quesito, $nota, $matriz){
     
     $notas = array();
     
     for ($i = 1; $i < count($matriz) - 2; $i++) {
         
         $notas[$i - 1] = $matriz[$i][$quesito];
-        
     }
     
     sort($notas);
@@ -112,7 +110,6 @@ function returnPosicao($quesito, $nota, $matriz)
         if ($notas[$j] == $nota) {
             return count($notas) - $j;
         }
-        
     }
 }
 
