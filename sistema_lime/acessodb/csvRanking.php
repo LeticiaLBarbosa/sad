@@ -26,11 +26,7 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 fclose($handle);
 
 function getMatriz() {
-	
-	// Arquivo usado pra gerar o csv do ranking
-	$fileCSV = fopen("../admin/ranking.csv", "w", 0);
-	fwrite($fileCSV,"disciplina,media,questao,posicao\n");
-	
+
 	$row        = 1;
 	$handle     = fopen("data.csv", "r");
 	$matriz     = array();
@@ -62,10 +58,12 @@ for ($i = 1; $i < count($matriz) - 2; $i++) {
     }
 }
 	//Gravando desvio padrão 
-	unset($media[0]);
-	var_dump($media);
+	for ($i = 0; $i < count($media); $i++){
+			
+	}
 	
-	for ($i = 0; $i < 15;$i++) {
+	
+	for ($i = 1; $i < count($media[0]);$i++) {
 		
 		
 	
