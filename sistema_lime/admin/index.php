@@ -152,8 +152,8 @@ function convert(nota,min,max){
 
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
 console.log(dados);
-    var dp = "DP";
-    var dn = "DN";
+    var dp = "desvioPositivo";
+    var dn = "desvioNegativo";
     
     function mousemove(nota, disciplina) { 
         svg.append("text")
