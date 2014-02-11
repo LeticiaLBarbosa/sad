@@ -23,7 +23,7 @@ d3.csv("ranking.csv",function(data){
 
 	//var nome = getCookie('disciplina_id'); //livia: aqui vem a leitura do cookie
 	//var nome = 'desvioPositivo';
-	var p = "<?php echo "Q". $_GET['quesito']; 
+	var p = "<?php echo "Q". $_GET['quesito']?>; 
 
 	plot_bar_disciplina_ranking(p);
 
