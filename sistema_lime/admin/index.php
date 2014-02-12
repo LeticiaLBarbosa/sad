@@ -150,13 +150,9 @@ function convert(nota,min,max){
     return (((nota- min)/(max-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
 }
 
-//function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
+
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
 console.log(dados);
-
-	
-	min = 0;
-	max = 4;
 	
     var dp = "desvioPositivo";
     var dn = "desvioNegativo";
@@ -189,8 +185,10 @@ console.log(dados);
     g.selectAll("line").data(dados)
                     .enter()
                     .append("line")
-                    .attr("x1", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao superior da linha 
-                    .attr("x2", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao inferior da linha
+               //     .attr("x1", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao superior da linha 
+                 //   .attr("x2", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao inferior da linha
+                    .attr("x1", function(d){ return convert(d.media,0,4);}) // Angulacao superior da linha 
+                    .attr("x2", function(d){ return convert(d.media,0,4);}) // Angulacao inferior da linha
                     .attr("y1",y0-12) // Altura superior da linha
                     .attr("y2",y0+12) // Altura inferior da linha
                     .attr("class","linha_disciplina")
