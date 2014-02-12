@@ -150,15 +150,18 @@ function plot_bars_ranking(svg, dados,y0){
 
 
 function convert(nota,min,max){
-	min1 = 0;
-	max1 = 4;
+	min = 0;
+	max = 4;
 	
-    return (((nota- min1)/(max1-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
+    return (((nota- min1)/(max1-min1))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
 }
 
 
 function plot_disciplinas_ranking(svg, dados, cor, min, max, y0){
 console.log(dados);
+	
+	min = 0;
+	max = 4;
 	
     var dp = "desvioPositivo";
     var dn = "desvioNegativo";
