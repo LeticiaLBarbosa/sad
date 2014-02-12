@@ -150,8 +150,8 @@ function plot_bars_ranking(svg, dados,y0){
 
 
 function convert(nota,min,max){
-	min = 0;
-	max = 4;
+	//min = 0;
+	//max = 4;
 	
     return (((nota- min1)/(max1-min1))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
 }
