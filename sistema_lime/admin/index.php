@@ -93,7 +93,7 @@ function plot_ranges_ranking(svg, dados, y0){
         svg.append("text")
             .attr("x",x1(dados[0].x) - 30)
             .attr("y",(y0 + 8))
-            .text(valor1);
+            .text(0);
 
         // Adiciona o texto "Max"
         svg.append("text")
@@ -104,7 +104,7 @@ function plot_ranges_ranking(svg, dados, y0){
         svg.append("text")
             .attr("x",x1(dados[1].x) + 10)
             .attr("y",(y0 + 8))
-            .text(valor2);
+            .text(4);
 
 }
 
