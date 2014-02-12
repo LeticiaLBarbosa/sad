@@ -18,6 +18,9 @@
 var duration = 1000;
 var dados_ranking = [];
 
+var min = 0;
+var max = 4;
+
 d3.csv("ranking.csv",function(data){
     dados_ranking = data;
 
@@ -147,7 +150,10 @@ function plot_bars_ranking(svg, dados,y0){
 
 
 function convert(nota,min,max){
-    return (((nota- min)/(max-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
+	min1 = 0;
+	max1 = 4;
+	
+    return (((nota- min1)/(max1-min))*(750-120)) + 120; //livia: algum tipo de normalizacao?????
 }
 
 
@@ -187,8 +193,8 @@ console.log(dados);
                     .append("line")
                //     .attr("x1", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao superior da linha 
                  //   .attr("x2", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao inferior da linha
-                    .attr("x1", function(d){ return convert(d.media,0,4);}) // Angulacao superior da linha 
-                    .attr("x2", function(d){ return convert(d.media,0,4);}) // Angulacao inferior da linha
+                    .attr("x1", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao superior da linha 
+                    .attr("x2", function(d){ return convert(d.media,min.x,max.x);}) // Angulacao inferior da linha
                     .attr("y1",y0-12) // Altura superior da linha
                     .attr("y2",y0+12) // Altura inferior da linha
                     .attr("class","linha_disciplina")
